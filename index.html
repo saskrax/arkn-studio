@@ -3,8 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vivid Labs — We build what works.</title>
-  <meta name="description" content="Agencia digital en Los Mochis, Sinaloa. Sitios web, automatizaciones y herramientas digitales para negocios reales en México.">
+  <title>Arkn Studio — Sitios web y automatizaciones en Los Mochis</title>
+  <meta name="description" content="Agencia digital en Los Mochis, Sinaloa. Sitios web profesionales, automatizaciones y herramientas digitales. Ves el resultado antes de pagar — sin anticipo.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Arkn Studio — We build what works.">
+  <meta property="og:description" content="Sitios web que convierten, automatizaciones que ahorran tiempo. Sin anticipo. Ves el resultado antes de pagar.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arkn Studio — We build what works.">
+  <meta name="twitter:description" content="Sitios web profesionales en Los Mochis. Sin anticipo.">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Arkn Studio",
+    "description": "Agencia digital especializada en sitios web y automatizaciones para negocios en México",
+    "address": { "@type": "PostalAddress", "addressLocality": "Los Mochis", "addressRegion": "Sinaloa", "addressCountry": "MX" },
+    "telephone": "+526688853458",
+    "url": "https://arkn.studio",
+    "sameAs": ["https://wa.me/526688853458"]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,16 +39,16 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #0F0F1A;
-      --surface: #1A1A2E;
+      --bg: #080808;
+      --surface: #111111;
       --surface-2: rgba(255,255,255,0.04);
-      --accent: #7C3AED;
-      --accent-light: #9D6FFF;
-      --accent-glow: rgba(124,58,237,0.25);
-      --cyan: #06B6D4;
+      --accent: #FFFFFF;
+      --accent-light: rgba(255,255,255,0.82);
+      --accent-glow: rgba(255,255,255,0.1);
+      --cyan: #60A5FA;
       --white: #FFFFFF;
-      --muted: #94A3B8;
-      --border: rgba(255,255,255,0.08);
+      --muted: #6B7280;
+      --border: rgba(255,255,255,0.09);
       --radius: 16px;
     }
 
@@ -63,13 +88,13 @@
       transition: all 0.3s ease;
     }
     .btn-primary {
-      background: var(--accent); color: white;
-      box-shadow: 0 0 30px var(--accent-glow);
+      background: var(--white); color: #080808;
+      box-shadow: 0 0 30px rgba(255,255,255,0.12);
     }
     .btn-primary:hover {
-      background: var(--accent-light);
+      background: rgba(255,255,255,0.88);
       transform: translateY(-2px);
-      box-shadow: 0 0 50px rgba(124,58,237,0.45);
+      box-shadow: 0 0 50px rgba(255,255,255,0.18);
     }
     .btn-ghost {
       background: transparent; color: white;
@@ -80,16 +105,20 @@
       border-color: rgba(255,255,255,0.2);
       transform: translateY(-2px);
     }
+    .btn:focus-visible {
+      outline: 2px solid white;
+      outline-offset: 3px;
+    }
 
     /* ── BADGE ── */
     .badge {
       display: inline-flex; align-items: center; gap: 6px;
       padding: 6px 14px;
-      background: rgba(124,58,237,0.12);
-      border: 1px solid rgba(124,58,237,0.28);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.18);
       border-radius: 50px;
       font-size: 12px; font-weight: 600;
-      color: var(--accent-light);
+      color: rgba(255,255,255,0.75);
       letter-spacing: 0.06em; text-transform: uppercase;
       font-family: 'Space Grotesk', sans-serif;
     }
@@ -118,7 +147,7 @@
       transition: all 0.4s ease;
     }
     .nav.scrolled {
-      background: rgba(15,15,26,0.88);
+      background: rgba(8,8,8,0.92);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
       padding: 14px 0;
@@ -128,20 +157,20 @@
       display: flex; align-items: center; justify-content: space-between;
     }
     .nav-logo {
+      text-decoration: none;
+      display: flex; flex-direction: column;
+      gap: 1px; line-height: 1;
+    }
+    .nav-logo-arkn {
       font-family: 'Space Grotesk', sans-serif;
-      font-weight: 800; font-size: 22px;
-      color: white; text-decoration: none;
-      display: flex; align-items: center; gap: 8px;
+      font-weight: 800; font-size: 20px;
+      color: white; letter-spacing: -0.5px;
     }
-    .nav-logo .dot {
-      width: 8px; height: 8px;
-      background: var(--accent); border-radius: 50%;
-      box-shadow: 0 0 12px var(--accent);
-      animation: pulsedot 2.2s ease-in-out infinite;
-    }
-    @keyframes pulsedot {
-      0%,100% { box-shadow: 0 0 8px var(--accent); transform: scale(1); }
-      50% { box-shadow: 0 0 22px var(--accent), 0 0 40px rgba(124,58,237,0.3); transform: scale(1.25); }
+    .nav-logo-studio {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 400; font-size: 7.5px;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 4px; text-transform: uppercase;
     }
     .nav-links { display: flex; align-items: center; gap: 34px; list-style: none; }
     .nav-links a {
@@ -160,27 +189,116 @@
       background: white; border-radius: 2px; transition: all 0.3s;
     }
 
-    /* Mobile menu */
+    /* ── Mobile menu ── */
     .mobile-menu {
       display: none; position: fixed; inset: 0;
-      background: rgba(15,15,26,0.97);
-      backdrop-filter: blur(24px);
-      z-index: 998; flex-direction: column;
-      align-items: center; justify-content: center;
-      gap: 32px; padding: 40px;
+      background: #080808;
+      z-index: 1001; flex-direction: column;
+      justify-content: space-between;
+      padding: 0;
+      overflow: hidden;
     }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      color: white; text-decoration: none;
+
+    .mobile-menu::before {
+      content: 'ARKN';
+      position: absolute;
+      bottom: -30px; right: -20px;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 28px; font-weight: 700; transition: color 0.2s;
+      font-weight: 800; font-size: 38vw;
+      color: rgba(255,255,255,0.025);
+      line-height: 1; pointer-events: none;
+      letter-spacing: -4px; user-select: none;
     }
-    .mobile-menu a:hover { color: var(--accent-light); }
+
+    .mm-header {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding: 24px 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      position: relative; z-index: 1;
+    }
+    .mm-logo {
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .mm-logo-arkn {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800; font-size: 18px;
+      color: white; letter-spacing: -0.5px; line-height: 1;
+    }
+    .mm-logo-studio {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 400; font-size: 7px;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 4px; text-transform: uppercase;
+    }
     .mobile-close {
-      position: absolute; top: 24px; right: 24px;
-      background: none; border: none;
-      color: white; font-size: 28px; cursor: pointer;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%; width: 40px; height: 40px;
+      color: white; font-size: 16px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
     }
+    .mobile-close:hover { background: rgba(255,255,255,0.14); }
+
+    .mm-links {
+      flex: 1; display: flex; flex-direction: column;
+      justify-content: center;
+      padding: 0 28px;
+      position: relative; z-index: 1;
+      gap: 0;
+    }
+    .mm-item {
+      display: flex; align-items: center;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      text-decoration: none;
+      transition: padding-left 0.3s ease;
+    }
+    .mm-item:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
+    .mm-item:hover { padding-left: 8px; }
+    .mm-item:hover .mm-item-num { color: white; }
+    .mm-item:hover .mm-item-name { color: white; }
+    .mm-item:hover .mm-item-arrow { opacity: 1; transform: translateX(0); }
+    .mm-item-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px; font-weight: 600;
+      color: rgba(255,255,255,0.22);
+      letter-spacing: 0.1em; min-width: 24px;
+      transition: color 0.2s;
+    }
+    .mm-item-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 26px; font-weight: 700;
+      color: rgba(255,255,255,0.85); flex: 1;
+      letter-spacing: -0.5px;
+      transition: color 0.2s;
+    }
+    .mm-item-arrow {
+      font-size: 18px; color: rgba(255,255,255,0.4);
+      opacity: 0; transform: translateX(-8px);
+      transition: opacity 0.25s, transform 0.25s;
+    }
+
+    .mm-footer {
+      padding: 24px 28px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      position: relative; z-index: 1;
+    }
+    .mm-wa {
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px; width: 100%;
+      background: white; color: #080808;
+      text-decoration: none;
+      padding: 15px 24px; border-radius: 50px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px; font-weight: 700;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .mm-wa:hover { background: rgba(255,255,255,0.88); transform: translateY(-2px); }
+    .mm-wa svg { flex-shrink: 0; }
 
     /* ════════════════════════════
        HERO
@@ -197,19 +315,19 @@
     }
     .orb-1 {
       width: 700px; height: 700px;
-      background: rgba(124,58,237,0.16);
+      background: rgba(96,165,250,0.07);
       top: -180px; left: -200px;
       animation: fl1 9s ease-in-out infinite;
     }
     .orb-2 {
       width: 450px; height: 450px;
-      background: rgba(6,182,212,0.10);
+      background: rgba(255,255,255,0.04);
       bottom: -80px; right: -120px;
       animation: fl2 11s ease-in-out infinite;
     }
     .orb-3 {
       width: 280px; height: 280px;
-      background: rgba(124,58,237,0.09);
+      background: rgba(96,165,250,0.05);
       top: 45%; right: 22%;
       animation: fl3 7s ease-in-out infinite;
     }
@@ -236,7 +354,7 @@
       letter-spacing: -2.5px;
     }
     .highlight {
-      background: linear-gradient(135deg, var(--accent-light) 0%, var(--cyan) 100%);
+      background: linear-gradient(135deg, #FFFFFF 0%, #93C5FD 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -261,7 +379,9 @@
        TRUST BANNER
     ════════════════════════════ */
     .trust {
-      background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 60%, #6D28D9 100%);
+      background: #111111;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
       padding: 26px 0; position: relative; overflow: hidden;
     }
     .trust::before {
@@ -323,20 +443,20 @@
     .card::before {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(124,58,237,0.06) 0%, transparent 60%);
+      background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 60%);
       opacity: 0; transition: opacity 0.35s;
     }
     .card:hover {
-      border-color: rgba(124,58,237,0.38);
+      border-color: rgba(255,255,255,0.22);
       transform: translateY(-5px);
-      box-shadow: 0 24px 64px rgba(0,0,0,0.3), 0 0 0 1px rgba(124,58,237,0.08);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.05);
     }
     .card:hover::before { opacity: 1; }
 
     .card-icon {
       width: 50px; height: 50px;
-      background: rgba(124,58,237,0.12);
-      border: 1px solid rgba(124,58,237,0.2);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
       font-size: 22px; margin-bottom: 18px;
@@ -369,15 +489,15 @@
       transition: all 0.35s ease;
       position: relative;
     }
-    .ret-card:hover { transform: translateY(-5px); border-color: rgba(124,58,237,0.4); }
+    .ret-card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.28); }
     .ret-card.featured {
-      border-color: rgba(124,58,237,0.48);
-      background: rgba(124,58,237,0.07);
+      border-color: rgba(255,255,255,0.32);
+      background: rgba(255,255,255,0.04);
     }
     .ret-card.featured::after {
       content: 'Más popular';
       position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-      background: var(--accent); color: white;
+      background: white; color: #080808;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
       text-transform: uppercase; padding: 4px 14px; border-radius: 50px;
@@ -403,7 +523,7 @@
     .ret-features li::before {
       content: '';
       width: 18px; height: 18px; min-width: 18px;
-      background: rgba(124,58,237,0.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8l3.5 3.5L13 4' stroke='%239D6FFF' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center / 11px no-repeat;
+      background: rgba(255,255,255,0.1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8l3.5 3.5L13 4' stroke='%23FFFFFF' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center / 11px no-repeat;
       border-radius: 50%;
       margin-top: 1px;
     }
@@ -449,8 +569,8 @@
       transition: all 0.5s ease;
     }
     .step.lit .step-num {
-      background: var(--accent); border-color: var(--accent);
-      color: white; box-shadow: 0 0 32px var(--accent-glow);
+      background: white; border-color: white;
+      color: #080808; box-shadow: 0 0 32px rgba(255,255,255,0.22);
     }
     .step-title {
       font-family: 'Space Grotesk', sans-serif;
@@ -463,8 +583,8 @@
     ════════════════════════════ */
     .guarantee { padding: 100px 0; }
     .guar-inner {
-      background: linear-gradient(135deg, rgba(124,58,237,0.10) 0%, rgba(6,182,212,0.04) 100%);
-      border: 1px solid rgba(124,58,237,0.22);
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: 24px; padding: 70px 56px;
       position: relative; overflow: hidden;
     }
@@ -472,7 +592,7 @@
       content: '';
       position: absolute; top: -120px; right: -120px;
       width: 420px; height: 420px;
-      background: rgba(124,58,237,0.09);
+      background: rgba(255,255,255,0.03);
       border-radius: 50%; filter: blur(90px);
     }
     .guar-grid {
@@ -493,8 +613,8 @@
     }
     .gp-ico {
       width: 46px; height: 46px; min-width: 46px;
-      background: rgba(124,58,237,0.13);
-      border: 1px solid rgba(124,58,237,0.22);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
       font-size: 20px;
@@ -511,18 +631,19 @@
     }
     .big-seal {
       width: 190px; height: 190px;
-      background: linear-gradient(135deg, var(--accent), #5B21B6);
+      background: linear-gradient(135deg, #181818 0%, #242424 100%);
+      border: 2px solid rgba(255,255,255,0.2);
       border-radius: 50%;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
-      box-shadow: 0 0 90px rgba(124,58,237,0.38),
-                  0 0 0 20px rgba(124,58,237,0.07),
-                  0 0 0 40px rgba(124,58,237,0.03);
+      box-shadow: 0 0 60px rgba(255,255,255,0.07),
+                  0 0 0 16px rgba(255,255,255,0.03),
+                  0 0 0 32px rgba(255,255,255,0.015);
       animation: sealrotate 20s linear infinite;
     }
     @keyframes sealrotate {
-      0%,100% { box-shadow: 0 0 90px rgba(124,58,237,0.38), 0 0 0 20px rgba(124,58,237,0.07), 0 0 0 40px rgba(124,58,237,0.03); }
-      50% { box-shadow: 0 0 120px rgba(124,58,237,0.55), 0 0 0 24px rgba(124,58,237,0.1), 0 0 0 48px rgba(124,58,237,0.04); }
+      0%,100% { box-shadow: 0 0 60px rgba(255,255,255,0.07), 0 0 0 16px rgba(255,255,255,0.03), 0 0 0 32px rgba(255,255,255,0.015); }
+      50% { box-shadow: 0 0 90px rgba(255,255,255,0.12), 0 0 0 20px rgba(255,255,255,0.05), 0 0 0 40px rgba(255,255,255,0.02); }
     }
     .big-seal .seal-icon { font-size: 52px; margin-bottom: 4px; }
     .big-seal .seal-txt {
@@ -558,21 +679,21 @@
       transition: all 0.38s ease;
     }
     .port-card:hover {
-      border-color: rgba(124,58,237,0.4);
+      border-color: rgba(255,255,255,0.22);
       transform: translateY(-7px);
       box-shadow: 0 36px 90px rgba(0,0,0,0.4);
     }
     .port-img {
       height: 290px;
-      background: linear-gradient(135deg, #1A1A2E 0%, #2d1b4e 50%, #1a2e3d 100%);
+      background: linear-gradient(135deg, #1A1A1A 0%, #222230 50%, #1a1a2a 100%);
       position: relative; overflow: hidden;
       display: flex; align-items: center; justify-content: center;
     }
     .port-orb {
       position: absolute; border-radius: 50%; filter: blur(60px);
     }
-    .port-orb-1 { width: 220px; height: 220px; background: rgba(124,58,237,0.32); top:-60px; left:-60px; }
-    .port-orb-2 { width: 160px; height: 160px; background: rgba(201,169,122,0.28); bottom:-30px; right:-30px; }
+    .port-orb-1 { width: 220px; height: 220px; background: rgba(96,165,250,0.18); top:-60px; left:-60px; }
+    .port-orb-2 { width: 160px; height: 160px; background: rgba(201,169,122,0.22); bottom:-30px; right:-30px; }
     .port-mock {
       position: relative; z-index: 2; text-align: center;
       padding: 20px;
@@ -603,6 +724,80 @@
     }
 
     /* ════════════════════════════
+       TESTIMONIOS
+    ════════════════════════════ */
+    .testimonios {
+      padding: 100px 0;
+      border-top: 1px solid var(--border);
+    }
+    .testi-head { margin-bottom: 52px; }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .testi-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      position: relative; overflow: hidden;
+    }
+    .testi-card::before {
+      content: '"';
+      position: absolute; top: -10px; left: 28px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 120px; font-weight: 800;
+      color: rgba(255,255,255,0.05);
+      line-height: 1; pointer-events: none;
+    }
+    .testi-stars {
+      font-size: 18px; letter-spacing: 2px;
+      color: #F8C94C; margin-bottom: 20px;
+    }
+    .testi-quote {
+      font-size: 17px; line-height: 1.75;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+    .testi-author {
+      display: flex; align-items: center; gap: 14px;
+    }
+    .testi-avatar {
+      width: 46px; height: 46px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700; font-size: 15px; color: white;
+      flex-shrink: 0;
+    }
+    .testi-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px; font-weight: 700; color: white;
+    }
+    .testi-biz { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    .testi-metrics {
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .testi-metric {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 30px;
+    }
+    .metric-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 44px; font-weight: 800;
+      color: white; line-height: 1; margin-bottom: 8px;
+    }
+    .metric-lbl { font-size: 13px; color: var(--muted); line-height: 1.55; }
+
+    /* ════════════════════════════
        SOBRE NOSOTROS
     ════════════════════════════ */
     .about { padding: 100px 0; }
@@ -619,7 +814,7 @@
       border-radius: var(--radius); padding: 28px; text-align: center;
       transition: all 0.3s;
     }
-    .about-stat:hover { border-color: rgba(124,58,237,0.4); transform: translateY(-4px); }
+    .about-stat:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-4px); }
     .about-stat-num {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 38px; font-weight: 800; color: var(--accent-light);
@@ -639,7 +834,7 @@
       position: absolute; top: 50%; left: 50%;
       transform: translate(-50%,-50%);
       width: 900px; height: 900px;
-      background: radial-gradient(circle, rgba(124,58,237,0.11) 0%, transparent 68%);
+      background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 68%);
       pointer-events: none;
     }
     .cta-final h2 {
@@ -655,34 +850,78 @@
     .wa-btn {
       display: inline-flex; align-items: center; gap: 12px;
       padding: 18px 42px;
-      background: #25D366; color: white; border-radius: 50px;
+      background: white; color: #080808; border-radius: 50px;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 17px; font-weight: 700;
       text-decoration: none; position: relative;
       transition: all 0.3s ease;
-      box-shadow: 0 0 0 0 rgba(37,211,102,0.3);
+      box-shadow: 0 0 40px rgba(255,255,255,0.14);
     }
     .wa-btn:hover {
+      background: rgba(255,255,255,0.9);
       transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 20px 60px rgba(37,211,102,0.3),
-                  0 0 0 10px rgba(37,211,102,0.07);
+      box-shadow: 0 20px 60px rgba(255,255,255,0.18);
     }
+    .wa-btn svg { color: #080808; }
 
     /* ════════════════════════════
        FOOTER
     ════════════════════════════ */
-    .footer { border-top: 1px solid var(--border); padding: 38px 0; }
-    .footer-inner {
-      display: flex; align-items: center;
-      justify-content: space-between; flex-wrap: wrap; gap: 18px;
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 60px 0 32px;
     }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px; margin-bottom: 48px;
+    }
+    .footer-brand { }
     .footer-logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 800; font-size: 18px;
-      display: flex; align-items: center; gap: 6px; color: white;
+      display: flex; flex-direction: column; gap: 2px;
+      margin-bottom: 14px;
     }
-    .footer-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
-    .footer-copy, .footer-loc { font-size: 13px; color: var(--muted); }
+    .footer-logo-arkn {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800; font-size: 20px;
+      color: white; letter-spacing: -0.5px; line-height: 1;
+    }
+    .footer-logo-studio {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 400; font-size: 7px;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 4px; text-transform: uppercase;
+    }
+    .footer-tagline {
+      font-size: 14px; color: var(--muted); line-height: 1.65; max-width: 240px;
+    }
+    .footer-col-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4); margin-bottom: 18px;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a {
+      font-size: 14px; color: var(--muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: white; }
+    .footer-contact { display: flex; flex-direction: column; gap: 10px; }
+    .footer-contact a {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 14px; color: var(--muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .footer-contact a:hover { color: white; }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-copy { font-size: 13px; color: var(--muted); }
+    .footer-loc { font-size: 13px; color: var(--muted); }
 
     /* ════════════════════════════
        FLOAT WA
@@ -714,6 +953,8 @@
       .proc-line { display: none; }
       .guar-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 44px; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 580px) {
       .grid-3, .grid-3-last { grid-template-columns: 1fr; }
@@ -724,6 +965,7 @@
       .stat-sep { display: none; }
       .port-header { flex-direction: column; }
       .port-header-right { text-align: left; max-width: 100%; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
     }
 
     /* GSAP initial */
@@ -737,7 +979,8 @@
     <div class="container">
       <div class="nav-inner">
         <a href="#" class="nav-logo">
-          Vivid Labs<span class="dot"></span>
+          <span class="nav-logo-arkn">ARKN</span>
+          <span class="nav-logo-studio">STUDIO</span>
         </a>
         <ul class="nav-links">
           <li><a href="#servicios">Servicios</a></li>
@@ -748,12 +991,12 @@
         </ul>
         <div class="nav-end">
           <a href="#servicios" class="btn btn-ghost" style="padding:10px 20px;font-size:14px;">Ver servicios</a>
-          <a href="https://wa.me/526688853458" target="_blank" class="btn btn-primary" style="padding:10px 22px;font-size:14px;">
+          <a href="https://wa.me/526688853458" target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 22px;font-size:14px;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
             WhatsApp
           </a>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Menú">
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -761,16 +1004,51 @@
   </nav>
 
   <!-- ── MOBILE MENU ── -->
-  <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-close" id="mobileClose">✕</button>
-    <a href="#servicios" onclick="closeMobile()">Servicios</a>
-    <a href="#proceso" onclick="closeMobile()">Proceso</a>
-    <a href="#garantia" onclick="closeMobile()">Garantía</a>
-    <a href="#portafolio" onclick="closeMobile()">Portafolio</a>
-    <a href="#nosotros" onclick="closeMobile()">Nosotros</a>
-    <a href="https://wa.me/526688853458" target="_blank" class="btn btn-primary" style="margin-top:16px;font-size:16px;">
-      💬 Hablar por WhatsApp
-    </a>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menú de navegación">
+
+    <div class="mm-header">
+      <div class="mm-logo">
+        <span class="mm-logo-arkn">ARKN</span>
+        <span class="mm-logo-studio">STUDIO</span>
+      </div>
+      <button class="mobile-close" id="mobileClose" aria-label="Cerrar menú">✕</button>
+    </div>
+
+    <div class="mm-links">
+      <a href="#servicios" class="mm-item" onclick="closeMobile()">
+        <span class="mm-item-num">01</span>
+        <span class="mm-item-name">Servicios</span>
+        <span class="mm-item-arrow">→</span>
+      </a>
+      <a href="#proceso" class="mm-item" onclick="closeMobile()">
+        <span class="mm-item-num">02</span>
+        <span class="mm-item-name">Proceso</span>
+        <span class="mm-item-arrow">→</span>
+      </a>
+      <a href="#garantia" class="mm-item" onclick="closeMobile()">
+        <span class="mm-item-num">03</span>
+        <span class="mm-item-name">Garantía</span>
+        <span class="mm-item-arrow">→</span>
+      </a>
+      <a href="#portafolio" class="mm-item" onclick="closeMobile()">
+        <span class="mm-item-num">04</span>
+        <span class="mm-item-name">Portafolio</span>
+        <span class="mm-item-arrow">→</span>
+      </a>
+      <a href="#nosotros" class="mm-item" onclick="closeMobile()">
+        <span class="mm-item-num">05</span>
+        <span class="mm-item-name">Nosotros</span>
+        <span class="mm-item-arrow">→</span>
+      </a>
+    </div>
+
+    <div class="mm-footer">
+      <a href="https://wa.me/526688853458" target="_blank" rel="noopener" class="mm-wa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#080808"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
+        Hablar por WhatsApp
+      </a>
+    </div>
+
   </div>
 
   <!-- ── HERO ── -->
@@ -782,7 +1060,7 @@
       <div class="hero-content">
         <div class="badge fu" style="margin-bottom:30px;">
           <span style="width:6px;height:6px;background:var(--accent);border-radius:50%;display:inline-block;"></span>
-          Vivid Labs · Los Mochis, Sinaloa
+          Arkn Studio · Los Mochis, Sinaloa
         </div>
         <h1 class="fu">
           Tu negocio,<br>
@@ -795,22 +1073,22 @@
         </p>
         <div class="hero-btns fu">
           <a href="#servicios" class="btn btn-primary" style="padding:16px 34px;font-size:16px;">Ver servicios →</a>
-          <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Quiero%20saber%20m%C3%A1s%20sobre%20Vivid%20Labs%20%F0%9F%9A%80" target="_blank" class="btn btn-ghost" style="padding:16px 34px;font-size:16px;">Empezar ahora</a>
+          <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Quiero%20saber%20m%C3%A1s%20sobre%20Arkn%20Studio%20%F0%9F%9A%80" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:16px 34px;font-size:16px;">Empezar ahora</a>
         </div>
         <div class="hero-stats fu">
           <div class="stat-item">
-            <span class="stat-num" data-count="15">0+</span>
-            <span class="stat-lbl">Proyectos entregados</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat-item">
             <span class="stat-num">48h</span>
-            <span class="stat-lbl">Tiempo promedio</span>
+            <span class="stat-lbl">Tiempo de entrega</span>
           </div>
           <div class="stat-sep"></div>
           <div class="stat-item">
             <span class="stat-num">$0</span>
             <span class="stat-lbl">Pago adelantado</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-lbl">Satisfacción garantizada</span>
           </div>
         </div>
       </div>
@@ -847,19 +1125,19 @@
             <div class="card-icon">🚀</div>
             <div class="card-name">Landing Page Profesional</div>
             <div class="card-desc">Una página de alto impacto diseñada para convertir visitantes en clientes. Ideal para negocios que necesitan presencia ya.</div>
-            <div class="card-price">desde $6,500 <small>MXN</small></div>
+            <div class="card-price">desde $3,500 <small>MXN</small></div>
           </div>
           <div class="card fu">
             <div class="card-icon">📅</div>
             <div class="card-name">Sitio con Reservaciones + WhatsApp</div>
             <div class="card-desc">Formulario de citas inteligente con notificaciones automáticas por correo y mensaje pre-llenado directo a WhatsApp.</div>
-            <div class="card-price">desde $10,000 <small>MXN</small></div>
+            <div class="card-price">desde $5,500 <small>MXN</small></div>
           </div>
           <div class="card fu">
             <div class="card-icon">📸</div>
             <div class="card-name">Portafolio Digital</div>
             <div class="card-desc">Muestra tu trabajo de forma elegante. Perfecto para fotógrafos, arquitectos y diseñadores que quieren impresionar.</div>
-            <div class="card-price">desde $7,500 <small>MXN</small></div>
+            <div class="card-price">desde $4,000 <small>MXN</small></div>
           </div>
         </div>
         <div class="grid-3-last">
@@ -867,19 +1145,19 @@
             <div class="card-icon">🍽️</div>
             <div class="card-name">Sitio para Restaurante + Menú Digital</div>
             <div class="card-desc">Menú QR, galería de platillos, reservaciones y Google Maps integrado. Tu restaurante en el siguiente nivel.</div>
-            <div class="card-price">desde $9,000 <small>MXN</small></div>
+            <div class="card-price">desde $4,500 <small>MXN</small></div>
           </div>
           <div class="card fu">
             <div class="card-icon">✨</div>
             <div class="card-name">Sitio para Clínica / Spa</div>
             <div class="card-desc">Diseño elegante y confiable con agenda en línea, servicios detallados, testimoniales y automatización completa.</div>
-            <div class="card-price">desde $11,000 <small>MXN</small></div>
+            <div class="card-price">desde $5,500 <small>MXN</small></div>
           </div>
           <div class="card fu">
             <div class="card-icon">🛒</div>
             <div class="card-name">Tienda en Línea</div>
             <div class="card-desc">E-commerce completo con catálogo, carrito de compras, pagos en línea y gestión de pedidos integrada.</div>
-            <div class="card-price">desde $22,000 <small>MXN</small></div>
+            <div class="card-price">desde $12,000 <small>MXN</small></div>
           </div>
         </div>
       </div>
@@ -892,19 +1170,19 @@
             <div class="card-icon">📧</div>
             <div class="card-name">Formulario → Correo Automático</div>
             <div class="card-desc">Cada solicitud llega a tu correo con un diseño profesional listo para responder en segundos.</div>
-            <div class="card-price">desde $3,800 <small>MXN</small></div>
+            <div class="card-price">desde $2,000 <small>MXN</small></div>
           </div>
           <div class="card fu">
             <div class="card-icon">🗓️</div>
             <div class="card-name">Sistema de Citas Automatizado</div>
             <div class="card-desc">Agenda inteligente con notificaciones por correo y WhatsApp. Sin llamadas, sin confusiones, sin doble-bookings.</div>
-            <div class="card-price">desde $7,500 <small>MXN</small></div>
+            <div class="card-price">desde $4,000 <small>MXN</small></div>
           </div>
           <div class="card fu">
             <div class="card-icon">📊</div>
             <div class="card-name">CRM Básico con Notificaciones</div>
             <div class="card-desc">Registro automático de clientes en Google Sheets con alertas en tiempo real. Control total sin pagar plataformas caras.</div>
-            <div class="card-price">desde $6,000 <small>MXN</small></div>
+            <div class="card-price">desde $3,200 <small>MXN</small></div>
           </div>
         </div>
       </div>
@@ -915,7 +1193,7 @@
         <div class="ret-grid">
           <div class="ret-card fu">
             <div class="ret-name">Plan Básico</div>
-            <div class="ret-price">$1,200</div>
+            <div class="ret-price">$700</div>
             <div class="ret-price-sub">por mes</div>
             <ul class="ret-features">
               <li>Hosting y dominio incluido</li>
@@ -926,7 +1204,7 @@
           </div>
           <div class="ret-card featured fu">
             <div class="ret-name">Plan Pro</div>
-            <div class="ret-price">$2,500</div>
+            <div class="ret-price">$1,400</div>
             <div class="ret-price-sub">por mes</div>
             <ul class="ret-features">
               <li>Todo el Plan Básico</li>
@@ -938,7 +1216,7 @@
           </div>
           <div class="ret-card fu">
             <div class="ret-name">Plan Premium</div>
-            <div class="ret-price">$4,500</div>
+            <div class="ret-price">$2,500</div>
             <div class="ret-price-sub">por mes</div>
             <ul class="ret-features">
               <li>Todo el Plan Pro</li>
@@ -1024,7 +1302,7 @@
           <div class="guar-right">
             <div class="big-seal">
               <span class="seal-icon">🛡️</span>
-              <span class="seal-txt">Garantía<br>Vivid Labs</span>
+              <span class="seal-txt">Garantía<br>Arkn Studio</span>
             </div>
             <p class="guar-note">Construimos confianza con resultados, no con promesas ni contratos intimidantes.</p>
           </div>
@@ -1064,9 +1342,42 @@
             <span class="tag">GSAP</span>
             <span class="tag">Vercel</span>
           </div>
-          <a href="https://thaly-falomir.vercel.app" target="_blank" class="btn btn-primary" style="padding:12px 26px;font-size:14px;">
+          <a href="https://thaly-falomir.vercel.app" target="_blank" rel="noopener" class="btn btn-primary" style="padding:12px 26px;font-size:14px;">
             Ver proyecto →
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIOS ── -->
+  <section class="testimonios" id="testimonios">
+    <div class="container">
+      <div class="testi-head fu">
+        <p class="section-label">Lo que dicen nuestros clientes</p>
+        <h2 class="section-title">Resultados que<br>hablan solos</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card fu">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Daniel nos hizo el sitio en tiempo récord y quedó exactamente como queríamos. Ya recibimos reservaciones automáticas directo a WhatsApp. Cero complicaciones, todo muy profesional."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">TF</div>
+            <div>
+              <div class="testi-name">Thaly Falomir</div>
+              <div class="testi-biz">Thaly Falomir Beauty Spá · Los Mochis</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-metrics">
+          <div class="testi-metric fu">
+            <div class="metric-num">48h</div>
+            <div class="metric-lbl">De primera llamada a sitio funcionando en producción</div>
+          </div>
+          <div class="testi-metric fu">
+            <div class="metric-num">$0</div>
+            <div class="metric-lbl">Anticipo cobrado — pagas solo al ver el resultado</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1082,24 +1393,24 @@
           <p>Soy Daniel, 19 años, de Los Mochis, Sinaloa. Construyo herramientas digitales que generan resultados reales para negocios locales en México.</p>
           <p>No somos una agencia gigante con décadas de historia. Somos alguien que entiende tu negocio, habla tu idioma y tiene la obsesión de que todo funcione perfectamente desde el primer día.</p>
           <p style="color:white;font-weight:600;">Sin burocracia. Sin esperas. Sin bullshit corporativo.</p>
-          <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Vi%20Vivid%20Labs%20y%20me%20interesa%20trabajar%20contigo%20%F0%9F%9A%80" target="_blank" class="btn btn-primary" style="margin-top:30px;">Hablar con Daniel →</a>
+          <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Vi%20Arkn%20Studio%20y%20me%20interesa%20trabajar%20contigo%20%F0%9F%9A%80" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:30px;">Hablar con Daniel →</a>
         </div>
         <div class="about-right fu">
           <div class="about-stat">
-            <div class="about-stat-num" data-count="15">0+</div>
-            <div class="about-stat-lbl">Proyectos entregados</div>
-          </div>
-          <div class="about-stat">
             <div class="about-stat-num">48h</div>
-            <div class="about-stat-lbl">Tiempo promedio de entrega</div>
+            <div class="about-stat-lbl">Tiempo de entrega promedio</div>
           </div>
           <div class="about-stat">
             <div class="about-stat-num">$0</div>
-            <div class="about-stat-lbl">Anticipos requeridos</div>
+            <div class="about-stat-lbl">Anticipo requerido</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">Los Mochis</div>
+            <div class="about-stat-lbl">Sinaloa, México</div>
           </div>
           <div class="about-stat">
             <div class="about-stat-num">100%</div>
-            <div class="about-stat-lbl">Clientes satisfechos</div>
+            <div class="about-stat-lbl">Satisfacción garantizada</div>
           </div>
         </div>
       </div>
@@ -1112,8 +1423,8 @@
       <p class="section-label" style="justify-content:center;margin-bottom:16px;">¿Listo para crecer?</p>
       <h2 class="fu">Tu sitio web,<br><span class="highlight">sin riesgos.</span></h2>
       <p class="fu">Escríbenos hoy y en menos de 48 horas tienes un sitio funcionando listo para mostrarle al mundo tu negocio.</p>
-      <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Vi%20Vivid%20Labs%20y%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio%20%F0%9F%9A%80%20%E2%80%94%20sin%20pago%20adelantado!" target="_blank" class="wa-btn fu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
+      <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Vi%20Arkn%20Studio%20y%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio%20%F0%9F%9A%80%20%E2%80%94%20sin%20pago%20adelantado!" target="_blank" rel="noopener" class="wa-btn fu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#080808"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
         Empezar por WhatsApp — gratis
       </a>
     </div>
@@ -1122,120 +1433,147 @@
   <!-- ── FOOTER ── -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-inner">
-        <div class="footer-logo">Vivid Labs<span class="footer-dot"></span></div>
-        <div class="footer-copy">© 2025 Vivid Labs · Todos los derechos reservados</div>
-        <div class="footer-loc">📍 Los Mochis, Sinaloa · México</div>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="footer-logo-arkn">ARKN</span>
+            <span class="footer-logo-studio">STUDIO</span>
+          </div>
+          <p class="footer-tagline">Sitios web y automatizaciones para negocios reales en México. Sin anticipo, sin riesgo.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navegación</div>
+          <ul class="footer-links">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#garantia">Garantía</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contacto</div>
+          <div class="footer-contact">
+            <a href="https://wa.me/526688853458" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
+              +52 668 885 3458
+            </a>
+            <a href="mailto:pavelguapeton@gmail.com">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              pavelguapeton@gmail.com
+            </a>
+            <a href="https://github.com/saskrax" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              github.com/saskrax
+            </a>
+            <a href="#">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Los Mochis, Sinaloa
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2025 Arkn Studio · Todos los derechos reservados</div>
+        <div class="footer-loc">Hecho con ♥ en Los Mochis, México</div>
       </div>
     </div>
   </footer>
 
   <!-- ── FLOAT WHATSAPP ── -->
-  <a href="https://wa.me/526688853458" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <a href="https://wa.me/526688853458" target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
     <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
   </a>
 
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
-    // ── Navbar scroll ──
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
+      // ── Navbar scroll ──
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+      });
 
-    // ── Mobile menu ──
-    document.getElementById('hamburger').addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.add('open');
-    });
-    document.getElementById('mobileClose').addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.remove('open');
-    });
-    function closeMobile() {
-      document.getElementById('mobileMenu').classList.remove('open');
-    }
+      // ── Mobile menu ──
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      hamburger.addEventListener('click', () => {
+        mobileMenu.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      });
+      document.getElementById('mobileClose').addEventListener('click', closeMobile);
+      function closeMobile() {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      window.closeMobile = closeMobile;
 
-    // ── Set initial state ──
-    gsap.set('.fu', { opacity: 0, y: 38 });
+      // ── Set initial state ──
+      gsap.set('.fu', { opacity: 0, y: 38 });
 
-    // ── Hero animate ──
-    const heroEls = document.querySelectorAll('.hero .fu');
-    gsap.to(heroEls, {
-      opacity: 1, y: 0,
-      duration: 0.95, ease: 'power3.out',
-      stagger: 0.14, delay: 0.25
-    });
-
-    // ── Scroll fade-up ──
-    document.querySelectorAll('.fu:not(.hero .fu)').forEach(el => {
-      gsap.to(el, {
-        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
+      // ── Hero animate ──
+      const heroEls = document.querySelectorAll('.hero .fu');
+      gsap.to(heroEls, {
         opacity: 1, y: 0,
-        duration: 0.82, ease: 'power3.out'
+        duration: 0.95, ease: 'power3.out',
+        stagger: 0.14, delay: 0.25
       });
-    });
 
-    // ── Service cards stagger ──
-    document.querySelectorAll('.card').forEach((card, i) => {
-      gsap.fromTo(card,
-        { opacity: 0, y: 28 },
-        {
-          scrollTrigger: { trigger: card, start: 'top 90%', toggleActions: 'play none none none' },
+      // ── Scroll fade-up ──
+      document.querySelectorAll('.fu:not(.hero .fu)').forEach(el => {
+        gsap.to(el, {
+          scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
           opacity: 1, y: 0,
-          duration: 0.65, ease: 'power2.out',
-          delay: (i % 3) * 0.08
-        }
-      );
-    });
-
-    // ── Process line fill ──
-    gsap.to('#procFill', {
-      scrollTrigger: {
-        trigger: '#procSteps',
-        start: 'top 65%', end: 'bottom 55%',
-        scrub: 1.2
-      },
-      width: '100%', ease: 'none'
-    });
-
-    // ── Process steps light up ──
-    ['s1','s2','s3','s4'].forEach((id, i) => {
-      ScrollTrigger.create({
-        trigger: `#${id}`,
-        start: 'top 72%',
-        onEnter: () => document.getElementById(id).classList.add('lit')
+          duration: 0.82, ease: 'power3.out'
+        });
       });
-    });
 
-    // ── Counter animation ──
-    document.querySelectorAll('[data-count]').forEach(el => {
-      const target = parseInt(el.dataset.count);
-      ScrollTrigger.create({
-        trigger: el,
-        start: 'top 85%',
-        once: true,
-        onEnter: () => {
-          const obj = { v: 0 };
-          gsap.to(obj, {
-            v: target, duration: 2, ease: 'power2.out',
-            onUpdate: () => { el.textContent = Math.round(obj.v) + '+'; }
-          });
-        }
+      // ── Service cards stagger ──
+      document.querySelectorAll('.card').forEach((card, i) => {
+        gsap.fromTo(card,
+          { opacity: 0, y: 28 },
+          {
+            scrollTrigger: { trigger: card, start: 'top 90%', toggleActions: 'play none none none' },
+            opacity: 1, y: 0,
+            duration: 0.65, ease: 'power2.out',
+            delay: (i % 3) * 0.08
+          }
+        );
       });
-    });
 
-    // ── Retainer cards stagger ──
-    document.querySelectorAll('.ret-card').forEach((card, i) => {
-      gsap.fromTo(card,
-        { opacity: 0, y: 28 },
-        {
-          scrollTrigger: { trigger: card, start: 'top 88%', toggleActions: 'play none none none' },
-          opacity: 1, y: 0,
-          duration: 0.7, ease: 'power2.out',
-          delay: i * 0.12
-        }
-      );
-    });
+      // ── Process line fill ──
+      gsap.to('#procFill', {
+        scrollTrigger: {
+          trigger: '#procSteps',
+          start: 'top 65%', end: 'bottom 55%',
+          scrub: 1.2
+        },
+        width: '100%', ease: 'none'
+      });
+
+      // ── Process steps light up ──
+      ['s1','s2','s3','s4'].forEach((id) => {
+        ScrollTrigger.create({
+          trigger: `#${id}`,
+          start: 'top 72%',
+          onEnter: () => document.getElementById(id).classList.add('lit')
+        });
+      });
+
+      // ── Retainer cards stagger ──
+      document.querySelectorAll('.ret-card').forEach((card, i) => {
+        gsap.fromTo(card,
+          { opacity: 0, y: 28 },
+          {
+            scrollTrigger: { trigger: card, start: 'top 88%', toggleActions: 'play none none none' },
+            opacity: 1, y: 0,
+            duration: 0.7, ease: 'power2.out',
+            delay: i * 0.12
+          }
+        );
+      });
   </script>
 </body>
 </html>
