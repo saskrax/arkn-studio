@@ -723,6 +723,31 @@
       border-radius: 50px; font-size: 12px; color: var(--muted);
     }
 
+    /* ── Portfolio coming soon ── */
+    .port-coming {
+      border: 1px dashed rgba(255,255,255,0.15);
+      border-radius: 22px;
+      padding: 80px 40px;
+      text-align: center;
+      background: rgba(255,255,255,0.02);
+      transition: all 0.3s;
+    }
+    .port-coming:hover {
+      border-color: rgba(255,255,255,0.28);
+      background: rgba(255,255,255,0.04);
+    }
+    .port-coming-inner { max-width: 480px; margin: 0 auto; }
+    .port-coming-icon { font-size: 48px; margin-bottom: 20px; }
+    .port-coming-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 26px; font-weight: 800;
+      margin-bottom: 14px; letter-spacing: -0.5px;
+    }
+    .port-coming-desc {
+      font-size: 15px; color: var(--muted);
+      line-height: 1.75; margin-bottom: 32px;
+    }
+
     /* ════════════════════════════
        TESTIMONIOS
     ════════════════════════════ */
@@ -1162,6 +1187,31 @@
         </div>
       </div>
 
+      <!-- Aplicaciones Web -->
+      <div class="svc-cat">
+        <div class="cat-label">⚡ Aplicaciones Web (Next.js)</div>
+        <div class="grid-3">
+          <div class="card fu">
+            <div class="card-icon">🔐</div>
+            <div class="card-name">Panel de Administración</div>
+            <div class="card-desc">Tu negocio con login propio. Ve tus clientes, citas o pedidos desde un dashboard privado — sin depender de WhatsApp para todo.</div>
+            <div class="card-price">desde $18,000 <small>MXN</small></div>
+          </div>
+          <div class="card fu">
+            <div class="card-icon">🏗️</div>
+            <div class="card-name">App Web con Base de Datos</div>
+            <div class="card-desc">Sistema completo con usuarios, historial, pagos y notificaciones. Para negocios que necesitan escalar más allá de un sitio estático.</div>
+            <div class="card-price">desde $28,000 <small>MXN</small></div>
+          </div>
+          <div class="card fu">
+            <div class="card-icon">🚀</div>
+            <div class="card-name">Plataforma / Micro-SaaS</div>
+            <div class="card-desc">Tu propia herramienta que otros pagan por usar. Suscripciones, usuarios ilimitados y un ingreso recurrente que crece solo.</div>
+            <div class="card-price">desde $45,000 <small>MXN</small></div>
+          </div>
+        </div>
+      </div>
+
       <!-- Automatizaciones -->
       <div class="svc-cat">
         <div class="cat-label">⚙️ Automatizaciones</div>
@@ -1321,63 +1371,14 @@
         </div>
         <p class="port-header-right fu">Cada proyecto representa un negocio real que hoy tiene presencia digital profesional y genera más clientes.</p>
       </div>
-      <div class="port-card fu">
-        <div class="port-img">
-          <div class="port-orb port-orb-1"></div>
-          <div class="port-orb port-orb-2"></div>
-          <div class="port-mock">
-            <div class="port-mock-title">Thaly Falomir</div>
-            <div class="port-mock-sub">Beauty Spá · Los Mochis, Sinaloa</div>
-          </div>
-        </div>
-        <div class="port-info">
-          <div class="port-cat">Spa &amp; Belleza · Los Mochis, Sinaloa</div>
-          <div class="port-name">Thaly Falomir Beauty Spá</div>
-          <div class="port-desc">Landing page elegante con sistema de reservaciones automatizado, notificaciones por correo con diseño HTML profesional, y mensaje pre-llenado a WhatsApp. Desplegado en Vercel.</div>
-          <div class="tags">
-            <span class="tag">Reservaciones</span>
-            <span class="tag">Make Automation</span>
-            <span class="tag">WhatsApp</span>
-            <span class="tag">Gmail</span>
-            <span class="tag">GSAP</span>
-            <span class="tag">Vercel</span>
-          </div>
-          <a href="https://thaly-falomir.vercel.app" target="_blank" rel="noopener" class="btn btn-primary" style="padding:12px 26px;font-size:14px;">
-            Ver proyecto →
+      <div class="port-coming fu">
+        <div class="port-coming-inner">
+          <div class="port-coming-icon">🏗️</div>
+          <h3 class="port-coming-title">Proyectos en construcción</h3>
+          <p class="port-coming-desc">Estamos trabajando en nuestros primeros proyectos con clientes reales. Sé el primero en Los Mochis con un sitio profesional hecho por Arkn Studio.</p>
+          <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Quiero%20ser%20uno%20de%20los%20primeros%20proyectos%20de%20Arkn%20Studio%20%F0%9F%9A%80" target="_blank" rel="noopener" class="btn btn-primary">
+            Quiero ser el primero →
           </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── TESTIMONIOS ── -->
-  <section class="testimonios" id="testimonios">
-    <div class="container">
-      <div class="testi-head fu">
-        <p class="section-label">Lo que dicen nuestros clientes</p>
-        <h2 class="section-title">Resultados que<br>hablan solos</h2>
-      </div>
-      <div class="testi-grid">
-        <div class="testi-card fu">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"Daniel nos hizo el sitio en tiempo récord y quedó exactamente como queríamos. Ya recibimos reservaciones automáticas directo a WhatsApp. Cero complicaciones, todo muy profesional."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">TF</div>
-            <div>
-              <div class="testi-name">Thaly Falomir</div>
-              <div class="testi-biz">Thaly Falomir Beauty Spá · Los Mochis</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-metrics">
-          <div class="testi-metric fu">
-            <div class="metric-num">48h</div>
-            <div class="metric-lbl">De primera llamada a sitio funcionando en producción</div>
-          </div>
-          <div class="testi-metric fu">
-            <div class="metric-num">$0</div>
-            <div class="metric-lbl">Anticipo cobrado — pagas solo al ver el resultado</div>
-          </div>
         </div>
       </div>
     </div>
