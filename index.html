@@ -993,6 +993,216 @@
       .footer-top { grid-template-columns: 1fr; gap: 32px; }
     }
 
+    /* ════════════════════════════
+       CAPACIDADES — TABS
+    ════════════════════════════ */
+    .capacidades { padding: 100px 0; }
+    .tabs-nav {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .tab-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; border-radius: 50px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      color: var(--muted); font-size: 13px; font-weight: 600;
+      font-family: 'Space Grotesk', sans-serif;
+      cursor: pointer; transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+    .tab-btn:hover { border-color: rgba(255,255,255,0.2); color: white; }
+    .tab-btn.active {
+      background: white; color: #080808;
+      border-color: white;
+      box-shadow: 0 0 24px rgba(255,255,255,0.12);
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+
+    .cap-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px; position: relative; overflow: hidden;
+      transition: all 0.35s ease; cursor: default;
+      backdrop-filter: blur(12px);
+    }
+    .cap-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 60%);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .cap-card:hover {
+      border-color: rgba(255,255,255,0.2);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .cap-card:hover::before { opacity: 1; }
+    .cap-icon {
+      width: 46px; height: 46px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .cap-icon svg { width: 20px; height: 20px; color: rgba(255,255,255,0.75); stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .cap-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px; font-weight: 700; margin-bottom: 8px; color: white;
+    }
+    .cap-desc { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 14px; }
+    .cap-tag {
+      display: inline-block; padding: 3px 10px;
+      background: rgba(96,165,250,0.08);
+      border: 1px solid rgba(96,165,250,0.2);
+      border-radius: 50px; font-size: 11px;
+      color: #60A5FA; font-weight: 600;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .tab-panel-grid-4 {
+      display: none; grid-template-columns: repeat(4,1fr); gap: 16px;
+    }
+    .tab-panel-grid-4.active { display: grid; }
+
+    /* ════════════════════════════
+       SOCIO TÉCNICO
+    ════════════════════════════ */
+    .socio { padding: 100px 0; background: rgba(255,255,255,0.015); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .socio-inner { position: relative; }
+    .socio-head { text-align: center; margin-bottom: 64px; }
+    .socio-head h2 { font-size: clamp(30px,5vw,52px); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 16px; }
+    .socio-head p { font-size: 17px; color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.75; }
+
+    .socio-roles {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      max-width: 900px; margin: 0 auto 48px;
+    }
+    .role-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 20px; padding: 36px;
+      transition: all 0.35s;
+    }
+    .role-card:hover { border-color: rgba(255,255,255,0.22); transform: translateY(-4px); }
+    .role-card.role-tu { border-color: rgba(255,255,255,0.1); }
+    .role-card.role-yo {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.2);
+    }
+    .role-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .role-label span {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--muted); display: inline-block;
+    }
+    .role-card.role-yo .role-label { color: white; }
+    .role-card.role-yo .role-label span { background: white; }
+    .role-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 26px; font-weight: 800; margin-bottom: 24px;
+      letter-spacing: -0.5px;
+    }
+    .role-items { display: flex; flex-direction: column; gap: 14px; }
+    .role-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 14px; color: var(--muted); line-height: 1.55;
+    }
+    .role-item svg { width: 18px; height: 18px; min-width: 18px; margin-top: 1px; color: rgba(255,255,255,0.5); fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .role-card.role-yo .role-item { color: rgba(255,255,255,0.82); }
+    .role-card.role-yo .role-item svg { color: white; }
+
+    .socio-cta {
+      text-align: center;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px; padding: 48px;
+      max-width: 680px; margin: 0 auto;
+    }
+    .socio-cta h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 26px; font-weight: 800;
+      margin-bottom: 12px; letter-spacing: -0.5px;
+    }
+    .socio-cta p { font-size: 16px; color: var(--muted); margin-bottom: 28px; line-height: 1.65; }
+
+    /* ════════════════════════════
+       TECH STACK
+    ════════════════════════════ */
+    .stack-sec {
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .stack-head { text-align: center; margin-bottom: 52px; }
+    .stack-head h2 { font-size: clamp(26px,4vw,40px); font-weight: 800; margin-bottom: 12px; letter-spacing: -1px; }
+    .stack-head p { font-size: 16px; color: var(--muted); }
+
+    .marquee-wrap { overflow: hidden; position: relative; }
+    .marquee-wrap::before, .marquee-wrap::after {
+      content: ''; position: absolute; top: 0; bottom: 0;
+      width: 120px; z-index: 2; pointer-events: none;
+    }
+    .marquee-wrap::before { left: 0; background: linear-gradient(90deg, var(--bg), transparent); }
+    .marquee-wrap::after { right: 0; background: linear-gradient(-90deg, var(--bg), transparent); }
+
+    .marquee-track {
+      display: flex; gap: 12px;
+      animation: marquee 28s linear infinite;
+      width: max-content;
+    }
+    .marquee-track-2 {
+      display: flex; gap: 12px;
+      animation: marquee 22s linear infinite reverse;
+      width: max-content; margin-top: 12px;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track, .marquee-track-2 { animation: none; }
+    }
+    .stack-chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 50px; white-space: nowrap;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.65);
+      transition: all 0.25s;
+    }
+    .stack-chip:hover { border-color: rgba(255,255,255,0.22); color: white; }
+    .stack-chip-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+    /* ════════════════════════════
+       PORTAFOLIO HTML
+    ════════════════════════════ */
+    .port-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 900px) { .port-grid { grid-template-columns: 1fr; } }
+
+    /* ════════════════════════════
+       RESPONSIVE NUEVOS
+    ════════════════════════════ */
+    @media (max-width: 900px) {
+      .tab-panel.active { grid-template-columns: repeat(2,1fr); }
+      .tab-panel-grid-4.active { grid-template-columns: repeat(2,1fr); }
+      .socio-roles { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 580px) {
+      .tab-panel.active { grid-template-columns: 1fr; }
+      .tab-panel-grid-4.active { grid-template-columns: 1fr; }
+      .tabs-nav { gap: 6px; }
+      .tab-btn { font-size: 12px; padding: 8px 14px; }
+    }
+
     /* GSAP initial */
     .fu { opacity: 0; transform: translateY(38px); }
   </style>
@@ -1009,8 +1219,9 @@
         </a>
         <ul class="nav-links">
           <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#capacidades">Capacidades</a></li>
+          <li><a href="#socio">Socio</a></li>
           <li><a href="#proceso">Proceso</a></li>
-          <li><a href="#garantia">Garantía</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
         </ul>
         <div class="nav-end">
@@ -1044,18 +1255,23 @@
         <span class="mm-item-name">Servicios</span>
         <span class="mm-item-arrow">→</span>
       </a>
-      <a href="#proceso" class="mm-item" onclick="closeMobile()">
+      <a href="#capacidades" class="mm-item" onclick="closeMobile()">
         <span class="mm-item-num">02</span>
+        <span class="mm-item-name">Capacidades</span>
+        <span class="mm-item-arrow">→</span>
+      </a>
+      <a href="#socio" class="mm-item" onclick="closeMobile()">
+        <span class="mm-item-num">03</span>
+        <span class="mm-item-name">Socio Técnico</span>
+        <span class="mm-item-arrow">→</span>
+      </a>
+      <a href="#proceso" class="mm-item" onclick="closeMobile()">
+        <span class="mm-item-num">04</span>
         <span class="mm-item-name">Proceso</span>
         <span class="mm-item-arrow">→</span>
       </a>
-      <a href="#garantia" class="mm-item" onclick="closeMobile()">
-        <span class="mm-item-num">03</span>
-        <span class="mm-item-name">Garantía</span>
-        <span class="mm-item-arrow">→</span>
-      </a>
       <a href="#nosotros" class="mm-item" onclick="closeMobile()">
-        <span class="mm-item-num">04</span>
+        <span class="mm-item-num">05</span>
         <span class="mm-item-name">Nosotros</span>
         <span class="mm-item-arrow">→</span>
       </a>
@@ -1272,6 +1488,518 @@
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CAPACIDADES TÉCNICAS ── -->
+  <section class="capacidades" id="capacidades">
+    <div class="container">
+      <div class="services-header fu">
+        <p class="section-label">Capacidades avanzadas</p>
+        <h2 class="section-title">Tecnología de alto nivel<br>para negocios que escalan</h2>
+        <p class="section-sub">Más allá de un sitio web — construimos sistemas completos que automatizan, generan datos y crean ventajas competitivas reales.</p>
+      </div>
+
+      <!-- TAB NAV -->
+      <div class="tabs-nav fu">
+        <button class="tab-btn active" data-tab="ecommerce">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          E-commerce
+        </button>
+        <button class="tab-btn" data-tab="sistemas">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Sistemas
+        </button>
+        <button class="tab-btn" data-tab="bots">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 15h.01M16 15h.01"/></svg>
+          Bots & Autos
+        </button>
+        <button class="tab-btn" data-tab="ia">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1010 10"/><path d="M12 6v6l4 2"/><path d="M22 2L12 12"/></svg>
+          Inteligencia Artificial
+        </button>
+        <button class="tab-btn" data-tab="dashboards">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          Dashboards
+        </button>
+        <button class="tab-btn" data-tab="saas">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          SaaS
+        </button>
+        <button class="tab-btn" data-tab="finanzas">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          Finanzas
+        </button>
+        <button class="tab-btn" data-tab="seguridad">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Seguridad
+        </button>
+      </div>
+
+      <!-- TAB: E-COMMERCE -->
+      <div class="tab-panel active" id="tab-ecommerce">
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+          <div class="cap-name">Tienda Online Completa</div>
+          <div class="cap-desc">Carrito de compras, pagos con Stripe/MercadoPago, gestión de inventario, panel admin, órdenes automáticas y notificaciones al cliente.</div>
+          <span class="cap-tag">desde $12,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="cap-name">Marketplace Multi-Vendedor</div>
+          <div class="cap-desc">Plataforma donde múltiples vendedores suben sus productos y tú cobras comisión. Como MercadoLibre, pero para tu nicho específico.</div>
+          <span class="cap-tag">desde $45,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="cap-name">Subasta Online en Tiempo Real</div>
+          <div class="cap-desc">Sistema de pujas en vivo con countdown, notificaciones instantáneas, pagos automáticos al ganador y historial de subastas completo.</div>
+          <span class="cap-tag">desde $35,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+          <div class="cap-name">Suscripciones y Membresías</div>
+          <div class="cap-desc">Cobro recurrente mensual o anual, acceso por niveles de membresía, contenido exclusivo y gestión automática de renovaciones.</div>
+          <span class="cap-tag">desde $22,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+          <div class="cap-name">Wishlist & Recomendaciones</div>
+          <div class="cap-desc">Motor de recomendaciones personalizado tipo Amazon — "también te puede gustar" basado en comportamiento y compras previas del usuario.</div>
+          <span class="cap-tag">Add-on $8,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div class="cap-name">Delivery con Rastreo en Vivo</div>
+          <div class="cap-desc">Sistema de pedidos con seguimiento en tiempo real: pedido → cocina/almacén → repartidor en mapa → entregado. Notificaciones automáticas.</div>
+          <span class="cap-tag">desde $28,000</span>
+        </div>
+      </div>
+
+      <!-- TAB: SISTEMAS -->
+      <div class="tab-panel" id="tab-sistemas">
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div class="cap-name">ERP a Medida</div>
+          <div class="cap-desc">Sistema centralizado con módulos de ventas, inventario, compras, finanzas y RRHH. Toda tu operación en un solo panel de control.</div>
+          <span class="cap-tag">desde $60,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="cap-name">CRM Completo</div>
+          <div class="cap-desc">Gestión de clientes, pipeline de ventas visual, seguimiento automático por etapa, reportes de conversión y alertas de seguimiento.</div>
+          <span class="cap-tag">desde $28,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+          <div class="cap-name">Sistema de Inventario</div>
+          <div class="cap-desc">Entradas y salidas en tiempo real, alertas de stock mínimo, códigos QR y barras, manejo de múltiples sucursales y proveedores.</div>
+          <span class="cap-tag">desde $18,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <div class="cap-name">POS — Punto de Venta</div>
+          <div class="cap-desc">Caja registradora digital con facturación instantánea, múltiples métodos de pago, corte de caja y reportes diarios automáticos.</div>
+          <span class="cap-tag">desde $15,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+          <div class="cap-name">Sistema de Nómina</div>
+          <div class="cap-desc">Cálculo automático de sueldos, deducciones, IMSS, generación de recibos PDF firmados digitalmente y reportes para contabilidad.</div>
+          <span class="cap-tag">desde $22,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div class="cap-name">Plataforma de Reservas</div>
+          <div class="cap-desc">Sistema completo para hoteles, restaurantes, canchas o clínicas. Agenda en línea, recordatorios automáticos y control de disponibilidad.</div>
+          <span class="cap-tag">desde $14,000</span>
+        </div>
+      </div>
+
+      <!-- TAB: BOTS & AUTOMATIZACIONES -->
+      <div class="tab-panel" id="tab-bots">
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+          <div class="cap-name">Bot de WhatsApp 24/7</div>
+          <div class="cap-desc">Responde clientes, toma pedidos, agenda citas y resuelve dudas — completamente solo, sin intervención humana. Integrado con tu negocio.</div>
+          <span class="cap-tag">desde $12,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div class="cap-name">Scraper de Datos</div>
+          <div class="cap-desc">Extrae información de cualquier sitio web automáticamente: precios de competidores, contactos, productos, noticias — con scheduling configurable.</div>
+          <span class="cap-tag">desde $8,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg></div>
+          <div class="cap-name">RPA — Robot de Procesos</div>
+          <div class="cap-desc">Automatiza tareas repetitivas en cualquier sistema existente: captura datos, llena formularios, genera reportes — como un empleado virtual que nunca descansa.</div>
+          <span class="cap-tag">desde $18,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+          <div class="cap-name">Pipeline de Datos</div>
+          <div class="cap-desc">Conecta múltiples fuentes de datos, limpia y transforma la información automáticamente, y la centraliza para análisis en tiempo real.</div>
+          <span class="cap-tag">desde $25,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M22 17H2a3 3 0 003-3V9a7 7 0 0114 0v5a3 3 0 003 3zm-8.27 4a2 2 0 01-3.46 0"/></svg></div>
+          <div class="cap-name">Alertas Inteligentes</div>
+          <div class="cap-desc">Monitorea precios, inventario, redes sociales o cualquier métrica de tu negocio — notifica por WhatsApp o correo cuando algo cambia.</div>
+          <span class="cap-tag">desde $6,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="cap-name">Automatización de Correos</div>
+          <div class="cap-desc">Secuencias de emails automáticos según comportamiento del usuario: bienvenida, seguimiento, recordatorio, reactivación — completamente en piloto automático.</div>
+          <span class="cap-tag">desde $5,000</span>
+        </div>
+      </div>
+
+      <!-- TAB: IA -->
+      <div class="tab-panel" id="tab-ia">
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+          <div class="cap-name">Chatbot IA Entrenado</div>
+          <div class="cap-desc">Chatbot con inteligencia artificial entrenado con el conocimiento específico de tu negocio. Responde correctamente, no con respuestas genéricas.</div>
+          <span class="cap-tag">desde $20,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <div class="cap-name">OCR + Extracción de Datos</div>
+          <div class="cap-desc">Escanea facturas, contratos, identificaciones o cualquier documento físico → extrae datos automáticamente → los registra en tu sistema.</div>
+          <span class="cap-tag">desde $15,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div class="cap-name">Motor de Recomendaciones</div>
+          <div class="cap-desc">Como Amazon pero para tu negocio — analiza comportamiento, historial y preferencias para mostrar el producto o servicio correcto en el momento correcto.</div>
+          <span class="cap-tag">desde $25,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="cap-name">Generador de Contenido IA</div>
+          <div class="cap-desc">Genera automáticamente descripciones de productos, posts para redes, correos de marketing y textos en el tono y voz específica de tu marca.</div>
+          <span class="cap-tag">desde $12,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div class="cap-name">Detección de Fraude</div>
+          <div class="cap-desc">Sistema de IA que analiza patrones de pago y comportamiento en tiempo real — alerta transacciones sospechosas antes de que el daño ocurra.</div>
+          <span class="cap-tag">desde $30,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div class="cap-name">Análisis de Sentimientos</div>
+          <div class="cap-desc">Lee automáticamente reseñas, comentarios y menciones en redes sociales → detecta si tus clientes están satisfechos → alerta en tiempo real si hay problemas.</div>
+          <span class="cap-tag">desde $18,000</span>
+        </div>
+      </div>
+
+      <!-- TAB: DASHBOARDS -->
+      <div class="tab-panel" id="tab-dashboards">
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+          <div class="cap-name">Dashboard Ejecutivo</div>
+          <div class="cap-desc">KPIs de tu negocio en tiempo real: ventas del día, clientes nuevos, conversiones, métricas de marketing — todo visual, bonito y entendible.</div>
+          <span class="cap-tag">desde $20,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <div class="cap-name">Analytics de Negocio</div>
+          <div class="cap-desc">Descubre qué producto vende más, a qué hora, desde qué ciudad, qué canal genera más clientes — datos reales para decisiones inteligentes.</div>
+          <span class="cap-tag">desde $15,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div class="cap-name">Reportes Automáticos</div>
+          <div class="cap-desc">Cada lunes llega un PDF a tu correo con el resumen de la semana. Ventas, métricas, alertas — sin que tengas que entrar a ninguna plataforma.</div>
+          <span class="cap-tag">desde $8,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div class="cap-name">Predicción de Demanda</div>
+          <div class="cap-desc">Basado en tu historial de ventas, el sistema predice qué necesitarás la próxima semana o temporada — reduce merma y evita desabastos.</div>
+          <span class="cap-tag">desde $28,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
+          <div class="cap-name">Mapa de Calor de Clientes</div>
+          <div class="cap-desc">Visualiza de dónde vienen tus clientes, qué zonas tienen mayor demanda y dónde conviene abrir tu próxima sucursal o enfocar publicidad.</div>
+          <span class="cap-tag">desde $12,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="cap-name">Monitor de Competencia</div>
+          <div class="cap-desc">Dashboard que rastrea automáticamente precios, promociones y cambios en los sitios de tus competidores — te avisa cuando algo importante cambia.</div>
+          <span class="cap-tag">desde $16,000</span>
+        </div>
+      </div>
+
+      <!-- TAB: SAAS -->
+      <div class="tab-panel" id="tab-saas">
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div class="cap-name">Software para Nicho Específico</div>
+          <div class="cap-desc">Un sistema diseñado para una industria en particular (ferreterías, veterinarias, gimnasios) que vendes como suscripción mensual a múltiples negocios.</div>
+          <span class="cap-tag">desde $50,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div class="cap-name">Plataforma White-Label</div>
+          <div class="cap-desc">Construyes una sola plataforma y la re-vendes a múltiples clientes con su propio logo, colores y dominio. Ingresos recurrentes sin crear algo nuevo cada vez.</div>
+          <span class="cap-tag">desde $60,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
+          <div class="cap-name">API como Servicio</div>
+          <div class="cap-desc">Construyes una API con funcionalidad única que otros desarrolladores consumen — cobras por uso, por llamada o por suscripción mensual.</div>
+          <span class="cap-tag">desde $35,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="cap-name">App Multi-Tenant</div>
+          <div class="cap-desc">Un sistema donde cada empresa cliente tiene sus datos completamente separados, su propio subdominio y su configuración independiente.</div>
+          <span class="cap-tag">desde $45,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+          <div class="cap-name">Portal de Clientes</div>
+          <div class="cap-desc">Cada cliente de tu negocio tiene su propio acceso privado donde ve su historial, documentos, facturas, avances de proyecto y puede comunicarse contigo.</div>
+          <span class="cap-tag">desde $28,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+          <div class="cap-name">Herramienta No-Code Builder</div>
+          <div class="cap-desc">Plataforma donde tus clientes crean sus propios formularios, flujos de trabajo y automatizaciones sin escribir una sola línea de código.</div>
+          <span class="cap-tag">desde $55,000</span>
+        </div>
+      </div>
+
+      <!-- TAB: FINANZAS -->
+      <div class="tab-panel" id="tab-finanzas">
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+          <div class="cap-name">Pasarela de Pagos Propia</div>
+          <div class="cap-desc">Integración de Stripe + MercadoPago + OXXO Pay en una sola interfaz. Acepta tarjetas, transferencias, efectivo — todo en tu plataforma.</div>
+          <span class="cap-tag">desde $12,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div class="cap-name">Facturación CFDI (SAT)</div>
+          <div class="cap-desc">Genera facturas fiscales automáticas válidas ante el SAT con cada venta. Timbrado en segundos, envío al cliente y resguardo digital incluido.</div>
+          <span class="cap-tag">desde $14,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <div class="cap-name">Comisiones Multi-Nivel</div>
+          <div class="cap-desc">Sistema de rastreo de referidos y ventas por vendedor. Calcula comisiones automáticamente por nivel, genera reportes y controla los pagos.</div>
+          <span class="cap-tag">desde $18,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="cap-name">Firma Digital de Contratos</div>
+          <div class="cap-desc">Genera contratos personalizados, los envía al cliente, el cliente los firma digitalmente desde su cel — válido legalmente, sin imprimir nada.</div>
+          <span class="cap-tag">desde $10,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
+          <div class="cap-name">Plataforma de Inversión</div>
+          <div class="cap-desc">Crowdfunding o préstamos P2P: inversores ponen capital en proyectos, el sistema calcula rendimientos automáticamente y distribuye pagos.</div>
+          <span class="cap-tag">desde $65,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div class="cap-name">Dashboard Financiero</div>
+          <div class="cap-desc">Flujo de caja en tiempo real, proyecciones de ingresos, balance general visual, alertas de gastos fuera de presupuesto y conciliación bancaria.</div>
+          <span class="cap-tag">desde $22,000</span>
+        </div>
+      </div>
+
+      <!-- TAB: SEGURIDAD -->
+      <div class="tab-panel" id="tab-seguridad">
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="cap-name">Autenticación Empresarial</div>
+          <div class="cap-desc">Login con Google/Apple/Microsoft, doble factor (2FA), roles y permisos granulares por área — cada empleado ve solo lo que debe ver.</div>
+          <span class="cap-tag">desde $10,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="cap-name">Backup Automático en Nube</div>
+          <div class="cap-desc">Respaldo automático de todos tus datos cada X horas a múltiples ubicaciones en la nube. Recuperación en minutos ante cualquier falla o pérdida.</div>
+          <span class="cap-tag">desde $6,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div class="cap-name">Auditoría de Accesos</div>
+          <div class="cap-desc">Registro completo de quién hizo qué, cuándo y desde dónde en tu sistema. Detecta actividad sospechosa y mantiene un historial legal inalterable.</div>
+          <span class="cap-tag">desde $8,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+          <div class="cap-name">Sistema Multi-Tenant Seguro</div>
+          <div class="cap-desc">Arquitectura donde múltiples empresas usan el mismo software pero sus datos están completamente aislados — imposible de mezclar o filtrar.</div>
+          <span class="cap-tag">desde $30,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg></div>
+          <div class="cap-name">Monitoreo de Vulnerabilidades</div>
+          <div class="cap-desc">Escaneo continuo de tu infraestructura para detectar brechas de seguridad antes que los atacantes. Reportes automáticos y parches prioritarios.</div>
+          <span class="cap-tag">desde $12,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+          <div class="cap-name">Encriptación de Datos</div>
+          <div class="cap-desc">Todos los datos sensibles de tus clientes cifrados en tránsito y en reposo. Cumplimiento de regulaciones de privacidad (LFPDPPP México).</div>
+          <span class="cap-tag">desde $8,000</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SOCIO TÉCNICO ── -->
+  <section class="socio" id="socio">
+    <div class="container">
+      <div class="socio-head fu">
+        <div class="badge" style="margin-bottom:20px;">
+          <span style="width:6px;height:6px;background:white;border-radius:50%;display:inline-block;"></span>
+          Modelo de Colaboración
+        </div>
+        <h2>Tú cierras el trato.<br><span class="highlight">Yo lo construyo.</span></h2>
+        <p>¿Tienes acceso a clientes o conoces el negocio, pero te falta la tecnología para resolverlo? Trabajamos como socios: tú traes los proyectos, yo entrego soluciones de nivel enterprise.</p>
+      </div>
+
+      <div class="socio-roles fu">
+        <div class="role-card role-tu">
+          <div class="role-label"><span></span> Tu rol</div>
+          <div class="role-title">El que conecta</div>
+          <div class="role-items">
+            <div class="role-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Identificar negocios con necesidades digitales
+            </div>
+            <div class="role-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Presentar la propuesta al cliente
+            </div>
+            <div class="role-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Cerrar el trato y acordar condiciones
+            </div>
+            <div class="role-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Mantener la relación con el cliente
+            </div>
+            <div class="role-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Conseguir más proyectos del mismo cliente
+            </div>
+          </div>
+        </div>
+        <div class="role-card role-yo">
+          <div class="role-label"><span></span> Mi rol</div>
+          <div class="role-title">El que ejecuta</div>
+          <div class="role-items">
+            <div class="role-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Diseño y desarrollo completo del sistema
+            </div>
+            <div class="role-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Automatizaciones e integraciones avanzadas
+            </div>
+            <div class="role-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Entrega funcional en tiempo récord
+            </div>
+            <div class="role-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Soporte técnico continuo post-entrega
+            </div>
+            <div class="role-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Escalabilidad cuando el negocio crezca
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="socio-cta fu">
+        <h3>¿Te interesa el modelo?</h3>
+        <p>Hablemos. Define el negocio o la industria que conoces — yo te digo exactamente qué podemos construir y cómo nos repartimos el proyecto.</p>
+        <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Me%20interesa%20el%20modelo%20de%20socio%20t%C3%A9cnico%20%F0%9F%9A%80" target="_blank" rel="noopener" class="btn btn-primary">
+          Hablar sobre alianza →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TECH STACK ── -->
+  <section class="stack-sec" id="stack">
+    <div class="container">
+      <div class="stack-head fu">
+        <p class="section-label">El stack</p>
+        <h2>Tecnologías que usamos</h2>
+        <p>Cada herramienta elegida por un motivo — velocidad, confiabilidad y escalabilidad real.</p>
+      </div>
+    </div>
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#F7DF1E;"></span>JavaScript</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#3178C6;"></span>TypeScript</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#000000;"></span>Next.js</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#61DAFB;"></span>React</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#3ECF8E;"></span>Supabase</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#6419E6;"></span>Vercel</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#25D366;"></span>WhatsApp API</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#635BFF;"></span>Stripe</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#009EE3;"></span>MercadoPago</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#02569B;"></span>Make.com</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF6B35;"></span>GSAP</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#181717;"></span>GitHub</span>
+        <!-- duplicado para loop infinito -->
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#F7DF1E;"></span>JavaScript</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#3178C6;"></span>TypeScript</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#000000;"></span>Next.js</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#61DAFB;"></span>React</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#3ECF8E;"></span>Supabase</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#6419E6;"></span>Vercel</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#25D366;"></span>WhatsApp API</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#635BFF;"></span>Stripe</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#009EE3;"></span>MercadoPago</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#02569B;"></span>Make.com</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF6B35;"></span>GSAP</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#181717;"></span>GitHub</span>
+      </div>
+      <div class="marquee-track-2">
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF9900;"></span>AWS S3</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#00B4D8;"></span>Cloudflare</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#4169E1;"></span>PostgreSQL</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#47A248;"></span>MongoDB</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#7C3AED;"></span>Claude API</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#00A67E;"></span>OpenAI API</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#E44D26;"></span>HTML5 / CSS3</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#06B6D4;"></span>Tailwind CSS</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#339933;"></span>Node.js</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#CC2927;"></span>Redis</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF4154;"></span>Prisma ORM</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#E10098;"></span>GraphQL</span>
+        <!-- duplicado -->
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF9900;"></span>AWS S3</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#00B4D8;"></span>Cloudflare</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#4169E1;"></span>PostgreSQL</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#47A248;"></span>MongoDB</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#7C3AED;"></span>Claude API</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#00A67E;"></span>OpenAI API</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#E44D26;"></span>HTML5 / CSS3</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#06B6D4;"></span>Tailwind CSS</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#339933;"></span>Node.js</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#CC2927;"></span>Redis</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF4154;"></span>Prisma ORM</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#E10098;"></span>GraphQL</span>
       </div>
     </div>
   </section>
@@ -1532,6 +2260,17 @@
           trigger: `#${id}`,
           start: 'top 72%',
           onEnter: () => document.getElementById(id).classList.add('lit')
+        });
+      });
+
+      // ── Tab system ──
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+          btn.classList.add('active');
+          const panel = document.getElementById('tab-' + btn.dataset.tab);
+          if (panel) panel.classList.add('active');
         });
       });
 
