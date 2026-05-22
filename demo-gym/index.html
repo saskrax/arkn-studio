@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IRON GYM — Entrena en serio. Cambia tu vida.</title>
+  <meta name="description" content="El gimnasio más completo de Los Mochis. Equipamiento de primer nivel, coaches certificados y membresías desde $499/mes."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">IRON<span>GYM</span></a>
+      <nav class="nav-links">
+        <a href="#planes">Planes</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#instalaciones">Instalaciones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a href="#prueba" class="nav-cta">Clase de prueba gratis</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#planes" class="mm-link">Planes</a>
+    <a href="#horarios" class="mm-link">Horarios</a>
+    <a href="#instalaciones" class="mm-link">Instalaciones</a>
+    <a href="#prueba" class="mm-link mm-cta">Clase de prueba gratis →</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&auto=format&fit=crop&q=85" alt="Iron Gym" class="hero-bg-img"/>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">LOS MOCHIS · DESDE 2019</div>
+      <h1 class="hero-title reveal">
+        ENTRENA<br/>
+        <span class="hero-accent">EN SERIO.</span><br/>
+        CAMBIA TU VIDA.
+      </h1>
+      <p class="hero-sub reveal">Más de 800 socios activos. Equipamiento de primer nivel.<br/>Coaches certificados. Sin contratos anuales.</p>
+      <div class="hero-actions reveal">
+        <a href="#prueba" class="btn-primary">Clase de prueba GRATIS →</a>
+        <a href="#planes" class="btn-ghost">Ver membresías</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <strong>800+</strong>
+          <span>Socios activos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <strong>12</strong>
+          <span>Coaches certificados</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <strong>5 años</strong>
+          <span>De experiencia</span>
+        </div>
+      </div>
+    </div>
+    <a href="#planes" class="hero-scroll">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </section>
+
+  <!-- SERVICIOS RÁPIDOS -->
+  <section class="servicios-bar">
+    <div class="servicios-bar-inner">
+      <div class="servicio-item reveal">
+        <div class="servicio-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.5 6.5h11M6.5 17.5h11M4 12h16M8 8.5V4m8 4.5V4M8 15.5V20m8-4.5V20"/></svg>
+        </div>
+        <div>
+          <strong>Pesas Libres</strong>
+          <span>Área completa de 400m²</span>
+        </div>
+      </div>
+      <div class="servicio-item reveal">
+        <div class="servicio-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div>
+          <strong>Clases Grupales</strong>
+          <span>15+ disciplinas disponibles</span>
+        </div>
+      </div>
+      <div class="servicio-item reveal">
+        <div class="servicio-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div>
+          <strong>Nutrición</strong>
+          <span>Plan personalizado incluido</span>
+        </div>
+      </div>
+      <div class="servicio-item reveal">
+        <div class="servicio-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        </div>
+        <div>
+          <strong>Locker & Vestidores</strong>
+          <span>Seguros con llave</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALACIONES -->
+  <section class="instalaciones" id="instalaciones">
+    <div class="section-header reveal">
+      <span class="section-label">Nuestras instalaciones</span>
+      <h2 class="section-title">Espacio diseñado<br/>para rendir al máximo</h2>
+    </div>
+    <div class="galeria-grid">
+      <div class="galeria-item galeria-big reveal">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&auto=format&fit=crop&q=80" alt="Área de pesas" class="galeria-img"/>
+        <div class="galeria-label">Área de Pesas Libres</div>
+      </div>
+      <div class="galeria-item reveal">
+        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&auto=format&fit=crop&q=80" alt="Zona cardio" class="galeria-img"/>
+        <div class="galeria-label">Zona Cardio</div>
+      </div>
+      <div class="galeria-item reveal">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&auto=format&fit=crop&q=80" alt="Clases grupales" class="galeria-img"/>
+        <div class="galeria-label">Sala de Clases</div>
+      </div>
+      <div class="galeria-item reveal">
+        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=600&auto=format&fit=crop&q=80" alt="Área funcional" class="galeria-img"/>
+        <div class="galeria-label">Entrenamiento Funcional</div>
+      </div>
+      <div class="galeria-item reveal">
+        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&auto=format&fit=crop&q=80" alt="Spinning" class="galeria-img"/>
+        <div class="galeria-label">Sala de Spinning</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section class="planes" id="planes">
+    <div class="section-header reveal">
+      <span class="section-label">Membresías</span>
+      <h2 class="section-title">Elige tu plan.<br/>Sin contratos anuales.</h2>
+      <p class="section-sub">Todos los planes incluyen acceso a instalaciones, casillero y app de seguimiento.</p>
+    </div>
+    <div class="planes-grid">
+
+      <div class="plan-card reveal">
+        <div class="plan-top">
+          <span class="plan-name">Básico</span>
+          <div class="plan-price">
+            <span class="plan-currency">$</span>499
+            <span class="plan-period">/mes</span>
+          </div>
+          <p class="plan-desc">Perfecto para empezar tu transformación</p>
+        </div>
+        <ul class="plan-features">
+          <li class="yes">Acceso L-V 6am–10pm</li>
+          <li class="yes">Área de pesas libres</li>
+          <li class="yes">Zona cardio</li>
+          <li class="yes">Casillero incluido</li>
+          <li class="yes">App de seguimiento</li>
+          <li class="no">Clases grupales</li>
+          <li class="no">Coach personal</li>
+          <li class="no">Plan de nutrición</li>
+        </ul>
+        <a href="#prueba" class="plan-btn">Empezar ahora</a>
+      </div>
+
+      <div class="plan-card plan-featured reveal">
+        <div class="plan-badge-top">⭐ MÁS POPULAR</div>
+        <div class="plan-top">
+          <span class="plan-name">Pro</span>
+          <div class="plan-price">
+            <span class="plan-currency">$</span>799
+            <span class="plan-period">/mes</span>
+          </div>
+          <p class="plan-desc">Lo que la mayoría de nuestros socios eligen</p>
+        </div>
+        <ul class="plan-features">
+          <li class="yes">Acceso 7 días 6am–11pm</li>
+          <li class="yes">Todo lo del plan Básico</li>
+          <li class="yes">Clases grupales ilimitadas</li>
+          <li class="yes">1 sesión mensual con coach</li>
+          <li class="yes">Plan de nutrición básico</li>
+          <li class="yes">Área de funcional</li>
+          <li class="yes">Sala de spinning</li>
+          <li class="no">Coach personal semanal</li>
+        </ul>
+        <a href="#prueba" class="plan-btn plan-btn-featured">Quiero este plan</a>
+      </div>
+
+      <div class="plan-card reveal">
+        <div class="plan-top">
+          <span class="plan-name">Elite</span>
+          <div class="plan-price">
+            <span class="plan-currency">$</span>1,299
+            <span class="plan-period">/mes</span>
+          </div>
+          <p class="plan-desc">Para quienes van en serio con sus metas</p>
+        </div>
+        <ul class="plan-features">
+          <li class="yes">Acceso 24/7 sin restricciones</li>
+          <li class="yes">Todo lo del plan Pro</li>
+          <li class="yes">Coach personal 2x/semana</li>
+          <li class="yes">Plan de nutrición completo</li>
+          <li class="yes">Evaluaciones mensuales</li>
+          <li class="yes">Área VIP exclusiva</li>
+          <li class="yes">Masaje deportivo 1x/mes</li>
+          <li class="yes">Prioridad en clases</li>
+        </ul>
+        <a href="#prueba" class="plan-btn">Quiero Elite</a>
+      </div>
+
+    </div>
+    <p class="planes-note">* Sin contrato de permanencia · Primer mes con 20% de descuento · Cancela cuando quieras</p>
+  </section>
+
+  <!-- COACHES -->
+  <section class="coaches" id="coaches">
+    <div class="section-header reveal">
+      <span class="section-label">Nuestro equipo</span>
+      <h2 class="section-title">Coaches que<br/>sí saben lo que hacen</h2>
+    </div>
+    <div class="coaches-grid">
+      <div class="coach-card reveal">
+        <div class="coach-photo">
+          <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&auto=format&fit=crop&q=80" alt="Coach Marco"/>
+        </div>
+        <div class="coach-info">
+          <h4>Marco Reyes</h4>
+          <span class="coach-role">Fuerza & Musculación</span>
+          <p>Campeón regional de powerlifting. 8 años de experiencia. Especialista en hipertrofia.</p>
+          <div class="coach-certs">
+            <span>NASM</span>
+            <span>CrossFit L2</span>
+          </div>
+        </div>
+      </div>
+      <div class="coach-card reveal">
+        <div class="coach-photo">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&auto=format&fit=crop&q=80" alt="Coach Sofía"/>
+        </div>
+        <div class="coach-info">
+          <h4>Sofía Mendoza</h4>
+          <span class="coach-role">Cardio & Funcional</span>
+          <p>Instructora certificada de spinning y HIIT. Especialista en pérdida de grasa.</p>
+          <div class="coach-certs">
+            <span>ACE</span>
+            <span>Spinning Pro</span>
+          </div>
+        </div>
+      </div>
+      <div class="coach-card reveal">
+        <div class="coach-photo">
+          <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&auto=format&fit=crop&q=80" alt="Coach Luis"/>
+        </div>
+        <div class="coach-info">
+          <h4>Luis Carrillo</h4>
+          <span class="coach-role">Nutrición Deportiva</span>
+          <p>Licenciado en nutrición. Diseña planes personalizados para cada objetivo y biotipo.</p>
+          <div class="coach-certs">
+            <span>Licenciado UNAM</span>
+            <span>ISSN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORARIOS -->
+  <section class="horarios" id="horarios">
+    <div class="horarios-inner">
+      <div class="section-header reveal">
+        <span class="section-label">Horarios de clases</span>
+        <h2 class="section-title">Siempre hay<br/>una clase para ti</h2>
+      </div>
+      <div class="horarios-tabs reveal">
+        <button class="tab-btn active" data-day="lunes">Lunes</button>
+        <button class="tab-btn" data-day="martes">Martes</button>
+        <button class="tab-btn" data-day="miercoles">Miér.</button>
+        <button class="tab-btn" data-day="jueves">Jueves</button>
+        <button class="tab-btn" data-day="viernes">Viernes</button>
+        <button class="tab-btn" data-day="sabado">Sáb.</button>
+      </div>
+      <div class="horarios-grid" id="horariosGrid">
+        <!-- JS fills this -->
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSFORMACIONES -->
+  <section class="transf">
+    <div class="transf-inner">
+      <div class="section-header reveal">
+        <span class="section-label">Resultados reales</span>
+        <h2 class="section-title">Ellos ya<br/>lo lograron</h2>
+      </div>
+      <div class="transf-grid">
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"En 4 meses bajé 12 kg. El coach Marco diseñó mi plan desde cero y siempre estaba pendiente de mi progreso. Lo recomiendo al 100%."</p>
+          <div class="review-author">
+            <div class="review-avatar">JR</div>
+            <div>
+              <strong>Juan Rodríguez</strong>
+              <span>Socio desde 2023 · Plan Pro</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Las clases de spinning de Sofía son increíbles. Ambiente muy motivador, el gym siempre limpio y el equipo en perfecto estado."</p>
+          <div class="review-author">
+            <div class="review-avatar">AM</div>
+            <div>
+              <strong>Ana Morales</strong>
+              <span>Socia desde 2022 · Plan Básico</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"El plan de nutrición de Luis cambió todo. Gané 8 kg de músculo en 6 meses siguiendo el plan al pie de la letra. Excelente inversión."</p>
+          <div class="review-author">
+            <div class="review-avatar">CP</div>
+            <div>
+              <strong>Carlos Patiño</strong>
+              <span>Socio desde 2024 · Plan Elite</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASE PRUEBA GRATIS -->
+  <section class="prueba" id="prueba">
+    <div class="prueba-inner">
+      <div class="prueba-left reveal">
+        <span class="section-label">Sin compromiso</span>
+        <h2 class="prueba-title">Agenda tu clase<br/><span>de prueba gratis</span></h2>
+        <p class="prueba-sub">Ven, conoce las instalaciones, toma una clase y habla con uno de nuestros coaches. Sin tarjeta. Sin contratos.</p>
+        <div class="prueba-checks">
+          <div class="prueba-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Acceso completo por 1 día</span>
+          </div>
+          <div class="prueba-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Asesoría con un coach</span>
+          </div>
+          <div class="prueba-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Sin presión de ventas</span>
+          </div>
+          <div class="prueba-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Te decimos el costo real sin sorpresas</span>
+          </div>
+        </div>
+      </div>
+      <div class="prueba-right reveal">
+        <div class="prueba-card" id="contacto">
+          <h3>Reserva tu clase gratis</h3>
+          <p>Te confirmamos en menos de 1 hora por WhatsApp</p>
+          <form id="gymForm">
+            <div class="fg">
+              <input type="text" id="gNombre" placeholder="Tu nombre" required/>
+            </div>
+            <div class="fg">
+              <input type="tel" id="gTelefono" placeholder="Tu WhatsApp" required/>
+            </div>
+            <div class="fg">
+              <select id="gClase">
+                <option value="">¿Qué clase te interesa?</option>
+                <option>Pesas libres / Musculación</option>
+                <option>Spinning / Cardio</option>
+                <option>Funcional / CrossFit</option>
+                <option>Clases grupales</option>
+                <option>Solo quiero conocer el gym</option>
+              </select>
+            </div>
+            <div class="fg">
+              <select id="gHorario">
+                <option value="">Horario preferido</option>
+                <option>Mañana (6am – 10am)</option>
+                <option>Mediodía (10am – 2pm)</option>
+                <option>Tarde (2pm – 6pm)</option>
+                <option>Noche (6pm – 10pm)</option>
+              </select>
+            </div>
+            <button type="submit" class="gym-submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Reservar por WhatsApp
+            </button>
+          </form>
+          <p class="gym-nota">Sin spam · Solo para confirmar tu clase</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">IRON<span>GYM</span></div>
+        <p>El gimnasio más completo de Los Mochis, Sinaloa. Abierto todos los días.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Horario General</h5>
+        <p>Lunes – Viernes: 6:00am – 11:00pm</p>
+        <p>Sábado: 7:00am – 9:00pm</p>
+        <p>Domingo: 8:00am – 6:00pm</p>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <p>Blvd. Jiquilpan 1200</p>
+        <p>Col. Centro, Los Mochis, Sin.</p>
+        <a href="tel:+526681234567">668 123 4567</a>
+        <a href="https://wa.me/526681234567">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Iron Gym Los Mochis · Sitio web por <strong>Arkn Studio</strong></p>
+      <a href="https://arkn.studio" target="_blank">arkn.studio</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
