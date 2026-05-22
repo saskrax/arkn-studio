@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blade & Co. — Barbería Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- CURSOR PERSONALIZADO -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <svg class="loader-svg" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text class="loader-text-path" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+              font-family="Bebas Neue" font-size="52" fill="none" stroke="#C9A84C" stroke-width="1"
+              stroke-dasharray="600" stroke-dashoffset="600">B&amp;CO.</text>
+      </svg>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- SIDEBAR NAV -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-mark">B&</span>
+      <span class="logo-text">CO.</span>
+    </div>
+    <div class="sidebar-line"></div>
+    <ul class="sidebar-links">
+      <li><a href="#inicio"    class="nav-link active" data-section="inicio">Inicio</a></li>
+      <li><a href="#servicios" class="nav-link" data-section="servicios">Servicios</a></li>
+      <li><a href="#galeria"   class="nav-link" data-section="galeria">Galería</a></li>
+      <li><a href="#equipo"    class="nav-link" data-section="equipo">Equipo</a></li>
+      <li><a href="#reservar"  class="nav-link" data-section="reservar">Reservar</a></li>
+    </ul>
+    <div class="sidebar-bottom">
+      <p class="sidebar-address">Blvd. Rosales 120<br/>Los Mochis, Sin.</p>
+      <div class="sidebar-social">
+        <a href="#" class="social-btn" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://wa.me/526681234567" class="social-btn" aria-label="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav">
+    <span class="mobile-logo">BLADE & CO.</span>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#inicio"    class="mobile-link">Inicio</a>
+    <a href="#servicios" class="mobile-link">Servicios</a>
+    <a href="#galeria"   class="mobile-link">Galería</a>
+    <a href="#equipo"    class="mobile-link">Equipo</a>
+    <a href="#reservar"  class="mobile-link">Reservar</a>
+  </div>
+
+  <main class="main-content">
+
+    <!-- ═══ HERO ═══ -->
+    <section id="inicio" class="section section-hero">
+      <!-- Fondo geométrico animado -->
+      <div class="hero-bg">
+        <div class="geo-line geo-line-1"></div>
+        <div class="geo-line geo-line-2"></div>
+        <div class="geo-circle geo-circle-1"></div>
+        <div class="geo-circle geo-circle-2"></div>
+        <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+      </div>
+
+      <div class="hero-left">
+        <div class="hero-badge reveal-badge">
+          <span class="badge-dot"></span>Est. 2019 · Los Mochis
+        </div>
+
+        <h1 class="hero-title">
+          <span class="title-line"><span class="title-word">EL</span> <span class="title-word">CORTE</span></span>
+          <span class="title-line"><span class="title-word">QUE</span></span>
+          <span class="title-line glitch-wrap">
+            <span class="title-word hero-accent" data-glitch="DEFINE">DEFINE</span>
+          </span>
+          <span class="title-line"><span class="title-word">TU</span> <span class="title-word">ESTILO.</span></span>
+        </h1>
+
+        <p class="hero-sub reveal-sub">Barbería de precisión. Fade perfecto,<br/>barba impecable, ambiente de respeto.</p>
+
+        <div class="hero-actions">
+          <a href="#reservar" class="btn-primary magnetic" data-magnetic>
+            <span>Reservar turno</span>
+            <div class="btn-shine"></div>
+          </a>
+          <a href="#servicios" class="btn-outline magnetic" data-magnetic>
+            <span>Ver servicios</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-count="6">0</span><span class="stat-num">+</span>
+            <span class="stat-label">Años en el negocio</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="4.9" data-decimal="1">0</span>
+            <span class="stat-label">Estrellas Google</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="1200">0</span><span class="stat-num">+</span>
+            <span class="stat-label">Clientes satisfechos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-img-wrapper" id="heroImgWrapper">
+          <div class="hero-img-inner">
+            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&auto=format&fit=crop&q=80"
+                 alt="Barbero trabajando en Blade & Co." class="hero-real-img">
+          </div>
+          <div class="img-decoration">
+            <div class="img-deco-ring"></div>
+            <div class="img-deco-dot img-deco-dot-1"></div>
+            <div class="img-deco-dot img-deco-dot-2"></div>
+            <div class="img-deco-dot img-deco-dot-3"></div>
+          </div>
+          <div class="hero-tag">
+            <span class="tag-pulse"></span>
+            Turno disponible HOY
+          </div>
+        </div>
+
+        <div class="quick-book reveal-quickbook">
+          <p>¿Solo quieres reservar rápido?</p>
+          <a href="https://wa.me/526681234567?text=Hola%2C%20quiero%20reservar%20un%20turno%20en%20Blade%20%26%20Co." class="btn-whatsapp magnetic" target="_blank" rel="noopener" data-magnetic>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            <span>Reservar por WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-dot"></div>
+        <span>scroll</span>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICIOS ═══ -->
+    <section id="servicios" class="section section-servicios">
+      <div class="section-header">
+        <span class="section-tag">Lo que hacemos</span>
+        <h2 class="section-title reveal-title">Servicios</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="servicios-grid">
+        <div class="servicio-card tilt-card" data-tilt>
+          <div class="card-shine"></div>
+          <div class="servicio-num">01</div>
+          <div class="servicio-icon-wrap"><span class="servicio-icon">✂</span></div>
+          <h3>Corte clásico</h3>
+          <p>Fade bajo, medio o alto. Tijera y máquina. Incluye lavado y peinado.</p>
+          <div class="servicio-footer">
+            <div class="servicio-price">$150 <span>MXN</span></div>
+            <span class="servicio-time">40 min</span>
+          </div>
+          <div class="card-border-anim"></div>
+        </div>
+
+        <div class="servicio-card servicio-featured tilt-card" data-tilt>
+          <div class="card-shine"></div>
+          <div class="servicio-num">02</div>
+          <div class="servicio-badge">
+            <span class="badge-star">★</span> Popular
+          </div>
+          <div class="servicio-icon-wrap"><span class="servicio-icon">⚡</span></div>
+          <h3>Corte + Barba</h3>
+          <p>Corte completo más perfilado o rasurado de barba. El combo más solicitado.</p>
+          <div class="servicio-footer">
+            <div class="servicio-price">$220 <span>MXN</span></div>
+            <span class="servicio-time">60 min</span>
+          </div>
+          <div class="card-border-anim"></div>
+        </div>
+
+        <div class="servicio-card tilt-card" data-tilt>
+          <div class="card-shine"></div>
+          <div class="servicio-num">03</div>
+          <div class="servicio-icon-wrap"><span class="servicio-icon">🪒</span></div>
+          <h3>Rasurado tradicional</h3>
+          <p>Navaja de afeitar, vapor caliente, aceites premium. Experiencia completa.</p>
+          <div class="servicio-footer">
+            <div class="servicio-price">$180 <span>MXN</span></div>
+            <span class="servicio-time">45 min</span>
+          </div>
+          <div class="card-border-anim"></div>
+        </div>
+
+        <div class="servicio-card tilt-card" data-tilt>
+          <div class="card-shine"></div>
+          <div class="servicio-num">04</div>
+          <div class="servicio-icon-wrap"><span class="servicio-icon">👶</span></div>
+          <h3>Niños (hasta 12 años)</h3>
+          <p>Paciencia y precisión para los más pequeños. Con peluche y paleta.</p>
+          <div class="servicio-footer">
+            <div class="servicio-price">$100 <span>MXN</span></div>
+            <span class="servicio-time">30 min</span>
+          </div>
+          <div class="card-border-anim"></div>
+        </div>
+
+        <div class="servicio-card tilt-card" data-tilt>
+          <div class="card-shine"></div>
+          <div class="servicio-num">05</div>
+          <div class="servicio-icon-wrap"><span class="servicio-icon">💆</span></div>
+          <h3>Tratamiento capilar</h3>
+          <p>Mascarilla nutritiva, hidratación profunda y masaje de cuero cabelludo.</p>
+          <div class="servicio-footer">
+            <div class="servicio-price">$250 <span>MXN</span></div>
+            <span class="servicio-time">50 min</span>
+          </div>
+          <div class="card-border-anim"></div>
+        </div>
+
+        <div class="servicio-card tilt-card" data-tilt>
+          <div class="card-shine"></div>
+          <div class="servicio-num">06</div>
+          <div class="servicio-icon-wrap"><span class="servicio-icon">👑</span></div>
+          <h3>VIP Package</h3>
+          <p>Corte + barba + tratamiento capilar + bebida. Para ocasiones especiales.</p>
+          <div class="servicio-footer">
+            <div class="servicio-price">$380 <span>MXN</span></div>
+            <span class="servicio-time">90 min</span>
+          </div>
+          <div class="card-border-anim"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GALERÍA ═══ -->
+    <section id="galeria" class="section section-galeria">
+      <div class="section-header">
+        <span class="section-tag">Nuestro trabajo</span>
+        <h2 class="section-title reveal-title">Galería</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="galeria-grid">
+        <div class="galeria-item galeria-tall" data-label="Fade alto + textura">
+          <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&auto=format&fit=crop&q=80" alt="Fade alto + textura" class="galeria-real-img">
+          <div class="galeria-overlay">
+            <span>Fade alto + textura</span>
+            <div class="gal-arrow">→</div>
+          </div>
+        </div>
+        <div class="galeria-item" data-label="Barba perfilada">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&auto=format&fit=crop&q=80" alt="Barba perfilada" class="galeria-real-img">
+          <div class="galeria-overlay"><span>Barba perfilada</span><div class="gal-arrow">→</div></div>
+        </div>
+        <div class="galeria-item" data-label="Corte clásico">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&auto=format&fit=crop&q=80" alt="Corte clásico" class="galeria-real-img">
+          <div class="galeria-overlay"><span>Corte clásico</span><div class="gal-arrow">→</div></div>
+        </div>
+        <div class="galeria-item galeria-wide" data-label="Vista del local">
+          <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&auto=format&fit=crop&q=80" alt="Interior de la barbería" class="galeria-real-img">
+          <div class="galeria-overlay"><span>Vista del local</span><div class="gal-arrow">→</div></div>
+        </div>
+        <div class="galeria-item galeria-tall" data-label="Rasurado navaja">
+          <img src="https://images.unsplash.com/photo-1622288432450-277d0fef5b4e?w=600&auto=format&fit=crop&q=80" alt="Rasurado con navaja" class="galeria-real-img">
+          <div class="galeria-overlay"><span>Rasurado navaja</span><div class="gal-arrow">→</div></div>
+        </div>
+        <div class="galeria-item" data-label="Degradado bajo">
+          <img src="https://images.unsplash.com/photo-1520808663317-647b476a81b9?w=600&auto=format&fit=crop&q=80" alt="Degradado bajo" class="galeria-real-img">
+          <div class="galeria-overlay"><span>Degradado bajo</span><div class="gal-arrow">→</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EQUIPO ═══ -->
+    <section id="equipo" class="section section-equipo">
+      <div class="section-header">
+        <span class="section-tag">Quiénes somos</span>
+        <h2 class="section-title reveal-title">El Equipo</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="equipo-grid">
+
+        <div class="barbero-card flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-front">
+              <div class="barbero-avatar">RG</div>
+              <h3>Roberto García</h3>
+              <p class="barbero-rol">Fundador & Head Barber</p>
+              <div class="barbero-tags">
+                <span>Fades</span><span>Diseños</span><span>Navaja</span>
+              </div>
+              <div class="flip-hint">Hover para más →</div>
+            </div>
+            <div class="flip-back">
+              <div class="flip-back-content">
+                <h3>Roberto García</h3>
+                <p>12 años de experiencia. Especialista en fades y diseños a navaja. Certificado en Barcelona, España.</p>
+                <a href="#reservar" class="btn-book-barber">Reservar con él</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="barbero-card flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-front">
+              <div class="barbero-avatar">ML</div>
+              <h3>Miguel López</h3>
+              <p class="barbero-rol">Barber Senior</p>
+              <div class="barbero-tags">
+                <span>Barba</span><span>Clásico</span><span>Tratamientos</span>
+              </div>
+              <div class="flip-hint">Hover para más →</div>
+            </div>
+            <div class="flip-back">
+              <div class="flip-back-content">
+                <h3>Miguel López</h3>
+                <p>7 años perfeccionando el corte clásico. Experto en barba y tratamientos capilares para cabello grueso.</p>
+                <a href="#reservar" class="btn-book-barber">Reservar con él</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="barbero-card flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-front">
+              <div class="barbero-avatar">JM</div>
+              <h3>Jesús Mendoza</h3>
+              <p class="barbero-rol">Junior Barber</p>
+              <div class="barbero-tags">
+                <span>Moderno</span><span>Tendencias</span><span>Niños</span>
+              </div>
+              <div class="flip-hint">Hover para más →</div>
+            </div>
+            <div class="flip-back">
+              <div class="flip-back-content">
+                <h3>Jesús Mendoza</h3>
+                <p>Recién graduado con todo el entusiasmo. Especializado en cortes modernos y tendencias actuales.</p>
+                <a href="#reservar" class="btn-book-barber">Reservar con él</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ RESERVAR ═══ -->
+    <section id="reservar" class="section section-reservar">
+      <div class="reservar-left">
+        <span class="section-tag">Sin esperar</span>
+        <h2 class="reservar-title reveal-title">Agenda<br/><span class="gold-text">tu turno</span></h2>
+        <p class="reservar-sub">Rellena el formulario y te confirmamos en menos de 10 minutos por WhatsApp.</p>
+        <div class="horario-box">
+          <h4>Horario</h4>
+          <div class="horario-row">
+            <span>Lunes – Viernes</span><span class="htime">9:00 – 20:00</span>
+          </div>
+          <div class="horario-row">
+            <span>Sábado</span><span class="htime">9:00 – 18:00</span>
+          </div>
+          <div class="horario-row closed">
+            <span>Domingo</span><span class="htime">Cerrado</span>
+          </div>
+        </div>
+        <div class="ubicacion-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Blvd. Rosales 120, Centro, Los Mochis, Sinaloa</span>
+        </div>
+      </div>
+
+      <div class="reservar-right">
+        <form class="reservar-form" id="reservarForm">
+          <div class="form-title">Hacer reservación</div>
+
+          <div class="form-group">
+            <div class="input-wrap">
+              <input type="text" id="nombre" name="nombre" required placeholder=" " />
+              <label for="nombre">Nombre completo</label>
+              <div class="input-line"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-wrap">
+              <input type="tel" id="telefono" name="telefono" required placeholder=" " />
+              <label for="telefono">Teléfono</label>
+              <div class="input-line"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <div class="input-wrap select-wrap">
+                <select id="servicio" name="servicio" required>
+                  <option value="" disabled selected></option>
+                  <option value="Corte clásico - $150">Corte clásico — $150</option>
+                  <option value="Corte + Barba - $220">Corte + Barba — $220</option>
+                  <option value="Rasurado tradicional - $180">Rasurado — $180</option>
+                  <option value="Niños - $100">Niños — $100</option>
+                  <option value="Tratamiento capilar - $250">Tratamiento — $250</option>
+                  <option value="VIP Package - $380">VIP Package — $380</option>
+                </select>
+                <label>Servicio</label>
+                <div class="input-line"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-wrap select-wrap">
+                <select id="barbero" name="barbero">
+                  <option value="Sin preferencia">Sin preferencia</option>
+                  <option value="Roberto García">Roberto García</option>
+                  <option value="Miguel López">Miguel López</option>
+                  <option value="Jesús Mendoza">Jesús Mendoza</option>
+                </select>
+                <label>Barbero</label>
+                <div class="input-line"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <div class="input-wrap">
+                <input type="date" id="fecha" name="fecha" required placeholder=" " />
+                <label for="fecha">Fecha</label>
+                <div class="input-line"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-wrap select-wrap">
+                <select id="hora" name="hora" required>
+                  <option value="" disabled selected></option>
+                  <option>9:00 am</option><option>9:30 am</option>
+                  <option>10:00 am</option><option>10:30 am</option>
+                  <option>11:00 am</option><option>11:30 am</option>
+                  <option>12:00 pm</option><option>12:30 pm</option>
+                  <option>1:00 pm</option><option>1:30 pm</option>
+                  <option>2:00 pm</option><option>2:30 pm</option>
+                  <option>3:00 pm</option><option>3:30 pm</option>
+                  <option>4:00 pm</option><option>4:30 pm</option>
+                  <option>5:00 pm</option><option>5:30 pm</option>
+                  <option>6:00 pm</option><option>6:30 pm</option>
+                  <option>7:00 pm</option><option>7:30 pm</option>
+                </select>
+                <label>Hora</label>
+                <div class="input-line"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-wrap">
+              <textarea id="notas" name="notas" rows="2" placeholder=" "></textarea>
+              <label for="notas">Notas adicionales (opcional)</label>
+              <div class="input-line"></div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit magnetic" data-magnetic>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            <span>Confirmar por WhatsApp</span>
+            <div class="btn-ripple"></div>
+          </button>
+          <p class="form-disclaimer">Confirmamos en menos de 10 min ✓</p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>© 2026 Blade & Co. Barbería · Los Mochis, Sinaloa</p>
+        <p class="footer-small">Sitio diseñado por <strong>Arkn Studio</strong></p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
