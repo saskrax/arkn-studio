@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arkn Studio — Sitios web y automatizaciones en Los Mochis</title>
-  <meta name="description" content="Agencia digital en Los Mochis, Sinaloa. Sitios web profesionales, automatizaciones y herramientas digitales. Ves el resultado antes de pagar — sin anticipo.">
+  <title>Arkn Studio — Diseño web para PyMEs en México</title>
+  <meta name="description" content="Estudio de diseño web en Los Mochis, Sinaloa. Sitios optimizados para conversión con Next.js, animaciones cinemáticas y CMS. Cotización fija por escrito, entrega en 10-14 días.">
+  <meta name="theme-color" content="#080808">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23080808'/%3E%3Ctext x='50' y='65' font-family='Arial Black' font-size='52' font-weight='900' text-anchor='middle' fill='%23FFFFFF'%3EA%3C/text%3E%3C/svg%3E">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Arkn Studio — We build what works.">
-  <meta property="og:description" content="Sitios web que convierten, automatizaciones que ahorran tiempo. Sin anticipo. Ves el resultado antes de pagar.">
+  <meta property="og:title" content="Arkn Studio — Sitios web que venden, no solo que se ven">
+  <meta property="og:description" content="Estudio de diseño web para PyMEs en México. Cotización fija, anticipo 30%, entrega 10-14 días. Sin sorpresas.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Arkn Studio">
+  <meta property="og:url" content="https://arkn.studio">
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Arkn Studio — We build what works.">
-  <meta name="twitter:description" content="Sitios web profesionales en Los Mochis. Sin anticipo.">
+  <meta name="twitter:title" content="Arkn Studio — Diseño web para PyMEs en México">
+  <meta name="twitter:description" content="Sitios web que venden. Cotización fija por escrito. Entrega 10-14 días.">
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -22,7 +29,7 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Arkn Studio",
-    "description": "Agencia digital especializada en sitios web y automatizaciones para negocios en México",
+    "description": "Estudio de diseño web para PyMEs en México",
     "address": { "@type": "PostalAddress", "addressLocality": "Los Mochis", "addressRegion": "Sinaloa", "addressCountry": "MX" },
     "telephone": "+526688853458",
     "url": "https://arkn.studio",
@@ -30,25 +37,16 @@
   }
   </script>
 
+  <!-- Preconnect & preload fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '2262931414448064');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=2262931414448064&ev=PageView&noscript=1"/></noscript>
-  <!-- End Meta Pixel Code -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- GSAP (deferred) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -60,8 +58,10 @@
       --accent-light: rgba(255,255,255,0.82);
       --accent-glow: rgba(255,255,255,0.1);
       --cyan: #60A5FA;
+      --cyan-deep: #3B82F6;
       --white: #FFFFFF;
-      --muted: #6B7280;
+      --muted: #8B92A0;
+      --muted-2: #6B7280;
       --border: rgba(255,255,255,0.09);
       --radius: 16px;
     }
@@ -103,12 +103,12 @@
     }
     .btn-primary {
       background: var(--white); color: #080808;
-      box-shadow: 0 0 30px rgba(255,255,255,0.12);
+      box-shadow: 0 0 30px rgba(96,165,250,0.18);
     }
     .btn-primary:hover {
-      background: rgba(255,255,255,0.88);
+      background: #E0F2FF;
       transform: translateY(-2px);
-      box-shadow: 0 0 50px rgba(255,255,255,0.18);
+      box-shadow: 0 0 50px rgba(96,165,250,0.32);
     }
     .btn-ghost {
       background: transparent; color: white;
@@ -119,8 +119,13 @@
       border-color: rgba(255,255,255,0.2);
       transform: translateY(-2px);
     }
+    .btn-link {
+      background: transparent; color: var(--cyan);
+      padding: 8px 0;
+    }
+    .btn-link:hover { color: white; }
     .btn:focus-visible {
-      outline: 2px solid white;
+      outline: 2px solid var(--cyan);
       outline-offset: 3px;
     }
 
@@ -146,10 +151,11 @@
     .section-title {
       font-size: clamp(30px,5vw,52px);
       font-weight: 800; margin-bottom: 16px;
+      letter-spacing: -1px;
     }
     .section-sub {
       font-size: 17px; color: var(--muted);
-      max-width: 540px; line-height: 1.75;
+      max-width: 580px; line-height: 1.75;
     }
 
     /* ════════════════════════════
@@ -167,9 +173,7 @@
       padding: 14px 0;
       border-bottom: 1px solid var(--border);
     }
-    .nav-inner {
-      display: flex; align-items: center; justify-content: space-between;
-    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
     .nav-logo {
       text-decoration: none;
       display: flex; flex-direction: column;
@@ -212,7 +216,8 @@
       padding: 0;
       overflow: hidden;
     }
-    .mobile-menu.open { display: flex; }
+    .mobile-menu.open { display: flex; animation: mmIn .35s cubic-bezier(.16,1,.3,1); }
+    @keyframes mmIn { from { opacity: 0; transform: translateY(8px); } to { opacity:1; transform: none; } }
 
     .mobile-menu::before {
       content: 'ARKN';
@@ -232,9 +237,7 @@
       border-bottom: 1px solid rgba(255,255,255,0.07);
       position: relative; z-index: 1;
     }
-    .mm-logo {
-      display: flex; flex-direction: column; gap: 1px;
-    }
+    .mm-logo { display: flex; flex-direction: column; gap: 1px; }
     .mm-logo-arkn {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 800; font-size: 18px;
@@ -273,8 +276,7 @@
     }
     .mm-item:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
     .mm-item:hover { padding-left: 8px; }
-    .mm-item:hover .mm-item-num { color: white; }
-    .mm-item:hover .mm-item-name { color: white; }
+    .mm-item:hover .mm-item-num, .mm-item:hover .mm-item-name { color: white; }
     .mm-item:hover .mm-item-arrow { opacity: 1; transform: translateX(0); }
     .mm-item-num {
       font-family: 'Space Grotesk', sans-serif;
@@ -312,7 +314,6 @@
       transition: background 0.2s, transform 0.2s;
     }
     .mm-wa:hover { background: rgba(255,255,255,0.88); transform: translateY(-2px); }
-    .mm-wa svg { flex-shrink: 0; }
 
     /* ════════════════════════════
        HERO
@@ -323,41 +324,13 @@
       position: relative; overflow: hidden;
       padding: 130px 0 90px;
     }
-    .orb {
-      position: absolute; border-radius: 50%;
-      filter: blur(110px); pointer-events: none;
-    }
-    .orb-1 {
-      width: 700px; height: 700px;
-      background: rgba(96,165,250,0.07);
-      top: -180px; left: -200px;
-      animation: fl1 9s ease-in-out infinite;
-    }
-    .orb-2 {
-      width: 450px; height: 450px;
-      background: rgba(255,255,255,0.04);
-      bottom: -80px; right: -120px;
-      animation: fl2 11s ease-in-out infinite;
-    }
-    .orb-3 {
-      width: 280px; height: 280px;
-      background: rgba(96,165,250,0.05);
-      top: 45%; right: 22%;
-      animation: fl3 7s ease-in-out infinite;
-    }
-    @keyframes fl1 {
-      0%,100% { transform: translate(0,0) scale(1); }
-      33% { transform: translate(35px,-25px) scale(1.06); }
-      66% { transform: translate(-20px,35px) scale(0.95); }
-    }
-    @keyframes fl2 {
-      0%,100% { transform: translate(0,0); }
-      50% { transform: translate(-45px,-35px); }
-    }
-    @keyframes fl3 {
-      0%,100% { transform: translate(0,0); }
-      50% { transform: translate(25px,45px); }
-    }
+    .orb { position: absolute; border-radius: 50%; filter: blur(110px); pointer-events: none; }
+    .orb-1 { width: 700px; height: 700px; background: rgba(96,165,250,0.07); top: -180px; left: -200px; animation: fl1 9s ease-in-out infinite; }
+    .orb-2 { width: 450px; height: 450px; background: rgba(255,255,255,0.04); bottom: -80px; right: -120px; animation: fl2 11s ease-in-out infinite; }
+    .orb-3 { width: 280px; height: 280px; background: rgba(96,165,250,0.05); top: 45%; right: 22%; animation: fl3 7s ease-in-out infinite; }
+    @keyframes fl1 { 0%,100% { transform: translate(0,0) scale(1); } 33% { transform: translate(35px,-25px) scale(1.06); } 66% { transform: translate(-20px,35px) scale(0.95); } }
+    @keyframes fl2 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-45px,-35px); } }
+    @keyframes fl3 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(25px,45px); } }
 
     .hero-content { position: relative; z-index: 2; max-width: 800px; }
 
@@ -389,6 +362,136 @@
     .stat-lbl { font-size: 13px; color: var(--muted); }
     .stat-sep { width: 1px; background: var(--border); align-self: stretch; }
 
+    /* ── HERO 2-col grid + visual stack ── */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-visual {
+      position: relative;
+      height: 580px;
+      perspective: 1400px;
+    }
+
+    .mockup {
+      position: absolute;
+      width: 380px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #0E0E10;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow:
+        0 30px 90px rgba(0,0,0,0.6),
+        0 0 0 1px rgba(96,165,250,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.06);
+      transition: transform 0.6s cubic-bezier(.16,1,.3,1), box-shadow 0.6s ease;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+    .mockup-1 {
+      top: 0; left: 4%;
+      transform: rotate(-5deg);
+      z-index: 2;
+      animation: mfloat1 7s ease-in-out infinite;
+    }
+    .mockup-2 {
+      top: 22%; right: 0;
+      transform: rotate(4deg);
+      z-index: 3;
+      animation: mfloat2 8s ease-in-out infinite;
+    }
+    .mockup-3 {
+      bottom: 0; left: 18%;
+      transform: rotate(-2deg);
+      z-index: 1;
+      animation: mfloat3 9s ease-in-out infinite;
+    }
+    @keyframes mfloat1 { 0%,100% { transform: rotate(-5deg) translateY(0); } 50% { transform: rotate(-5deg) translateY(-12px); } }
+    @keyframes mfloat2 { 0%,100% { transform: rotate(4deg) translateY(0); } 50% { transform: rotate(4deg) translateY(-18px); } }
+    @keyframes mfloat3 { 0%,100% { transform: rotate(-2deg) translateY(0); } 50% { transform: rotate(-2deg) translateY(-8px); } }
+    .mockup:hover {
+      transform: rotate(0deg) translateY(-14px) scale(1.04);
+      z-index: 10;
+      box-shadow:
+        0 50px 120px rgba(0,0,0,0.7),
+        0 0 0 1px rgba(96,165,250,0.3),
+        0 0 60px rgba(96,165,250,0.15);
+      animation-play-state: paused;
+    }
+
+    .mockup-bar {
+      display: flex; align-items: center; gap: 6px;
+      padding: 11px 14px;
+      background: #16161A;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .mockup-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,0.16);
+    }
+    .mockup-dot:nth-child(1) { background: #FF5F57; }
+    .mockup-dot:nth-child(2) { background: #FEBC2E; }
+    .mockup-dot:nth-child(3) { background: #28C840; }
+    .mockup-url {
+      flex: 1; margin-left: 10px;
+      background: #0a0a0a;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .mockup-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .mockup-caption {
+      padding: 12px 14px;
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,0.6));
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      pointer-events: none;
+    }
+    .mockup-caption-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px; font-weight: 700;
+      color: white;
+      letter-spacing: -0.2px;
+    }
+    .mockup-caption-cat {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px; font-weight: 600;
+      color: var(--cyan);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    /* Decorative glow behind mockups */
+    .hero-visual::before {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(96,165,250,0.12) 0%, transparent 65%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(40px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
     /* ════════════════════════════
        TRUST BANNER
     ════════════════════════════ */
@@ -398,19 +501,16 @@
       border-bottom: 1px solid rgba(255,255,255,0.08);
       padding: 26px 0; position: relative; overflow: hidden;
     }
-    .trust::before {
-      content: '';
-      position: absolute; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
-      pointer-events: none;
-    }
     .trust-inner {
       display: flex; align-items: center;
       justify-content: center; gap: 16px;
       text-align: center; flex-wrap: wrap;
       position: relative;
     }
-    .trust-icon { font-size: 30px; }
+    .trust-icon-svg {
+      width: 32px; height: 32px;
+      color: var(--cyan);
+    }
     .trust-text {
       font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(18px,3vw,27px);
@@ -419,128 +519,235 @@
     .trust-sub { font-size: 14px; color: rgba(255,255,255,0.72); margin-top: 3px; }
 
     /* ════════════════════════════
-       SERVICIOS
+       SERVICIOS — BENTO ASIMÉTRICO
     ════════════════════════════ */
     .services { padding: 100px 0; position: relative; }
     .services-header { margin-bottom: 64px; }
 
-    .cat-label {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 11px; font-weight: 700;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 20px;
-      display: flex; align-items: center; gap: 14px;
+    .plans-bento {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 16px;
     }
-    .cat-label::after {
-      content: ''; flex: 1; height: 1px; background: var(--border);
-    }
-
-    .grid-3 {
-      display: grid; grid-template-columns: repeat(3,1fr); gap: 16px;
-      margin-bottom: 14px;
-    }
-    .grid-3-last {
-      display: grid; grid-template-columns: repeat(3,1fr); gap: 16px;
-    }
-
-    .svc-cat { margin-bottom: 52px; }
-
-    .card {
+    .plan {
       background: var(--surface-2);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
+      border-radius: 22px;
+      padding: 36px;
       position: relative; overflow: hidden;
       transition: all 0.35s ease;
       backdrop-filter: blur(10px);
+      display: flex; flex-direction: column;
     }
-    .card::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 60%);
-      opacity: 0; transition: opacity 0.35s;
-    }
-    .card:hover {
+    .plan:hover {
       border-color: rgba(255,255,255,0.22);
       transform: translateY(-5px);
-      box-shadow: 0 24px 64px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.05);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.35);
     }
-    .card:hover::before { opacity: 1; }
-
-    .card-icon {
-      width: 50px; height: 50px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px; margin-bottom: 18px;
+    .plan-featured {
+      grid-row: 1 / span 2;
+      background: linear-gradient(160deg, rgba(96,165,250,0.08) 0%, rgba(255,255,255,0.02) 60%);
+      border-color: rgba(96,165,250,0.32);
     }
-    .card-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 16px; font-weight: 700; margin-bottom: 8px;
-    }
-    .card-desc {
-      font-size: 13px; color: var(--muted);
-      line-height: 1.65; margin-bottom: 18px;
-    }
-    .card-price {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 21px; font-weight: 800; color: var(--accent-light);
-    }
-    .card-price small {
-      font-size: 12px; font-weight: 500; color: var(--muted); margin-left: 4px;
-    }
-
-    /* Retainer */
-    .ret-grid {
-      display: grid; grid-template-columns: repeat(3,1fr); gap: 16px;
-    }
-    .ret-card {
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 34px 28px; text-align: center;
-      transition: all 0.35s ease;
-      position: relative;
-    }
-    .ret-card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.28); }
-    .ret-card.featured {
-      border-color: rgba(255,255,255,0.32);
-      background: rgba(255,255,255,0.04);
-    }
-    .ret-card.featured::after {
-      content: 'Más popular';
-      position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-      background: white; color: #080808;
+    .plan-badge {
+      position: absolute; top: 24px; right: 24px;
+      background: var(--cyan); color: #080808;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; padding: 4px 14px; border-radius: 50px;
-      white-space: nowrap;
+      text-transform: uppercase; padding: 5px 12px; border-radius: 50px;
     }
-    .ret-name {
+    .plan-name {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 18px; font-weight: 700; margin-bottom: 10px;
+      font-size: 28px; font-weight: 800;
+      margin-bottom: 10px; letter-spacing: -0.5px;
     }
-    .ret-price {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 40px; font-weight: 800; color: var(--accent-light);
-      line-height: 1; margin-bottom: 4px;
-    }
-    .ret-price-sub {
-      font-size: 13px; color: var(--muted); margin-bottom: 28px;
-    }
-    .ret-features { list-style: none; text-align: left; display: flex; flex-direction: column; gap: 11px; }
-    .ret-features li {
+    .plan-featured .plan-name { font-size: 38px; }
+    .plan-desc {
       font-size: 14px; color: var(--muted);
+      line-height: 1.65; margin-bottom: 28px;
+    }
+    .plan-price {
+      display: flex; align-items: baseline; gap: 8px;
+      margin-bottom: 6px;
+    }
+    .plan-price-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 44px; font-weight: 800; color: white;
+      line-height: 1;
+    }
+    .plan-featured .plan-price-num { font-size: 56px; }
+    .plan-price-cur { font-size: 14px; color: var(--muted-2); }
+    .plan-timeline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--cyan);
+      margin-bottom: 28px;
+    }
+    .plan-features {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 12px;
+      margin-bottom: 32px;
+      flex: 1;
+    }
+    .plan-features li {
+      font-size: 14px; color: rgba(255,255,255,0.78);
       display: flex; align-items: flex-start; gap: 10px;
+      line-height: 1.55;
     }
-    .ret-features li::before {
-      content: '';
-      width: 18px; height: 18px; min-width: 18px;
-      background: rgba(255,255,255,0.1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8l3.5 3.5L13 4' stroke='%23FFFFFF' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center / 11px no-repeat;
-      border-radius: 50%;
-      margin-top: 1px;
+    .plan-features li svg {
+      width: 16px; height: 16px; min-width: 16px; margin-top: 3px;
+      color: var(--cyan); fill: none; stroke: currentColor;
+      stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
     }
+    .plan-cta {
+      width: 100%; justify-content: center;
+    }
+
+    /* Retainer minimal */
+    .retainer-strip {
+      margin-top: 56px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 36px;
+      display: grid; grid-template-columns: 1.2fr repeat(3, 1fr) auto;
+      gap: 32px; align-items: center;
+    }
+    .retainer-intro h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px; font-weight: 800; margin-bottom: 8px;
+    }
+    .retainer-intro p { font-size: 13px; color: var(--muted); line-height: 1.55; }
+    .retainer-plan {
+      text-align: left;
+      padding-left: 24px;
+      border-left: 1px solid var(--border);
+    }
+    .retainer-plan-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px; font-weight: 700; color: var(--cyan);
+      letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .retainer-plan-price {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px; font-weight: 800;
+    }
+    .retainer-plan-price small { font-size: 12px; color: var(--muted-2); font-weight: 500; }
+
+    /* ════════════════════════════
+       CAPACIDADES — 12 destacadas
+    ════════════════════════════ */
+    .capacidades { padding: 100px 0; border-top: 1px solid var(--border); }
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .cap-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px; position: relative; overflow: hidden;
+      transition: all 0.35s ease;
+      backdrop-filter: blur(12px);
+    }
+    .cap-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(96,165,250,0.05) 0%, transparent 60%);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .cap-card:hover {
+      border-color: rgba(96,165,250,0.32);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .cap-card:hover::before { opacity: 1; }
+    .cap-icon {
+      width: 44px; height: 44px;
+      background: rgba(96,165,250,0.08);
+      border: 1px solid rgba(96,165,250,0.18);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .cap-icon svg {
+      width: 20px; height: 20px;
+      color: var(--cyan);
+      stroke: currentColor; fill: none;
+      stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .cap-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px; font-weight: 700; margin-bottom: 8px; color: white;
+    }
+    .cap-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 14px; }
+    .cap-tag {
+      display: inline-block; padding: 4px 11px;
+      background: rgba(96,165,250,0.08);
+      border: 1px solid rgba(96,165,250,0.22);
+      border-radius: 50px; font-size: 11px;
+      color: var(--cyan); font-weight: 600;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .cap-cta {
+      text-align: center; margin-top: 40px;
+    }
+
+    /* ════════════════════════════
+       TECH STACK MARQUEE
+    ════════════════════════════ */
+    .stack-sec {
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .stack-head { text-align: center; margin-bottom: 52px; }
+    .stack-head h2 { font-size: clamp(26px,4vw,40px); font-weight: 800; margin-bottom: 12px; letter-spacing: -1px; }
+    .stack-head p { font-size: 16px; color: var(--muted); }
+
+    .marquee-wrap { overflow: hidden; position: relative; padding: 8px 0; }
+    .marquee-wrap::before, .marquee-wrap::after {
+      content: ''; position: absolute; top: 0; bottom: 0;
+      width: 160px; z-index: 2; pointer-events: none;
+    }
+    .marquee-wrap::before { left: 0; background: linear-gradient(90deg, var(--bg) 30%, transparent); }
+    .marquee-wrap::after { right: 0; background: linear-gradient(-90deg, var(--bg) 30%, transparent); }
+
+    .marquee-track { display: flex; gap: 14px; animation: marquee 32s linear infinite; width: max-content; padding: 6px 0; }
+    .marquee-track-2 { display: flex; gap: 14px; animation: marquee 24s linear infinite reverse; width: max-content; margin-top: 14px; padding: 6px 0; }
+    .marquee-track:hover, .marquee-track-2:hover { animation-play-state: paused; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .marquee-track, .marquee-track-2 { animation: none; } }
+
+    .stack-chip {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 11px 20px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 50px; white-space: nowrap;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.55);
+      transition: all 0.3s ease; cursor: default; position: relative;
+    }
+    .stack-chip:hover {
+      color: white;
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(96,165,250,0.32);
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .stack-chip-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      flex-shrink: 0; box-shadow: 0 0 6px currentColor;
+      animation: dot-pulse 3s ease-in-out infinite;
+    }
+    .marquee-track .stack-chip:nth-child(odd) .stack-chip-dot { animation-delay: 0s; }
+    .marquee-track .stack-chip:nth-child(even) .stack-chip-dot { animation-delay: 1.5s; }
+    .marquee-track-2 .stack-chip:nth-child(odd) .stack-chip-dot { animation-delay: 0.8s; }
+    .marquee-track-2 .stack-chip:nth-child(even) .stack-chip-dot { animation-delay: 2.1s; }
+    @keyframes dot-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.7); } }
 
     /* ════════════════════════════
        PROCESO
@@ -553,12 +760,12 @@
     }
     .process-head { text-align: center; margin-bottom: 64px; }
     .process-steps {
-      display: grid; grid-template-columns: repeat(4,1fr);
+      display: grid; grid-template-columns: repeat(5,1fr);
       gap: 0; position: relative;
     }
     .proc-line {
       position: absolute; top: 27px;
-      left: calc(12.5% + 18px); right: calc(12.5% + 18px);
+      left: calc(10% + 18px); right: calc(10% + 18px);
       height: 1px; background: var(--border);
     }
     .proc-fill {
@@ -569,7 +776,7 @@
     .step {
       display: flex; flex-direction: column;
       align-items: center; text-align: center;
-      padding: 0 14px;
+      padding: 0 12px;
     }
     .step-num {
       width: 56px; height: 56px;
@@ -583,14 +790,21 @@
       transition: all 0.5s ease;
     }
     .step.lit .step-num {
-      background: white; border-color: white;
-      color: #080808; box-shadow: 0 0 32px rgba(255,255,255,0.22);
+      background: white; border-color: var(--cyan);
+      color: #080808;
+      box-shadow: 0 0 32px rgba(96,165,250,0.4);
     }
     .step-title {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 16px; font-weight: 700; margin-bottom: 8px;
+      font-size: 15px; font-weight: 700; margin-bottom: 8px;
     }
-    .step-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .step-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+    .step-time {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--cyan);
+      margin-bottom: 6px;
+    }
 
     /* ════════════════════════════
        GARANTÍA
@@ -606,7 +820,7 @@
       content: '';
       position: absolute; top: -120px; right: -120px;
       width: 420px; height: 420px;
-      background: rgba(255,255,255,0.03);
+      background: rgba(96,165,250,0.04);
       border-radius: 50%; filter: blur(90px);
     }
     .guar-grid {
@@ -622,16 +836,19 @@
       line-height: 1.8; margin-bottom: 36px;
     }
     .guar-pts { display: flex; flex-direction: column; gap: 20px; }
-    .gp {
-      display: flex; align-items: flex-start; gap: 16px;
-    }
+    .gp { display: flex; align-items: flex-start; gap: 16px; }
     .gp-ico {
       width: 46px; height: 46px; min-width: 46px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(96,165,250,0.08);
+      border: 1px solid rgba(96,165,250,0.2);
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 20px;
+    }
+    .gp-ico svg {
+      width: 22px; height: 22px;
+      color: var(--cyan);
+      fill: none; stroke: currentColor;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
     }
     .gp-body h4 {
       font-family: 'Space Grotesk', sans-serif;
@@ -643,232 +860,82 @@
       display: flex; flex-direction: column;
       align-items: center; text-align: center; gap: 28px;
     }
-    .big-seal {
-      width: 190px; height: 190px;
-      background: linear-gradient(135deg, #181818 0%, #242424 100%);
-      border: 2px solid rgba(255,255,255,0.2);
+    .small-seal {
+      width: 110px; height: 110px;
+      background: linear-gradient(135deg, #1A1A1A 0%, #242424 100%);
+      border: 2px solid rgba(96,165,250,0.32);
       border-radius: 50%;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
-      box-shadow: 0 0 60px rgba(255,255,255,0.07),
-                  0 0 0 16px rgba(255,255,255,0.03),
-                  0 0 0 32px rgba(255,255,255,0.015);
-      animation: sealrotate 20s linear infinite;
+      box-shadow: 0 0 40px rgba(96,165,250,0.18);
     }
-    @keyframes sealrotate {
-      0%,100% { box-shadow: 0 0 60px rgba(255,255,255,0.07), 0 0 0 16px rgba(255,255,255,0.03), 0 0 0 32px rgba(255,255,255,0.015); }
-      50% { box-shadow: 0 0 90px rgba(255,255,255,0.12), 0 0 0 20px rgba(255,255,255,0.05), 0 0 0 40px rgba(255,255,255,0.02); }
+    .small-seal svg {
+      width: 36px; height: 36px;
+      color: var(--cyan);
+      fill: none; stroke: currentColor;
+      stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
     }
-    .big-seal .seal-icon { font-size: 52px; margin-bottom: 4px; }
-    .big-seal .seal-txt {
+    .small-seal .seal-txt {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      font-size: 8px; font-weight: 700; letter-spacing: 0.1em;
       text-transform: uppercase; color: rgba(255,255,255,0.85);
-      line-height: 1.4;
+      margin-top: 4px; text-align: center; line-height: 1.3;
     }
-    .guar-note { font-size: 14px; color: var(--muted); max-width: 260px; line-height: 1.6; }
+    .guar-note { font-size: 14px; color: var(--muted); max-width: 280px; line-height: 1.6; }
 
     /* ════════════════════════════
-       PORTAFOLIO
+       FAQ
     ════════════════════════════ */
-    .portfolio {
+    .faq-sec {
       padding: 100px 0;
       background: rgba(255,255,255,0.015);
       border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-    .port-header {
-      display: flex; align-items: flex-end;
-      justify-content: space-between;
-      margin-bottom: 52px; flex-wrap: wrap; gap: 20px;
+    .faq-wrap {
+      max-width: 760px; margin: 0 auto;
     }
-    .port-header-right {
-      font-size: 15px; color: var(--muted);
-      max-width: 300px; text-align: right; line-height: 1.65;
-    }
-    .port-card {
-      background: var(--surface-2);
+    .faq-head { text-align: center; margin-bottom: 52px; }
+    .faq-item {
+      background: rgba(255,255,255,0.025);
       border: 1px solid var(--border);
-      border-radius: 22px; overflow: hidden;
-      max-width: 680px;
-      transition: all 0.38s ease;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
     }
-    .port-card:hover {
-      border-color: rgba(255,255,255,0.22);
-      transform: translateY(-7px);
-      box-shadow: 0 36px 90px rgba(0,0,0,0.4);
-    }
-    .port-img {
-      height: 290px;
-      background: linear-gradient(135deg, #1A1A1A 0%, #222230 50%, #1a1a2a 100%);
-      position: relative; overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .port-orb {
-      position: absolute; border-radius: 50%; filter: blur(60px);
-    }
-    .port-orb-1 { width: 220px; height: 220px; background: rgba(96,165,250,0.18); top:-60px; left:-60px; }
-    .port-orb-2 { width: 160px; height: 160px; background: rgba(201,169,122,0.22); bottom:-30px; right:-30px; }
-    .port-mock {
-      position: relative; z-index: 2; text-align: center;
-      padding: 20px;
-    }
-    .port-mock-title {
+    .faq-item:hover { border-color: rgba(255,255,255,0.18); }
+    .faq-item[open] { border-color: rgba(96,165,250,0.28); }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 26px;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 30px; font-weight: 800;
-      text-shadow: 0 2px 24px rgba(0,0,0,0.5);
-    }
-    .port-mock-sub { font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 6px; }
-    .port-info { padding: 30px 34px; }
-    .port-cat {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--accent-light); margin-bottom: 10px;
-    }
-    .port-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 22px; font-weight: 800; margin-bottom: 10px;
-    }
-    .port-desc { font-size: 14px; color: var(--muted); line-height: 1.65; margin-bottom: 20px; }
-    .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 26px; }
-    .tag {
-      padding: 4px 12px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      border-radius: 50px; font-size: 12px; color: var(--muted);
-    }
-
-    /* ── Portfolio coming soon ── */
-    .port-coming {
-      border: 1px dashed rgba(255,255,255,0.15);
-      border-radius: 22px;
-      padding: 80px 40px;
-      text-align: center;
-      background: rgba(255,255,255,0.02);
-      transition: all 0.3s;
-    }
-    .port-coming:hover {
-      border-color: rgba(255,255,255,0.28);
-      background: rgba(255,255,255,0.04);
-    }
-    .port-coming-inner { max-width: 480px; margin: 0 auto; }
-    .port-coming-icon { font-size: 48px; margin-bottom: 20px; }
-    .port-coming-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 26px; font-weight: 800;
-      margin-bottom: 14px; letter-spacing: -0.5px;
-    }
-    .port-coming-desc {
-      font-size: 15px; color: var(--muted);
-      line-height: 1.75; margin-bottom: 32px;
-    }
-
-    /* ── Port real photos ── */
-    .port-img-photo {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center top;
-      transition: transform 0.7s ease;
-      filter: brightness(0.65);
-    }
-    .port-card:hover .port-img-photo { transform: scale(1.06); filter: brightness(0.8); }
-    .port-img-overlay {
-      position: absolute; inset: 0; z-index: 3;
-      background: rgba(96,165,250,0.85);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; transition: opacity 0.3s ease;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 15px; font-weight: 700; color: #000;
-      letter-spacing: 0.5px;
-    }
-    .port-card:hover .port-img-overlay { opacity: 1; }
-    .port-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    @media (max-width: 1024px) { .port-grid-3 { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 700px) { .port-grid-3 { grid-template-columns: 1fr; } }
-    .port-grid-3 .port-card { max-width: none; }
-    .port-grid-3 .port-img { height: 220px; }
-    .port-link {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-family: 'Space Grotesk', sans-serif; font-size: 13px;
-      font-weight: 700; color: rgba(255,255,255,0.8);
-      text-decoration: none; border: 1px solid var(--border);
-      padding: 8px 16px; border-radius: 50px;
-      transition: all 0.2s;
-    }
-    .port-link:hover { border-color: rgba(255,255,255,0.4); color: white; }
-
-    /* ════════════════════════════
-       TESTIMONIOS
-    ════════════════════════════ */
-    .testimonios {
-      padding: 100px 0;
-      border-top: 1px solid var(--border);
-    }
-    .testi-head { margin-bottom: 52px; }
-    .testi-grid {
-      display: grid;
-      grid-template-columns: 1.6fr 1fr;
+      font-size: 16px; font-weight: 700;
+      color: white;
+      display: flex; align-items: center; justify-content: space-between;
       gap: 20px;
-      align-items: start;
     }
-    .testi-card {
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 40px;
-      position: relative; overflow: hidden;
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 24px; font-weight: 300;
+      color: var(--cyan);
+      transition: transform 0.3s ease;
+      line-height: 1;
     }
-    .testi-card::before {
-      content: '"';
-      position: absolute; top: -10px; left: 28px;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 120px; font-weight: 800;
-      color: rgba(255,255,255,0.05);
-      line-height: 1; pointer-events: none;
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-answer {
+      padding: 0 26px 22px;
+      font-size: 14px; color: var(--muted);
+      line-height: 1.75;
     }
-    .testi-stars {
-      font-size: 18px; letter-spacing: 2px;
-      color: #F8C94C; margin-bottom: 20px;
+    .faq-cta {
+      text-align: center; margin-top: 32px;
+      font-size: 14px; color: var(--muted);
     }
-    .testi-quote {
-      font-size: 17px; line-height: 1.75;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 30px;
-      font-style: italic;
-    }
-    .testi-author {
-      display: flex; align-items: center; gap: 14px;
-    }
-    .testi-avatar {
-      width: 46px; height: 46px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700; font-size: 15px; color: white;
-      flex-shrink: 0;
-    }
-    .testi-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 15px; font-weight: 700; color: white;
-    }
-    .testi-biz { font-size: 12px; color: var(--muted); margin-top: 2px; }
-
-    .testi-metrics {
-      display: flex; flex-direction: column; gap: 16px;
-    }
-    .testi-metric {
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px 30px;
-    }
-    .metric-num {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 44px; font-weight: 800;
-      color: white; line-height: 1; margin-bottom: 8px;
-    }
-    .metric-lbl { font-size: 13px; color: var(--muted); line-height: 1.55; }
+    .faq-cta a { color: var(--cyan); text-decoration: none; font-weight: 600; }
+    .faq-cta a:hover { text-decoration: underline; }
 
     /* ════════════════════════════
        SOBRE NOSOTROS
@@ -887,13 +954,93 @@
       border-radius: var(--radius); padding: 28px; text-align: center;
       transition: all 0.3s;
     }
-    .about-stat:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-4px); }
+    .about-stat:hover { border-color: rgba(96,165,250,0.32); transform: translateY(-4px); }
     .about-stat-num {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 38px; font-weight: 800; color: var(--accent-light);
       line-height: 1; margin-bottom: 6px;
     }
     .about-stat-lbl { font-size: 13px; color: var(--muted); }
+
+    /* ════════════════════════════
+       PORTAFOLIO
+    ════════════════════════════ */
+    .portfolio {
+      padding: 100px 0;
+      background: rgba(255,255,255,0.015);
+      border-top: 1px solid var(--border);
+    }
+    .port-header {
+      display: flex; align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 52px; flex-wrap: wrap; gap: 20px;
+    }
+    .port-header-right {
+      font-size: 15px; color: var(--muted);
+      max-width: 360px; text-align: right; line-height: 1.65;
+    }
+    .port-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .port-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 22px; overflow: hidden;
+      transition: all 0.38s ease;
+      display: block;
+      text-decoration: none;
+    }
+    .port-card:hover {
+      border-color: rgba(96,165,250,0.32);
+      transform: translateY(-7px);
+      box-shadow: 0 36px 90px rgba(0,0,0,0.4);
+    }
+    .port-img {
+      height: 220px;
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #1A1A1A 0%, #222230 50%, #1a1a2a 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .port-img-photo {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+      transition: transform 0.7s ease;
+      filter: brightness(0.65);
+    }
+    .port-card:hover .port-img-photo { transform: scale(1.06); filter: brightness(0.85); }
+    .port-img-overlay {
+      position: absolute; inset: 0; z-index: 3;
+      background: rgba(96,165,250,0.85);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.3s ease;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px; font-weight: 700; color: #000;
+      letter-spacing: 0.5px;
+    }
+    .port-card:hover .port-img-overlay { opacity: 1; }
+    .port-info { padding: 26px 28px; }
+    .port-cat {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--cyan); margin-bottom: 10px;
+    }
+    .port-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px; font-weight: 800; margin-bottom: 10px; color: white;
+    }
+    .port-desc { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 18px; }
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag {
+      padding: 3px 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 50px; font-size: 11px; color: var(--muted);
+    }
+    .port-disclaimer {
+      text-align: center; margin-top: 32px;
+      font-size: 12px; color: var(--muted-2); font-style: italic;
+      max-width: 680px; margin-left: auto; margin-right: auto;
+      line-height: 1.7;
+    }
 
     /* ════════════════════════════
        FINAL CTA
@@ -907,7 +1054,7 @@
       position: absolute; top: 50%; left: 50%;
       transform: translate(-50%,-50%);
       width: 900px; height: 900px;
-      background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 68%);
+      background: radial-gradient(circle, rgba(96,165,250,0.05) 0%, transparent 68%);
       pointer-events: none;
     }
     .cta-final h2 {
@@ -917,25 +1064,49 @@
     }
     .cta-final p {
       font-size: 18px; color: var(--muted);
-      max-width: 460px; margin: 0 auto 40px;
+      max-width: 540px; margin: 0 auto 40px;
       line-height: 1.75; position: relative;
+    }
+    .cta-final-btns {
+      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+      position: relative;
     }
     .wa-btn {
       display: inline-flex; align-items: center; gap: 12px;
-      padding: 18px 42px;
+      padding: 18px 38px;
       background: white; color: #080808; border-radius: 50px;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 17px; font-weight: 700;
-      text-decoration: none; position: relative;
+      font-size: 16px; font-weight: 700;
+      text-decoration: none;
       transition: all 0.3s ease;
-      box-shadow: 0 0 40px rgba(255,255,255,0.14);
+      box-shadow: 0 0 40px rgba(96,165,250,0.18);
     }
     .wa-btn:hover {
-      background: rgba(255,255,255,0.9);
+      background: #E0F2FF;
       transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 20px 60px rgba(255,255,255,0.18);
+      box-shadow: 0 20px 60px rgba(96,165,250,0.3);
     }
-    .wa-btn svg { color: #080808; }
+    .email-btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      padding: 18px 38px;
+      background: transparent; color: white;
+      border: 1px solid var(--border); border-radius: 50px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px; font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .email-btn:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.22);
+      transform: translateY(-3px);
+    }
+    .cta-final-note {
+      margin-top: 32px;
+      display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
+      font-size: 12px; color: var(--muted-2);
+      position: relative;
+    }
 
     /* ════════════════════════════
        FOOTER
@@ -949,7 +1120,6 @@
       grid-template-columns: 1.5fr 1fr 1fr;
       gap: 48px; margin-bottom: 48px;
     }
-    .footer-brand { }
     .footer-logo {
       display: flex; flex-direction: column; gap: 2px;
       margin-bottom: 14px;
@@ -966,7 +1136,7 @@
       letter-spacing: 4px; text-transform: uppercase;
     }
     .footer-tagline {
-      font-size: 14px; color: var(--muted); line-height: 1.65; max-width: 240px;
+      font-size: 14px; color: var(--muted); line-height: 1.65; max-width: 280px;
     }
     .footer-col-title {
       font-family: 'Space Grotesk', sans-serif;
@@ -987,14 +1157,15 @@
       text-decoration: none; transition: color 0.2s;
     }
     .footer-contact a:hover { color: white; }
+    .footer-contact a svg { width: 14px; height: 14px; min-width: 14px; }
     .footer-bottom {
       border-top: 1px solid var(--border);
       padding-top: 24px;
       display: flex; align-items: center;
       justify-content: space-between; flex-wrap: wrap; gap: 12px;
     }
-    .footer-copy { font-size: 13px; color: var(--muted); }
-    .footer-loc { font-size: 13px; color: var(--muted); }
+    .footer-copy { font-size: 13px; color: var(--muted-2); }
+    .footer-loc { font-size: 13px; color: var(--muted-2); }
 
     /* ════════════════════════════
        FLOAT WA
@@ -1017,20 +1188,29 @@
     /* ════════════════════════════
        RESPONSIVE
     ════════════════════════════ */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 60px; }
+      .hero-visual { height: 460px; max-width: 540px; margin: 0 auto; }
+      .mockup { width: 320px; }
+      .mockup-img { height: 200px; }
+    }
     @media (max-width: 900px) {
       .nav-links, .nav-end .btn-ghost { display: none; }
       .hamburger { display: flex; }
-      .grid-3, .grid-3-last { grid-template-columns: repeat(2,1fr); }
-      .ret-grid { grid-template-columns: 1fr; }
+      .plans-bento { grid-template-columns: 1fr; }
+      .plan-featured { grid-row: auto; }
+      .retainer-strip { grid-template-columns: 1fr; gap: 16px; }
+      .retainer-plan { padding-left: 0; padding-top: 16px; border-left: 0; border-top: 1px solid var(--border); }
+      .cap-grid { grid-template-columns: repeat(2, 1fr); }
       .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
       .proc-line { display: none; }
       .guar-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 44px; }
-      .testi-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr 1fr; }
+      .port-grid-3 { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 580px) {
-      .grid-3, .grid-3-last { grid-template-columns: 1fr; }
+      .cap-grid { grid-template-columns: 1fr; }
       .process-steps { grid-template-columns: 1fr; }
       .about-right { grid-template-columns: 1fr 1fr; }
       .guar-inner { padding: 40px 22px; }
@@ -1038,250 +1218,17 @@
       .stat-sep { display: none; }
       .port-header { flex-direction: column; }
       .port-header-right { text-align: left; max-width: 100%; }
+      .port-grid-3 { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .hero-visual { height: 380px; max-width: 380px; }
+      .mockup { width: 260px; }
+      .mockup-img { height: 160px; }
+      .mockup-1 { left: 0; }
+      .mockup-2 { right: 0; top: 18%; }
+      .mockup-3 { left: 10%; }
     }
 
-    /* ════════════════════════════
-       CAPACIDADES — TABS
-    ════════════════════════════ */
-    .capacidades { padding: 100px 0; }
-    .tabs-nav {
-      display: flex; gap: 8px; flex-wrap: wrap;
-      margin-bottom: 48px;
-    }
-    .tab-btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 18px; border-radius: 50px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      color: var(--muted); font-size: 13px; font-weight: 600;
-      font-family: 'Space Grotesk', sans-serif;
-      cursor: pointer; transition: all 0.25s ease;
-      white-space: nowrap;
-    }
-    .tab-btn:hover { border-color: rgba(255,255,255,0.2); color: white; }
-    .tab-btn.active {
-      background: white; color: #080808;
-      border-color: white;
-      box-shadow: 0 0 24px rgba(255,255,255,0.12);
-    }
-    .tab-panel { display: none; }
-    .tab-panel.active { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-
-    .cap-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px; position: relative; overflow: hidden;
-      transition: all 0.35s ease; cursor: default;
-      backdrop-filter: blur(12px);
-    }
-    .cap-card::before {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 60%);
-      opacity: 0; transition: opacity 0.3s;
-    }
-    .cap-card:hover {
-      border-color: rgba(255,255,255,0.2);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    }
-    .cap-card:hover::before { opacity: 1; }
-    .cap-icon {
-      width: 46px; height: 46px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 16px;
-    }
-    .cap-icon svg { width: 20px; height: 20px; color: rgba(255,255,255,0.75); stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-    .cap-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 15px; font-weight: 700; margin-bottom: 8px; color: white;
-    }
-    .cap-desc { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 14px; }
-    .cap-tag {
-      display: inline-block; padding: 3px 10px;
-      background: rgba(96,165,250,0.08);
-      border: 1px solid rgba(96,165,250,0.2);
-      border-radius: 50px; font-size: 11px;
-      color: #60A5FA; font-weight: 600;
-      font-family: 'Space Grotesk', sans-serif;
-    }
-    .tab-panel-grid-4 {
-      display: none; grid-template-columns: repeat(4,1fr); gap: 16px;
-    }
-    .tab-panel-grid-4.active { display: grid; }
-
-    /* ════════════════════════════
-       SOCIO TÉCNICO
-    ════════════════════════════ */
-    .socio { padding: 100px 0; background: rgba(255,255,255,0.015); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .socio-inner { position: relative; }
-    .socio-head { text-align: center; margin-bottom: 64px; }
-    .socio-head h2 { font-size: clamp(30px,5vw,52px); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 16px; }
-    .socio-head p { font-size: 17px; color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.75; }
-
-    .socio-roles {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
-      max-width: 900px; margin: 0 auto 48px;
-    }
-    .role-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border);
-      border-radius: 20px; padding: 36px;
-      transition: all 0.35s;
-    }
-    .role-card:hover { border-color: rgba(255,255,255,0.22); transform: translateY(-4px); }
-    .role-card.role-tu { border-color: rgba(255,255,255,0.1); }
-    .role-card.role-yo {
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.2);
-    }
-    .role-label {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--muted);
-      margin-bottom: 18px;
-    }
-    .role-label span {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--muted); display: inline-block;
-    }
-    .role-card.role-yo .role-label { color: white; }
-    .role-card.role-yo .role-label span { background: white; }
-    .role-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 26px; font-weight: 800; margin-bottom: 24px;
-      letter-spacing: -0.5px;
-    }
-    .role-items { display: flex; flex-direction: column; gap: 14px; }
-    .role-item {
-      display: flex; align-items: flex-start; gap: 12px;
-      font-size: 14px; color: var(--muted); line-height: 1.55;
-    }
-    .role-item svg { width: 18px; height: 18px; min-width: 18px; margin-top: 1px; color: rgba(255,255,255,0.5); fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .role-card.role-yo .role-item { color: rgba(255,255,255,0.82); }
-    .role-card.role-yo .role-item svg { color: white; }
-
-    .socio-cta {
-      text-align: center;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 20px; padding: 48px;
-      max-width: 680px; margin: 0 auto;
-    }
-    .socio-cta h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 26px; font-weight: 800;
-      margin-bottom: 12px; letter-spacing: -0.5px;
-    }
-    .socio-cta p { font-size: 16px; color: var(--muted); margin-bottom: 28px; line-height: 1.65; }
-
-    /* ════════════════════════════
-       TECH STACK
-    ════════════════════════════ */
-    .stack-sec {
-      padding: 80px 0;
-      border-top: 1px solid var(--border);
-      overflow: hidden;
-    }
-    .stack-head { text-align: center; margin-bottom: 52px; }
-    .stack-head h2 { font-size: clamp(26px,4vw,40px); font-weight: 800; margin-bottom: 12px; letter-spacing: -1px; }
-    .stack-head p { font-size: 16px; color: var(--muted); }
-
-    .marquee-wrap { overflow: hidden; position: relative; padding: 8px 0; }
-    .marquee-wrap::before, .marquee-wrap::after {
-      content: ''; position: absolute; top: 0; bottom: 0;
-      width: 160px; z-index: 2; pointer-events: none;
-    }
-    .marquee-wrap::before { left: 0; background: linear-gradient(90deg, var(--bg) 30%, transparent); }
-    .marquee-wrap::after { right: 0; background: linear-gradient(-90deg, var(--bg) 30%, transparent); }
-
-    .marquee-track {
-      display: flex; gap: 14px;
-      animation: marquee 32s linear infinite;
-      width: max-content;
-      padding: 6px 0;
-    }
-    .marquee-track-2 {
-      display: flex; gap: 14px;
-      animation: marquee 24s linear infinite reverse;
-      width: max-content; margin-top: 14px;
-      padding: 6px 0;
-    }
-    .marquee-track:hover, .marquee-track-2:hover {
-      animation-play-state: paused;
-    }
-    @keyframes marquee {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .marquee-track, .marquee-track-2 { animation: none; }
-    }
-
-    .stack-chip {
-      display: inline-flex; align-items: center; gap: 9px;
-      padding: 11px 20px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 50px; white-space: nowrap;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.55);
-      transition: all 0.3s ease;
-      cursor: default;
-      position: relative;
-    }
-    .stack-chip:hover {
-      color: white;
-      background: rgba(255,255,255,0.07);
-      border-color: rgba(255,255,255,0.2);
-      transform: translateY(-3px) scale(1.04);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    }
-
-    .stack-chip-dot {
-      width: 7px; height: 7px; border-radius: 50%;
-      flex-shrink: 0;
-      box-shadow: 0 0 6px currentColor;
-      animation: dot-pulse 3s ease-in-out infinite;
-    }
-    /* stagger dot animations so they don't all pulse together */
-    .marquee-track .stack-chip:nth-child(odd) .stack-chip-dot { animation-delay: 0s; }
-    .marquee-track .stack-chip:nth-child(even) .stack-chip-dot { animation-delay: 1.5s; }
-    .marquee-track-2 .stack-chip:nth-child(odd) .stack-chip-dot { animation-delay: 0.8s; }
-    .marquee-track-2 .stack-chip:nth-child(even) .stack-chip-dot { animation-delay: 2.1s; }
-
-    @keyframes dot-pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.7); }
-    }
-
-    /* ════════════════════════════
-       PORTAFOLIO HTML
-    ════════════════════════════ */
-    .port-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    @media (max-width: 900px) { .port-grid { grid-template-columns: 1fr; } }
-
-    /* ════════════════════════════
-       RESPONSIVE NUEVOS
-    ════════════════════════════ */
-    @media (max-width: 900px) {
-      .tab-panel.active { grid-template-columns: repeat(2,1fr); }
-      .tab-panel-grid-4.active { grid-template-columns: repeat(2,1fr); }
-      .socio-roles { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 580px) {
-      .tab-panel.active { grid-template-columns: 1fr; }
-      .tab-panel-grid-4.active { grid-template-columns: 1fr; }
-      .tabs-nav { gap: 6px; }
-      .tab-btn { font-size: 12px; padding: 8px 14px; }
-    }
-
-    /* GSAP initial */
+    /* GSAP initial state */
     .fu { opacity: 0; transform: translateY(38px); }
   </style>
 </head>
@@ -1298,13 +1245,13 @@
         <ul class="nav-links">
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#capacidades">Capacidades</a></li>
-          <li><a href="#socio">Socio</a></li>
           <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
         </ul>
         <div class="nav-end">
           <a href="#servicios" class="btn btn-ghost" style="padding:10px 20px;font-size:14px;">Ver servicios</a>
-          <a href="https://wa.me/526688853458" target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 22px;font-size:14px;">
+          <a href="https://wa.me/526688853458" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:10px 22px;font-size:14px;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
             WhatsApp
           </a>
@@ -1318,7 +1265,6 @@
 
   <!-- ── MOBILE MENU ── -->
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menú de navegación">
-
     <div class="mm-header">
       <div class="mm-logo">
         <span class="mm-logo-arkn">ARKN</span>
@@ -1326,7 +1272,6 @@
       </div>
       <button class="mobile-close" id="mobileClose" aria-label="Cerrar menú">✕</button>
     </div>
-
     <div class="mm-links">
       <a href="#servicios" class="mm-item" onclick="closeMobile()">
         <span class="mm-item-num">01</span>
@@ -1338,14 +1283,14 @@
         <span class="mm-item-name">Capacidades</span>
         <span class="mm-item-arrow">→</span>
       </a>
-      <a href="#socio" class="mm-item" onclick="closeMobile()">
+      <a href="#proceso" class="mm-item" onclick="closeMobile()">
         <span class="mm-item-num">03</span>
-        <span class="mm-item-name">Socio Técnico</span>
+        <span class="mm-item-name">Proceso</span>
         <span class="mm-item-arrow">→</span>
       </a>
-      <a href="#proceso" class="mm-item" onclick="closeMobile()">
+      <a href="#faq" class="mm-item" onclick="closeMobile()">
         <span class="mm-item-num">04</span>
-        <span class="mm-item-name">Proceso</span>
+        <span class="mm-item-name">FAQ</span>
         <span class="mm-item-arrow">→</span>
       </a>
       <a href="#nosotros" class="mm-item" onclick="closeMobile()">
@@ -1354,14 +1299,12 @@
         <span class="mm-item-arrow">→</span>
       </a>
     </div>
-
     <div class="mm-footer">
-      <a href="https://wa.me/526688853458" target="_blank" rel="noopener" class="mm-wa">
+      <a href="https://wa.me/526688853458" target="_blank" rel="noopener noreferrer" class="mm-wa">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="#080808"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
         Hablar por WhatsApp
       </a>
     </div>
-
   </div>
 
   <!-- ── HERO ── -->
@@ -1370,40 +1313,94 @@
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
     <div class="container">
-      <div class="hero-content">
-        <div class="badge fu" style="margin-bottom:30px;">
-          <span style="width:6px;height:6px;background:var(--accent);border-radius:50%;display:inline-block;"></span>
-          Arkn Studio · Los Mochis, Sinaloa
-        </div>
-        <h1 class="fu">
-          Tu negocio,<br>
-          <span class="highlight">online en días.</span><br>
-          No en meses.
-        </h1>
-        <p class="hero-sub fu">
-          Diseñamos sitios web que convierten, automatizamos tus procesos y te hacemos crecer
-          — sin que pagues <strong style="color:white;">hasta ver resultados reales.</strong>
-        </p>
-        <div class="hero-btns fu">
-          <a href="#servicios" class="btn btn-primary" style="padding:16px 34px;font-size:16px;">Ver servicios →</a>
-          <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Quiero%20saber%20m%C3%A1s%20sobre%20Arkn%20Studio%20%F0%9F%9A%80" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:16px 34px;font-size:16px;">Empezar ahora</a>
-        </div>
-        <div class="hero-stats fu">
-          <div class="stat-item">
-            <span class="stat-num">48h</span>
-            <span class="stat-lbl">Tiempo de entrega</span>
+      <div class="hero-grid">
+
+        <!-- LEFT: copy -->
+        <div class="hero-content">
+          <div class="badge fu" style="margin-bottom:30px;">
+            <span style="width:6px;height:6px;background:var(--cyan);border-radius:50%;display:inline-block;"></span>
+            Arkn Studio · Los Mochis, Sinaloa
           </div>
-          <div class="stat-sep"></div>
-          <div class="stat-item">
-            <span class="stat-num">$0</span>
-            <span class="stat-lbl">Pago adelantado</span>
+          <h1 class="fu">
+            Sitios web<br>
+            que <span class="highlight">venden.</span><br>
+            No solo que se ven.
+          </h1>
+          <p class="hero-sub fu">
+            Estudio de diseño web para PyMEs en México. Investigamos tu mercado, diseñamos para conversión y programamos para velocidad. <strong style="color:white;">Cada proyecto documentado de inicio a fin.</strong>
+          </p>
+          <div class="hero-btns fu">
+            <a href="#servicios" class="btn btn-primary" style="padding:16px 34px;font-size:16px;">Ver servicios →</a>
+            <a href="https://wa.me/526688853458?text=Hola%20Arkn%20Studio!%20Quiero%20cotizar%20un%20sitio%20web." target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding:16px 34px;font-size:16px;">Cotizar ahora</a>
           </div>
-          <div class="stat-sep"></div>
-          <div class="stat-item">
-            <span class="stat-num">100%</span>
-            <span class="stat-lbl">Satisfacción garantizada</span>
+          <div class="hero-stats fu">
+            <div class="stat-item">
+              <span class="stat-num">10-14d</span>
+              <span class="stat-lbl">Entrega típica</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <span class="stat-num">30%</span>
+              <span class="stat-lbl">Anticipo al firmar</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <span class="stat-num">95+</span>
+              <span class="stat-lbl">Lighthouse mobile</span>
+            </div>
           </div>
         </div>
+
+        <!-- RIGHT: 3-mockup stack -->
+        <div class="hero-visual fu">
+
+          <!-- Mockup 1: Yucatan Dental -->
+          <a href="https://yucatan-dental-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="mockup mockup-1" aria-label="Ver demo Yucatan Dental">
+            <div class="mockup-bar">
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <div class="mockup-url">yucatan-dental-demo.vercel.app</div>
+            </div>
+            <img class="mockup-img" loading="lazy" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=900&auto=format&fit=crop&q=85" alt="Demo Yucatan Dental Clinic">
+            <div class="mockup-caption">
+              <div class="mockup-caption-cat">Clínica · Mérida</div>
+              <div class="mockup-caption-name">Yucatan Dental Clinic</div>
+            </div>
+          </a>
+
+          <!-- Mockup 2: Grupo Dental GDL -->
+          <a href="https://grupo-dental-gdl-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="mockup mockup-2" aria-label="Ver demo Grupo Dental GDL">
+            <div class="mockup-bar">
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <div class="mockup-url">grupo-dental-gdl-demo.vercel.app</div>
+            </div>
+            <img class="mockup-img" loading="lazy" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900&auto=format&fit=crop&q=85" alt="Demo Grupo Dental Guadalajara">
+            <div class="mockup-caption">
+              <div class="mockup-caption-cat">Clínica · Guadalajara</div>
+              <div class="mockup-caption-name">Grupo Dental GDL</div>
+            </div>
+          </a>
+
+          <!-- Mockup 3: Dentrica -->
+          <a href="https://dentrica-coyoacan-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="mockup mockup-3" aria-label="Ver demo Dentrica">
+            <div class="mockup-bar">
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <div class="mockup-url">dentrica-coyoacan-demo.vercel.app</div>
+            </div>
+            <img class="mockup-img" loading="lazy" src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&auto=format&fit=crop&q=85" alt="Demo Dentrica Coyoacán">
+            <div class="mockup-caption">
+              <div class="mockup-caption-cat">Tech · CDMX</div>
+              <div class="mockup-caption-name">Dentrica Coyoacán</div>
+            </div>
+          </a>
+
+        </div>
+
       </div>
     </div>
   </section>
@@ -1412,604 +1409,195 @@
   <div class="trust">
     <div class="container">
       <div class="trust-inner">
-        <span class="trust-icon">🛡️</span>
+        <svg class="trust-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         <div>
-          <div class="trust-text">Primero hacemos el trabajo. Después pagas.</div>
-          <div class="trust-sub">Ves el resultado funcionando antes de comprometerte con un solo peso.</div>
+          <div class="trust-text">Cotización fija por escrito. Sin sorpresas.</div>
+          <div class="trust-sub">Antes de firmar sabes alcance, precio y plazos. Lo que firmas es lo que pagas.</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ── SERVICIOS ── -->
+  <!-- ── SERVICIOS (BENTO 3 PLANES + RETAINER) ── -->
   <section class="services" id="servicios">
     <div class="container">
       <div class="services-header fu">
-        <p class="section-label">Lo que construimos</p>
-        <h2 class="section-title">Soluciones digitales<br>para negocios reales</h2>
-        <p class="section-sub">Desde una landing page de alto impacto hasta automatizaciones completas — todo hecho a medida, sin templates genéricos ni excusas.</p>
+        <p class="section-label">Planes principales</p>
+        <h2 class="section-title">Tres planes claros.<br>Precios públicos en MXN.</h2>
+        <p class="section-sub">Sin paquetes oscuros ni "cotizar todo". El plan que necesitas tiene precio fijo, alcance definido y timeline garantizado por contrato.</p>
       </div>
 
-      <!-- Sitios Web -->
-      <div class="svc-cat">
-        <div class="cat-label">🌐 Sitios Web</div>
-        <div class="grid-3">
-          <div class="card fu">
-            <div class="card-icon">🚀</div>
-            <div class="card-name">Landing Page Profesional</div>
-            <div class="card-desc">Una página de alto impacto diseñada para convertir visitantes en clientes. Ideal para negocios que necesitan presencia ya.</div>
-            <div class="card-price">desde $3,500 <small>MXN</small></div>
-          </div>
-          <div class="card fu">
-            <div class="card-icon">📅</div>
-            <div class="card-name">Sitio con Reservaciones + WhatsApp</div>
-            <div class="card-desc">Formulario de citas inteligente con notificaciones automáticas por correo y mensaje pre-llenado directo a WhatsApp.</div>
-            <div class="card-price">desde $5,500 <small>MXN</small></div>
-          </div>
-          <div class="card fu">
-            <div class="card-icon">📸</div>
-            <div class="card-name">Portafolio Digital</div>
-            <div class="card-desc">Muestra tu trabajo de forma elegante. Perfecto para fotógrafos, arquitectos y diseñadores que quieren impresionar.</div>
-            <div class="card-price">desde $4,000 <small>MXN</small></div>
-          </div>
-        </div>
-        <div class="grid-3-last">
-          <div class="card fu">
-            <div class="card-icon">🍽️</div>
-            <div class="card-name">Sitio para Restaurante + Menú Digital</div>
-            <div class="card-desc">Menú QR, galería de platillos, reservaciones y Google Maps integrado. Tu restaurante en el siguiente nivel.</div>
-            <div class="card-price">desde $4,500 <small>MXN</small></div>
-          </div>
-          <div class="card fu">
-            <div class="card-icon">✨</div>
-            <div class="card-name">Sitio para Clínica / Spa</div>
-            <div class="card-desc">Diseño elegante y confiable con agenda en línea, servicios detallados, testimoniales y automatización completa.</div>
-            <div class="card-price">desde $5,500 <small>MXN</small></div>
-          </div>
-          <div class="card fu">
-            <div class="card-icon">🛒</div>
-            <div class="card-name">Tienda en Línea</div>
-            <div class="card-desc">E-commerce completo con catálogo, carrito de compras, pagos en línea y gestión de pedidos integrada.</div>
-            <div class="card-price">desde $12,000 <small>MXN</small></div>
-          </div>
-        </div>
-      </div>
+      <div class="plans-bento fu">
 
-      <!-- Aplicaciones Web -->
-      <div class="svc-cat">
-        <div class="cat-label">⚡ Aplicaciones Web (Next.js)</div>
-        <div class="grid-3">
-          <div class="card fu">
-            <div class="card-icon">🔐</div>
-            <div class="card-name">Panel de Administración</div>
-            <div class="card-desc">Tu negocio con login propio. Ve tus clientes, citas o pedidos desde un dashboard privado — sin depender de WhatsApp para todo.</div>
-            <div class="card-price">desde $18,000 <small>MXN</small></div>
+        <!-- Plan FEATURED · Studio -->
+        <div class="plan plan-featured">
+          <span class="plan-badge">Más solicitado</span>
+          <div class="plan-name">Studio</div>
+          <p class="plan-desc">Sitio web completo con CMS para que tú edites contenido sin depender de nosotros. La elección de PyMEs consolidadas.</p>
+          <div class="plan-price">
+            <span class="plan-price-num">$48,000</span>
+            <span class="plan-price-cur">MXN</span>
           </div>
-          <div class="card fu">
-            <div class="card-icon">🏗️</div>
-            <div class="card-name">App Web con Base de Datos</div>
-            <div class="card-desc">Sistema completo con usuarios, historial, pagos y notificaciones. Para negocios que necesitan escalar más allá de un sitio estático.</div>
-            <div class="card-price">desde $28,000 <small>MXN</small></div>
+          <div class="plan-timeline">Timeline: 3 semanas</div>
+          <ul class="plan-features">
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Hasta 8 páginas + blog conectado a CMS</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Diseño Figma con 3 rondas de iteración</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Animaciones cinemáticas premium</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SEO técnico completo (schema, sitemap, OG)</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Hosting + dominio primer año</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>60 días de soporte post-entrega</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Repositorio y accesos a tu nombre</li>
+          </ul>
+          <a href="https://wa.me/526688853458?text=Hola!%20Quiero%20cotizar%20el%20plan%20Studio%20%2448%2C000%20MXN." target="_blank" rel="noopener noreferrer" class="btn btn-primary plan-cta">Cotizar Studio →</a>
+        </div>
+
+        <!-- Plan Landing -->
+        <div class="plan">
+          <div class="plan-name">Landing</div>
+          <p class="plan-desc">Landing page de alto impacto. Para validar producto, lanzar campaña o vender un servicio específico.</p>
+          <div class="plan-price">
+            <span class="plan-price-num">$18,000</span>
+            <span class="plan-price-cur">MXN</span>
           </div>
-          <div class="card fu">
-            <div class="card-icon">🚀</div>
-            <div class="card-name">Plataforma / Micro-SaaS</div>
-            <div class="card-desc">Tu propia herramienta que otros pagan por usar. Suscripciones, usuarios ilimitados y un ingreso recurrente que crece solo.</div>
-            <div class="card-price">desde $45,000 <small>MXN</small></div>
+          <div class="plan-timeline">Timeline: 10 días hábiles</div>
+          <ul class="plan-features">
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>1 página optimizada (hasta 8 secciones)</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Formulario + integración WhatsApp</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>2 rondas de iteración incluidas</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Lighthouse 90+ garantizado</li>
+          </ul>
+          <a href="https://wa.me/526688853458?text=Hola!%20Quiero%20cotizar%20el%20plan%20Landing%20%2418%2C000%20MXN." target="_blank" rel="noopener noreferrer" class="btn btn-ghost plan-cta">Cotizar Landing →</a>
+        </div>
+
+        <!-- Plan Flagship -->
+        <div class="plan">
+          <div class="plan-name">Flagship</div>
+          <p class="plan-desc">E-commerce avanzado, experiencias 3D o plataformas a medida. Cuando lo estándar no aplica.</p>
+          <div class="plan-price">
+            <span class="plan-price-num">Desde $90K</span>
           </div>
+          <div class="plan-timeline">Timeline: 4-8 semanas</div>
+          <ul class="plan-features">
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Scope a medida según brief</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Spline / Three.js / animación avanzada</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Integraciones (CRM, pagos, ERP)</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>6 meses de soporte dedicado</li>
+          </ul>
+          <a href="https://wa.me/526688853458?text=Hola!%20Quiero%20discutir%20un%20proyecto%20Flagship." target="_blank" rel="noopener noreferrer" class="btn btn-ghost plan-cta">Agendar llamada →</a>
         </div>
       </div>
 
-      <!-- Automatizaciones -->
-      <div class="svc-cat">
-        <div class="cat-label">⚙️ Automatizaciones</div>
-        <div class="grid-3">
-          <div class="card fu">
-            <div class="card-icon">📧</div>
-            <div class="card-name">Formulario → Correo Automático</div>
-            <div class="card-desc">Cada solicitud llega a tu correo con un diseño profesional listo para responder en segundos.</div>
-            <div class="card-price">desde $2,000 <small>MXN</small></div>
-          </div>
-          <div class="card fu">
-            <div class="card-icon">🗓️</div>
-            <div class="card-name">Sistema de Citas Automatizado</div>
-            <div class="card-desc">Agenda inteligente con notificaciones por correo y WhatsApp. Sin llamadas, sin confusiones, sin doble-bookings.</div>
-            <div class="card-price">desde $4,000 <small>MXN</small></div>
-          </div>
-          <div class="card fu">
-            <div class="card-icon">📊</div>
-            <div class="card-name">CRM Básico con Notificaciones</div>
-            <div class="card-desc">Registro automático de clientes en Google Sheets con alertas en tiempo real. Control total sin pagar plataformas caras.</div>
-            <div class="card-price">desde $3,200 <small>MXN</small></div>
-          </div>
+      <!-- Retainer strip -->
+      <div class="retainer-strip fu">
+        <div class="retainer-intro">
+          <h3>Mantenimiento mensual</h3>
+          <p>Después de entregar, mantenemos tu sitio actualizado, respaldado y monitoreado.</p>
         </div>
+        <div class="retainer-plan">
+          <div class="retainer-plan-name">Básico</div>
+          <div class="retainer-plan-price">$700<small>/mes</small></div>
+        </div>
+        <div class="retainer-plan">
+          <div class="retainer-plan-name">Pro</div>
+          <div class="retainer-plan-price">$1,400<small>/mes</small></div>
+        </div>
+        <div class="retainer-plan">
+          <div class="retainer-plan-name">Premium</div>
+          <div class="retainer-plan-price">$2,500<small>/mes</small></div>
+        </div>
+        <a href="https://wa.me/526688853458?text=Hola!%20Quiero%20info%20de%20mantenimiento%20mensual." target="_blank" rel="noopener noreferrer" class="btn btn-link" style="white-space:nowrap;">Ver detalles →</a>
       </div>
 
-      <!-- Retainer -->
-      <div class="svc-cat">
-        <div class="cat-label">🔁 Mantenimiento Mensual</div>
-        <div class="ret-grid">
-          <div class="ret-card fu">
-            <div class="ret-name">Plan Básico</div>
-            <div class="ret-price">$700</div>
-            <div class="ret-price-sub">por mes</div>
-            <ul class="ret-features">
-              <li>Hosting y dominio incluido</li>
-              <li>1 actualización de contenido/mes</li>
-              <li>Soporte por WhatsApp</li>
-              <li>Respaldo mensual</li>
-            </ul>
-          </div>
-          <div class="ret-card featured fu">
-            <div class="ret-name">Plan Pro</div>
-            <div class="ret-price">$1,400</div>
-            <div class="ret-price-sub">por mes</div>
-            <ul class="ret-features">
-              <li>Todo el Plan Básico</li>
-              <li>3 actualizaciones de contenido</li>
-              <li>Automatización de correos</li>
-              <li>Reporte mensual de visitas</li>
-              <li>Soporte prioritario</li>
-            </ul>
-          </div>
-          <div class="ret-card fu">
-            <div class="ret-name">Plan Premium</div>
-            <div class="ret-price">$2,500</div>
-            <div class="ret-price-sub">por mes</div>
-            <ul class="ret-features">
-              <li>Todo el Plan Pro</li>
-              <li>Cambios ilimitados</li>
-              <li>Automatizaciones completas</li>
-              <li>Integración WhatsApp avanzada</li>
-              <li>Dashboard de métricas</li>
-              <li>Soporte 24/7</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- ── CAPACIDADES TÉCNICAS ── -->
+  <!-- ── CAPACIDADES (12 destacadas) ── -->
   <section class="capacidades" id="capacidades">
     <div class="container">
       <div class="services-header fu">
-        <p class="section-label">Capacidades avanzadas</p>
-        <h2 class="section-title">Tecnología de alto nivel<br>para negocios que escalan</h2>
-        <p class="section-sub">Más allá de un sitio web — construimos sistemas completos que automatizan, generan datos y crean ventajas competitivas reales.</p>
+        <p class="section-label">Capacidades técnicas</p>
+        <h2 class="section-title">Más allá del sitio.<br>Sistemas que escalan.</h2>
+        <p class="section-sub">Para negocios que ya validaron y necesitan automatizar, integrar o construir herramientas internas. Cotización por proyecto.</p>
       </div>
 
-      <!-- TAB NAV -->
-      <div class="tabs-nav fu">
-        <button class="tab-btn active" data-tab="ecommerce">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-          E-commerce
-        </button>
-        <button class="tab-btn" data-tab="sistemas">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          Sistemas
-        </button>
-        <button class="tab-btn" data-tab="bots">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 15h.01M16 15h.01"/></svg>
-          Bots & Autos
-        </button>
-        <button class="tab-btn" data-tab="ia">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1010 10"/><path d="M12 6v6l4 2"/><path d="M22 2L12 12"/></svg>
-          Inteligencia Artificial
-        </button>
-        <button class="tab-btn" data-tab="dashboards">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          Dashboards
-        </button>
-        <button class="tab-btn" data-tab="saas">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          SaaS
-        </button>
-        <button class="tab-btn" data-tab="finanzas">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-          Finanzas
-        </button>
-        <button class="tab-btn" data-tab="seguridad">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Seguridad
-        </button>
-      </div>
-
-      <!-- TAB: E-COMMERCE -->
-      <div class="tab-panel active" id="tab-ecommerce">
+      <div class="cap-grid fu">
         <div class="cap-card">
           <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
-          <div class="cap-name">Tienda Online Completa</div>
-          <div class="cap-desc">Carrito de compras, pagos con Stripe/MercadoPago, gestión de inventario, panel admin, órdenes automáticas y notificaciones al cliente.</div>
+          <div class="cap-name">Tienda online completa</div>
+          <p class="cap-desc">Carrito, pagos Stripe/MercadoPago, gestión de inventario, panel admin y notificaciones al cliente.</p>
           <span class="cap-tag">desde $12,000</span>
         </div>
         <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-          <div class="cap-name">Marketplace Multi-Vendedor</div>
-          <div class="cap-desc">Plataforma donde múltiples vendedores suben sus productos y tú cobras comisión. Como MercadoLibre, pero para tu nicho específico.</div>
-          <span class="cap-tag">desde $45,000</span>
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div class="cap-name">Panel administrador</div>
+          <p class="cap-desc">Dashboard privado con login para que veas clientes, pedidos o citas sin depender de WhatsApp.</p>
+          <span class="cap-tag">desde $18,000</span>
         </div>
         <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div class="cap-name">Subasta Online en Tiempo Real</div>
-          <div class="cap-desc">Sistema de pujas en vivo con countdown, notificaciones instantáneas, pagos automáticos al ganador y historial de subastas completo.</div>
-          <span class="cap-tag">desde $35,000</span>
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 15h.01M16 15h.01"/></svg></div>
+          <div class="cap-name">Bot de WhatsApp 24/7</div>
+          <p class="cap-desc">Atención automatizada que responde, califica leads y agenda citas mientras duermes.</p>
+          <span class="cap-tag">desde $12,000</span>
         </div>
         <div class="cap-card">
           <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
-          <div class="cap-name">Suscripciones y Membresías</div>
-          <div class="cap-desc">Cobro recurrente mensual o anual, acceso por niveles de membresía, contenido exclusivo y gestión automática de renovaciones.</div>
+          <div class="cap-name">Suscripciones y membresías</div>
+          <p class="cap-desc">Cobro recurrente mensual o anual con acceso por niveles, contenido exclusivo y renovaciones automáticas.</p>
           <span class="cap-tag">desde $22,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-          <div class="cap-name">Wishlist & Recomendaciones</div>
-          <div class="cap-desc">Motor de recomendaciones personalizado tipo Amazon — "también te puede gustar" basado en comportamiento y compras previas del usuario.</div>
-          <span class="cap-tag">Add-on $8,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-          <div class="cap-name">Delivery con Rastreo en Vivo</div>
-          <div class="cap-desc">Sistema de pedidos con seguimiento en tiempo real: pedido → cocina/almacén → repartidor en mapa → entregado. Notificaciones automáticas.</div>
-          <span class="cap-tag">desde $28,000</span>
-        </div>
-      </div>
-
-      <!-- TAB: SISTEMAS -->
-      <div class="tab-panel" id="tab-sistemas">
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <div class="cap-name">ERP a Medida</div>
-          <div class="cap-desc">Sistema centralizado con módulos de ventas, inventario, compras, finanzas y RRHH. Toda tu operación en un solo panel de control.</div>
-          <span class="cap-tag">desde $60,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-          <div class="cap-name">CRM Completo</div>
-          <div class="cap-desc">Gestión de clientes, pipeline de ventas visual, seguimiento automático por etapa, reportes de conversión y alertas de seguimiento.</div>
-          <span class="cap-tag">desde $28,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
-          <div class="cap-name">Sistema de Inventario</div>
-          <div class="cap-desc">Entradas y salidas en tiempo real, alertas de stock mínimo, códigos QR y barras, manejo de múltiples sucursales y proveedores.</div>
-          <span class="cap-tag">desde $18,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <div class="cap-name">POS — Punto de Venta</div>
-          <div class="cap-desc">Caja registradora digital con facturación instantánea, múltiples métodos de pago, corte de caja y reportes diarios automáticos.</div>
-          <span class="cap-tag">desde $15,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
-          <div class="cap-name">Sistema de Nómina</div>
-          <div class="cap-desc">Cálculo automático de sueldos, deducciones, IMSS, generación de recibos PDF firmados digitalmente y reportes para contabilidad.</div>
-          <span class="cap-tag">desde $22,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-          <div class="cap-name">Plataforma de Reservas</div>
-          <div class="cap-desc">Sistema completo para hoteles, restaurantes, canchas o clínicas. Agenda en línea, recordatorios automáticos y control de disponibilidad.</div>
-          <span class="cap-tag">desde $14,000</span>
-        </div>
-      </div>
-
-      <!-- TAB: BOTS & AUTOMATIZACIONES -->
-      <div class="tab-panel" id="tab-bots">
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-          <div class="cap-name">Bot de WhatsApp 24/7</div>
-          <div class="cap-desc">Responde clientes, toma pedidos, agenda citas y resuelve dudas — completamente solo, sin intervención humana. Integrado con tu negocio.</div>
-          <span class="cap-tag">desde $12,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-          <div class="cap-name">Scraper de Datos</div>
-          <div class="cap-desc">Extrae información de cualquier sitio web automáticamente: precios de competidores, contactos, productos, noticias — con scheduling configurable.</div>
-          <span class="cap-tag">desde $8,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg></div>
-          <div class="cap-name">RPA — Robot de Procesos</div>
-          <div class="cap-desc">Automatiza tareas repetitivas en cualquier sistema existente: captura datos, llena formularios, genera reportes — como un empleado virtual que nunca descansa.</div>
-          <span class="cap-tag">desde $18,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
-          <div class="cap-name">Pipeline de Datos</div>
-          <div class="cap-desc">Conecta múltiples fuentes de datos, limpia y transforma la información automáticamente, y la centraliza para análisis en tiempo real.</div>
-          <span class="cap-tag">desde $25,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M22 17H2a3 3 0 003-3V9a7 7 0 0114 0v5a3 3 0 003 3zm-8.27 4a2 2 0 01-3.46 0"/></svg></div>
-          <div class="cap-name">Alertas Inteligentes</div>
-          <div class="cap-desc">Monitorea precios, inventario, redes sociales o cualquier métrica de tu negocio — notifica por WhatsApp o correo cuando algo cambia.</div>
-          <span class="cap-tag">desde $6,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div class="cap-name">Automatización de Correos</div>
-          <div class="cap-desc">Secuencias de emails automáticos según comportamiento del usuario: bienvenida, seguimiento, recordatorio, reactivación — completamente en piloto automático.</div>
-          <span class="cap-tag">desde $5,000</span>
-        </div>
-      </div>
-
-      <!-- TAB: IA -->
-      <div class="tab-panel" id="tab-ia">
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-          <div class="cap-name">Chatbot IA Entrenado</div>
-          <div class="cap-desc">Chatbot con inteligencia artificial entrenado con el conocimiento específico de tu negocio. Responde correctamente, no con respuestas genéricas.</div>
-          <span class="cap-tag">desde $20,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-          <div class="cap-name">OCR + Extracción de Datos</div>
-          <div class="cap-desc">Escanea facturas, contratos, identificaciones o cualquier documento físico → extrae datos automáticamente → los registra en tu sistema.</div>
-          <span class="cap-tag">desde $15,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          <div class="cap-name">Motor de Recomendaciones</div>
-          <div class="cap-desc">Como Amazon pero para tu negocio — analiza comportamiento, historial y preferencias para mostrar el producto o servicio correcto en el momento correcto.</div>
-          <span class="cap-tag">desde $25,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-          <div class="cap-name">Generador de Contenido IA</div>
-          <div class="cap-desc">Genera automáticamente descripciones de productos, posts para redes, correos de marketing y textos en el tono y voz específica de tu marca.</div>
-          <span class="cap-tag">desde $12,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-          <div class="cap-name">Detección de Fraude</div>
-          <div class="cap-desc">Sistema de IA que analiza patrones de pago y comportamiento en tiempo real — alerta transacciones sospechosas antes de que el daño ocurra.</div>
-          <span class="cap-tag">desde $30,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <div class="cap-name">Análisis de Sentimientos</div>
-          <div class="cap-desc">Lee automáticamente reseñas, comentarios y menciones en redes sociales → detecta si tus clientes están satisfechos → alerta en tiempo real si hay problemas.</div>
-          <span class="cap-tag">desde $18,000</span>
-        </div>
-      </div>
-
-      <!-- TAB: DASHBOARDS -->
-      <div class="tab-panel" id="tab-dashboards">
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-          <div class="cap-name">Dashboard Ejecutivo</div>
-          <div class="cap-desc">KPIs de tu negocio en tiempo real: ventas del día, clientes nuevos, conversiones, métricas de marketing — todo visual, bonito y entendible.</div>
-          <span class="cap-tag">desde $20,000</span>
         </div>
         <div class="cap-card">
           <div class="cap-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-          <div class="cap-name">Analytics de Negocio</div>
-          <div class="cap-desc">Descubre qué producto vende más, a qué hora, desde qué ciudad, qué canal genera más clientes — datos reales para decisiones inteligentes.</div>
+          <div class="cap-name">Dashboard de analytics</div>
+          <p class="cap-desc">Métricas de tu negocio en tiempo real. Ventas, conversión, embudo. Más útil que Google Analytics genérico.</p>
           <span class="cap-tag">desde $15,000</span>
         </div>
         <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-          <div class="cap-name">Reportes Automáticos</div>
-          <div class="cap-desc">Cada lunes llega un PDF a tu correo con el resumen de la semana. Ventas, métricas, alertas — sin que tengas que entrar a ninguna plataforma.</div>
-          <span class="cap-tag">desde $8,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <div class="cap-name">Predicción de Demanda</div>
-          <div class="cap-desc">Basado en tu historial de ventas, el sistema predice qué necesitarás la próxima semana o temporada — reduce merma y evita desabastos.</div>
-          <span class="cap-tag">desde $28,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
-          <div class="cap-name">Mapa de Calor de Clientes</div>
-          <div class="cap-desc">Visualiza de dónde vienen tus clientes, qué zonas tienen mayor demanda y dónde conviene abrir tu próxima sucursal o enfocar publicidad.</div>
-          <span class="cap-tag">desde $12,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="cap-name">Monitor de Competencia</div>
-          <div class="cap-desc">Dashboard que rastrea automáticamente precios, promociones y cambios en los sitios de tus competidores — te avisa cuando algo importante cambia.</div>
-          <span class="cap-tag">desde $16,000</span>
-        </div>
-      </div>
-
-      <!-- TAB: SAAS -->
-      <div class="tab-panel" id="tab-saas">
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          <div class="cap-name">Software para Nicho Específico</div>
-          <div class="cap-desc">Un sistema diseñado para una industria en particular (ferreterías, veterinarias, gimnasios) que vendes como suscripción mensual a múltiples negocios.</div>
-          <span class="cap-tag">desde $50,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <div class="cap-name">Plataforma White-Label</div>
-          <div class="cap-desc">Construyes una sola plataforma y la re-vendes a múltiples clientes con su propio logo, colores y dominio. Ingresos recurrentes sin crear algo nuevo cada vez.</div>
-          <span class="cap-tag">desde $60,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
-          <div class="cap-name">API como Servicio</div>
-          <div class="cap-desc">Construyes una API con funcionalidad única que otros desarrolladores consumen — cobras por uso, por llamada o por suscripción mensual.</div>
-          <span class="cap-tag">desde $35,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-          <div class="cap-name">App Multi-Tenant</div>
-          <div class="cap-desc">Un sistema donde cada empresa cliente tiene sus datos completamente separados, su propio subdominio y su configuración independiente.</div>
-          <span class="cap-tag">desde $45,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
-          <div class="cap-name">Portal de Clientes</div>
-          <div class="cap-desc">Cada cliente de tu negocio tiene su propio acceso privado donde ve su historial, documentos, facturas, avances de proyecto y puede comunicarse contigo.</div>
-          <span class="cap-tag">desde $28,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
-          <div class="cap-name">Herramienta No-Code Builder</div>
-          <div class="cap-desc">Plataforma donde tus clientes crean sus propios formularios, flujos de trabajo y automatizaciones sin escribir una sola línea de código.</div>
-          <span class="cap-tag">desde $55,000</span>
-        </div>
-      </div>
-
-      <!-- TAB: FINANZAS -->
-      <div class="tab-panel" id="tab-finanzas">
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-          <div class="cap-name">Pasarela de Pagos Propia</div>
-          <div class="cap-desc">Integración de Stripe + MercadoPago + OXXO Pay en una sola interfaz. Acepta tarjetas, transferencias, efectivo — todo en tu plataforma.</div>
-          <span class="cap-tag">desde $12,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-          <div class="cap-name">Facturación CFDI (SAT)</div>
-          <div class="cap-desc">Genera facturas fiscales automáticas válidas ante el SAT con cada venta. Timbrado en segundos, envío al cliente y resguardo digital incluido.</div>
-          <span class="cap-tag">desde $14,000</span>
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1010 10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div class="cap-name">Chatbot con IA entrenado</div>
+          <p class="cap-desc">Chatbot que conoce tus productos, responde como tú lo harías y conecta con WhatsApp para cerrar.</p>
+          <span class="cap-tag">desde $20,000</span>
         </div>
         <div class="cap-card">
           <div class="cap-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-          <div class="cap-name">Comisiones Multi-Nivel</div>
-          <div class="cap-desc">Sistema de rastreo de referidos y ventas por vendedor. Calcula comisiones automáticamente por nivel, genera reportes y controla los pagos.</div>
-          <span class="cap-tag">desde $18,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="cap-name">Firma Digital de Contratos</div>
-          <div class="cap-desc">Genera contratos personalizados, los envía al cliente, el cliente los firma digitalmente desde su cel — válido legalmente, sin imprimir nada.</div>
-          <span class="cap-tag">desde $10,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
-          <div class="cap-name">Plataforma de Inversión</div>
-          <div class="cap-desc">Crowdfunding o préstamos P2P: inversores ponen capital en proyectos, el sistema calcula rendimientos automáticamente y distribuye pagos.</div>
-          <span class="cap-tag">desde $65,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <div class="cap-name">Dashboard Financiero</div>
-          <div class="cap-desc">Flujo de caja en tiempo real, proyecciones de ingresos, balance general visual, alertas de gastos fuera de presupuesto y conciliación bancaria.</div>
-          <span class="cap-tag">desde $22,000</span>
-        </div>
-      </div>
-
-      <!-- TAB: SEGURIDAD -->
-      <div class="tab-panel" id="tab-seguridad">
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="cap-name">Autenticación Empresarial</div>
-          <div class="cap-desc">Login con Google/Apple/Microsoft, doble factor (2FA), roles y permisos granulares por área — cada empleado ve solo lo que debe ver.</div>
-          <span class="cap-tag">desde $10,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="cap-name">Backup Automático en Nube</div>
-          <div class="cap-desc">Respaldo automático de todos tus datos cada X horas a múltiples ubicaciones en la nube. Recuperación en minutos ante cualquier falla o pérdida.</div>
-          <span class="cap-tag">desde $6,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <div class="cap-name">Auditoría de Accesos</div>
-          <div class="cap-desc">Registro completo de quién hizo qué, cuándo y desde dónde en tu sistema. Detecta actividad sospechosa y mantiene un historial legal inalterable.</div>
-          <span class="cap-tag">desde $8,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
-          <div class="cap-name">Sistema Multi-Tenant Seguro</div>
-          <div class="cap-desc">Arquitectura donde múltiples empresas usan el mismo software pero sus datos están completamente aislados — imposible de mezclar o filtrar.</div>
-          <span class="cap-tag">desde $30,000</span>
-        </div>
-        <div class="cap-card">
-          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg></div>
-          <div class="cap-name">Monitoreo de Vulnerabilidades</div>
-          <div class="cap-desc">Escaneo continuo de tu infraestructura para detectar brechas de seguridad antes que los atacantes. Reportes automáticos y parches prioritarios.</div>
-          <span class="cap-tag">desde $12,000</span>
+          <div class="cap-name">Facturación CFDI (SAT)</div>
+          <p class="cap-desc">Genera facturas válidas ante SAT desde tu sitio. Conexión con PAC autorizado y descarga XML/PDF.</p>
+          <span class="cap-tag">desde $14,000</span>
         </div>
         <div class="cap-card">
           <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
-          <div class="cap-name">Encriptación de Datos</div>
-          <div class="cap-desc">Todos los datos sensibles de tus clientes cifrados en tránsito y en reposo. Cumplimiento de regulaciones de privacidad (LFPDPPP México).</div>
-          <span class="cap-tag">desde $8,000</span>
+          <div class="cap-name">Autenticación empresarial</div>
+          <p class="cap-desc">Login con Google/Apple/Microsoft + doble factor (2FA), roles y permisos granulares por área.</p>
+          <span class="cap-tag">desde $10,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg></div>
+          <div class="cap-name">CRM completo a medida</div>
+          <p class="cap-desc">Tu propio CRM con contactos, embudo, recordatorios, automatización de seguimientos y reportes.</p>
+          <span class="cap-tag">desde $28,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div class="cap-name">OCR + extracción de datos</div>
+          <p class="cap-desc">Escanea recibos, facturas o documentos y extrae datos a tu base. Ahorra horas de captura manual.</p>
+          <span class="cap-tag">desde $15,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="cap-name">Sistema de citas automático</div>
+          <p class="cap-desc">Agenda en línea con bloqueo de horarios, recordatorios por WhatsApp/email y cancelación cliente-side.</p>
+          <span class="cap-tag">desde $4,000</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div class="cap-name">Pipeline de datos</div>
+          <p class="cap-desc">ETL automático entre tus sistemas (ventas, CRM, contabilidad). Datos limpios y sincronizados.</p>
+          <span class="cap-tag">desde $25,000</span>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ── SOCIO TÉCNICO ── -->
-  <section class="socio" id="socio">
-    <div class="container">
-      <div class="socio-head fu">
-        <div class="badge" style="margin-bottom:20px;">
-          <span style="width:6px;height:6px;background:white;border-radius:50%;display:inline-block;"></span>
-          Modelo de Colaboración
-        </div>
-        <h2>Tú cierras el trato.<br><span class="highlight">Yo lo construyo.</span></h2>
-        <p>¿Tienes acceso a clientes o conoces el negocio, pero te falta la tecnología para resolverlo? Trabajamos como socios: tú traes los proyectos, yo entrego soluciones de nivel enterprise.</p>
-      </div>
-
-      <div class="socio-roles fu">
-        <div class="role-card role-tu">
-          <div class="role-label"><span></span> Tu rol</div>
-          <div class="role-title">El que conecta</div>
-          <div class="role-items">
-            <div class="role-item">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Identificar negocios con necesidades digitales
-            </div>
-            <div class="role-item">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Presentar la propuesta al cliente
-            </div>
-            <div class="role-item">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Cerrar el trato y acordar condiciones
-            </div>
-            <div class="role-item">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Mantener la relación con el cliente
-            </div>
-            <div class="role-item">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Conseguir más proyectos del mismo cliente
-            </div>
-          </div>
-        </div>
-        <div class="role-card role-yo">
-          <div class="role-label"><span></span> Mi rol</div>
-          <div class="role-title">El que ejecuta</div>
-          <div class="role-items">
-            <div class="role-item">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Diseño y desarrollo completo del sistema
-            </div>
-            <div class="role-item">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Automatizaciones e integraciones avanzadas
-            </div>
-            <div class="role-item">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Entrega funcional en tiempo récord
-            </div>
-            <div class="role-item">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Soporte técnico continuo post-entrega
-            </div>
-            <div class="role-item">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Escalabilidad cuando el negocio crezca
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="socio-cta fu">
-        <h3>¿Te interesa el modelo?</h3>
-        <p>Hablemos. Define el negocio o la industria que conoces — yo te digo exactamente qué podemos construir y cómo nos repartimos el proyecto.</p>
-        <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Me%20interesa%20el%20modelo%20de%20socio%20t%C3%A9cnico%20%F0%9F%9A%80" target="_blank" rel="noopener" class="btn btn-primary">
-          Hablar sobre alianza →
+      <div class="cap-cta">
+        <a href="https://wa.me/526688853458?text=Hola!%20Tengo%20un%20proyecto%20a%20medida%20que%20no%20veo%20en%20la%20lista." target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+          ¿Tu proyecto no está aquí? Cuéntanos →
         </a>
       </div>
     </div>
@@ -2028,7 +1616,7 @@
       <div class="marquee-track">
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#F7DF1E;"></span>JavaScript</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#3178C6;"></span>TypeScript</span>
-        <span class="stack-chip"><span class="stack-chip-dot" style="background:#000000;"></span>Next.js</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FFFFFF;"></span>Next.js</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#61DAFB;"></span>React</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#3ECF8E;"></span>Supabase</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#6419E6;"></span>Vercel</span>
@@ -2037,11 +1625,11 @@
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#009EE3;"></span>MercadoPago</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#02569B;"></span>Make.com</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF6B35;"></span>GSAP</span>
-        <span class="stack-chip"><span class="stack-chip-dot" style="background:#181717;"></span>GitHub</span>
-        <!-- duplicado para loop infinito -->
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FFFFFF;"></span>GitHub</span>
+        <!-- duplicado para loop -->
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#F7DF1E;"></span>JavaScript</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#3178C6;"></span>TypeScript</span>
-        <span class="stack-chip"><span class="stack-chip-dot" style="background:#000000;"></span>Next.js</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FFFFFF;"></span>Next.js</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#61DAFB;"></span>React</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#3ECF8E;"></span>Supabase</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#6419E6;"></span>Vercel</span>
@@ -2050,7 +1638,7 @@
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#009EE3;"></span>MercadoPago</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#02569B;"></span>Make.com</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF6B35;"></span>GSAP</span>
-        <span class="stack-chip"><span class="stack-chip-dot" style="background:#181717;"></span>GitHub</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FFFFFF;"></span>GitHub</span>
       </div>
       <div class="marquee-track-2">
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF9900;"></span>AWS S3</span>
@@ -2059,12 +1647,12 @@
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#47A248;"></span>MongoDB</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#7C3AED;"></span>Claude API</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#00A67E;"></span>OpenAI API</span>
-        <span class="stack-chip"><span class="stack-chip-dot" style="background:#E44D26;"></span>HTML5 / CSS3</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#06B6D4;"></span>Tailwind CSS</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#339933;"></span>Node.js</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#CC2927;"></span>Redis</span>
-        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF4154;"></span>Prisma ORM</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF4154;"></span>Prisma</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#E10098;"></span>GraphQL</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#0070F3;"></span>Figma</span>
         <!-- duplicado -->
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF9900;"></span>AWS S3</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#00B4D8;"></span>Cloudflare</span>
@@ -2072,45 +1660,55 @@
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#47A248;"></span>MongoDB</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#7C3AED;"></span>Claude API</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#00A67E;"></span>OpenAI API</span>
-        <span class="stack-chip"><span class="stack-chip-dot" style="background:#E44D26;"></span>HTML5 / CSS3</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#06B6D4;"></span>Tailwind CSS</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#339933;"></span>Node.js</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#CC2927;"></span>Redis</span>
-        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF4154;"></span>Prisma ORM</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#FF4154;"></span>Prisma</span>
         <span class="stack-chip"><span class="stack-chip-dot" style="background:#E10098;"></span>GraphQL</span>
+        <span class="stack-chip"><span class="stack-chip-dot" style="background:#0070F3;"></span>Figma</span>
       </div>
     </div>
   </section>
 
-  <!-- ── PROCESO ── -->
+  <!-- ── PROCESO (5 etapas) ── -->
   <section class="process" id="proceso">
     <div class="container">
       <div class="process-head fu">
         <p class="section-label" style="justify-content:center;">Nuestro proceso</p>
-        <h2 class="section-title">Simple, rápido<br>y sin sorpresas</h2>
-        <p class="section-sub" style="margin: 0 auto;">Tu tiempo vale. Por eso nuestro proceso está diseñado para ser claro y eficiente desde el día uno.</p>
+        <h2 class="section-title">De brief a lanzamiento.<br>En 10-14 días.</h2>
+        <p class="section-sub" style="margin: 0 auto;">Cinco etapas claras. Sabes en qué semana estamos, qué se entrega y qué necesitamos de ti.</p>
       </div>
       <div class="process-steps" id="procSteps">
         <div class="proc-line"><div class="proc-fill" id="procFill"></div></div>
         <div class="step fu" id="s1">
           <div class="step-num">1</div>
-          <div class="step-title">Hablamos</div>
-          <div class="step-desc">Entendemos tu negocio en una llamada de 15 minutos. Sin formularios, directo al punto.</div>
+          <div class="step-time">Día 1</div>
+          <div class="step-title">Brief</div>
+          <div class="step-desc">Call de 30-45 min. Entendemos negocio, audiencia y objetivos.</div>
         </div>
         <div class="step fu" id="s2">
           <div class="step-num">2</div>
-          <div class="step-title">Construimos</div>
-          <div class="step-desc">Diseñamos y desarrollamos tu solución en tiempo récord. Sin pedirte nada por adelantado.</div>
+          <div class="step-time">Día 2-3</div>
+          <div class="step-title">Investigación</div>
+          <div class="step-desc">Competencia, referencias y arquitectura de información.</div>
         </div>
         <div class="step fu" id="s3">
           <div class="step-num">3</div>
-          <div class="step-title">Te mostramos</div>
-          <div class="step-desc">Ves el resultado 100% funcional antes de pagar. Si no te convence, no debes nada.</div>
+          <div class="step-time">Día 4-7</div>
+          <div class="step-title">Diseño</div>
+          <div class="step-desc">Mockups Figma + hasta 2 rondas de iteración.</div>
         </div>
         <div class="step fu" id="s4">
           <div class="step-num">4</div>
-          <div class="step-title">Lanzamos</div>
-          <div class="step-desc">Publicamos tu sitio, te entregamos todo y te damos soporte para que arranques con fuerza.</div>
+          <div class="step-time">Día 8-12</div>
+          <div class="step-title">Desarrollo</div>
+          <div class="step-desc">Implementación con Next.js + QA Lighthouse 95+.</div>
+        </div>
+        <div class="step fu" id="s5">
+          <div class="step-num">5</div>
+          <div class="step-time">Día 13-14</div>
+          <div class="step-title">Lanzamiento</div>
+          <div class="step-desc">Deploy + dominio + analytics + handover.</div>
         </div>
       </div>
     </div>
@@ -2122,163 +1720,265 @@
       <div class="guar-inner fu">
         <div class="guar-grid">
           <div class="guar-left">
-            <p class="section-label">Nuestra garantía</p>
-            <h2>Primero trabajamos,<br><span class="highlight">después pagas.</span></h2>
-            <p>No te pedimos un solo peso por adelantado. Diseñamos tu sitio, lo dejamos funcionando y <strong style="color:white;">tú decides si pagas después de verlo.</strong> Si no te convence al 100%, no debes nada. Así de simple.</p>
+            <p class="section-label">Nuestras garantías</p>
+            <h2>Todo por escrito.<br><span class="highlight">En el contrato.</span></h2>
+            <p>Somos un estudio joven y la forma de compensarlo no es prometer lo imposible — es ser más claros y más transparentes que las agencias tradicionales. Esto es lo que firmamos contigo:</p>
             <div class="guar-pts">
               <div class="gp">
-                <div class="gp-ico">🚫</div>
+                <div class="gp-ico">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 14l2 2 4-4"/></svg>
+                </div>
                 <div class="gp-body">
-                  <h4>Sin anticipos</h4>
-                  <p>Empezamos a trabajar sin que pongas un peso. La inversión viene al final.</p>
+                  <h4>Cotización fija por escrito</h4>
+                  <p>Antes de firmar conoces alcance, precio y plazos. Sin cargos sorpresa por revisiones incluidas.</p>
                 </div>
               </div>
               <div class="gp">
-                <div class="gp-ico">👁️</div>
+                <div class="gp-ico">
+                  <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg>
+                </div>
                 <div class="gp-body">
-                  <h4>Ves antes de pagar</h4>
-                  <p>Te entregamos el sitio funcionando y en producción antes de cerrar cualquier trato.</p>
+                  <h4>Pago 30/70 — sin trampas</h4>
+                  <p>30% al firmar para arrancar el proyecto · 70% contra entrega final aprobada por ti.</p>
                 </div>
               </div>
               <div class="gp">
-                <div class="gp-ico">✅</div>
+                <div class="gp-ico">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+                </div>
                 <div class="gp-body">
-                  <h4>Riesgo cero para ti</h4>
-                  <p>Si no quedas satisfecho, nos vamos sin reclamaciones. Tu confianza vale más que el dinero.</p>
+                  <h4>El código y dominio son tuyos</h4>
+                  <p>Te entregamos repositorio, accesos y dominio a tu nombre. Sin lock-in con nosotros.</p>
+                </div>
+              </div>
+              <div class="gp">
+                <div class="gp-ico">
+                  <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                </div>
+                <div class="gp-body">
+                  <h4>60 días de soporte post-entrega</h4>
+                  <p>Después de la entrega tienes 2 meses de ajustes menores (textos, imágenes, correcciones).</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="guar-right">
-            <div class="big-seal">
-              <span class="seal-icon">🛡️</span>
-              <span class="seal-txt">Garantía<br>Arkn Studio</span>
+            <div class="small-seal">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span class="seal-txt">Garantía<br>por contrato</span>
             </div>
-            <p class="guar-note">Construimos confianza con resultados, no con promesas ni contratos intimidantes.</p>
+            <p class="guar-note">Construimos confianza con claridad contractual, no con promesas vagas.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ── FAQ ── -->
+  <section class="faq-sec" id="faq">
+    <div class="container">
+      <div class="faq-wrap">
+        <div class="faq-head fu">
+          <p class="section-label" style="justify-content:center;">Preguntas frecuentes</p>
+          <h2 class="section-title">Las dudas reales<br>antes de contratarnos.</h2>
+        </div>
+
+        <details class="faq-item fu">
+          <summary>¿Cuánto tarda realmente mi proyecto?</summary>
+          <div class="faq-answer">Una landing simple: 10-14 días hábiles. Un sitio Studio (8 páginas + CMS): 3 semanas. Un Flagship (e-commerce, 3D, integraciones): 4-8 semanas según scope. Te damos timeline exacto en la cotización antes de firmar.</div>
+        </details>
+
+        <details class="faq-item fu">
+          <summary>¿Por qué piden 30% de anticipo?</summary>
+          <div class="faq-answer">Porque el anticipo bloquea agenda y arranca la fase de investigación y diseño. El 70% restante se cobra contra entrega final aprobada por ti. Es el modelo estándar de estudios de diseño en LATAM — protege a ambas partes.</div>
+        </details>
+
+        <details class="faq-item fu">
+          <summary>¿Qué pasa si no me gusta el primer diseño?</summary>
+          <div class="faq-answer">El plan incluye 2 rondas de iteración con tu feedback (3 rondas en Studio). Si después de las rondas el diseño todavía no convence, definimos juntos: o se hace una ronda extra con costo por hora, o se cancela y devolvemos 50% del anticipo (cubre el trabajo de investigación + diseño ya realizado).</div>
+        </details>
+
+        <details class="faq-item fu">
+          <summary>¿Puedo editar la web yo después?</summary>
+          <div class="faq-answer">Sí. En los planes Studio y Flagship conectamos un CMS visual (tipo Sanity o Notion) para que cambies textos, imágenes y precios sin tocar código. En Landing el contenido es fijo — si necesitas editar después, te damos opciones de mantenimiento.</div>
+        </details>
+
+        <details class="faq-item fu">
+          <summary>¿Qué incluye exactamente el SEO técnico?</summary>
+          <div class="faq-answer">Meta tags, schema markup, sitemap XML, robots.txt, Open Graph, performance Lighthouse 95+, mobile-first, alt tags en imágenes. SEO de contenidos (blog, link building) es servicio aparte si lo necesitas.</div>
+        </details>
+
+        <details class="faq-item fu">
+          <summary>¿De quién es el código y el dominio?</summary>
+          <div class="faq-answer">Tuyos. Te entregamos el repositorio de GitHub, los accesos de Vercel y el dominio a tu nombre. Sin lock-in. Si algún día quieres cambiar de proveedor o de equipo, el código se va contigo sin complicaciones.</div>
+        </details>
+
+        <details class="faq-item fu">
+          <summary>¿Trabajan fuera de México?</summary>
+          <div class="faq-answer">Sí. Trabajamos remoto desde Sinaloa con clientes en cualquier país de habla hispana. Cotizamos en MXN o USD según prefieras.</div>
+        </details>
+
+        <details class="faq-item fu">
+          <summary>¿Tienen casos que pueda revisar?</summary>
+          <div class="faq-answer">Sí. En la sección de portafolio puedes navegar 5 demos completos construidos por el estudio — todos están deployados en Vercel y son funcionales. Algunos son demos de prospección (propuestas), otros son trabajos para clientes activos.</div>
+        </details>
+
+        <p class="faq-cta">
+          ¿Tu pregunta no está aquí? <a href="https://wa.me/526688853458?text=Hola!%20Tengo%20una%20duda%20espec%C3%ADfica." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp →</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- ── SOBRE NOSOTROS ── -->
   <section class="about" id="nosotros">
     <div class="container">
       <div class="about-grid">
         <div class="about-left fu">
-          <div class="badge">👋 Sobre nosotros</div>
-          <h2>Somos los que<br>hacen el trabajo.</h2>
-          <p>Soy Daniel, 19 años, de Los Mochis, Sinaloa. Construyo herramientas digitales que generan resultados reales para negocios locales en México.</p>
-          <p>No somos una agencia gigante con décadas de historia. Somos alguien que entiende tu negocio, habla tu idioma y tiene la obsesión de que todo funcione perfectamente desde el primer día.</p>
-          <p style="color:white;font-weight:600;">Sin burocracia. Sin esperas. Sin bullshit corporativo.</p>
-          <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Vi%20Arkn%20Studio%20y%20me%20interesa%20trabajar%20contigo%20%F0%9F%9A%80" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:30px;">Hablar con Daniel →</a>
+          <div class="badge">👋 Sobre el estudio</div>
+          <h2>Estudio joven con<br>obsesión por el detalle.</h2>
+          <p>Arkn Studio es un estudio de diseño web basado en Los Mochis, Sinaloa. Construimos sitios y aplicaciones para PyMEs mexicanas que entienden que un buen sitio no es decoración — es la herramienta de adquisición más importante de su negocio.</p>
+          <p>No somos una agencia gigante con décadas de historia ni queremos serlo. Nuestra ventaja es velocidad, claridad de procesos y documentación obsesiva de cada decisión. Cada cliente sabe qué, cuándo y por qué.</p>
+          <p style="color:white;font-weight:600;">Sin burocracia. Sin reuniones eternas. Sin scope-creep oculto.</p>
+          <a href="https://wa.me/526688853458?text=Hola!%20Vi%20Arkn%20Studio%20y%20quiero%20hablar%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top:30px;">Hablar con el estudio →</a>
         </div>
         <div class="about-right fu">
           <div class="about-stat">
-            <div class="about-stat-num">48h</div>
-            <div class="about-stat-lbl">Tiempo de entrega promedio</div>
+            <div class="about-stat-num">10-14d</div>
+            <div class="about-stat-lbl">Entrega típica Landing</div>
           </div>
           <div class="about-stat">
-            <div class="about-stat-num">$0</div>
-            <div class="about-stat-lbl">Anticipo requerido</div>
+            <div class="about-stat-num">30%</div>
+            <div class="about-stat-lbl">Anticipo al firmar</div>
           </div>
           <div class="about-stat">
-            <div class="about-stat-num">Los Mochis</div>
-            <div class="about-stat-lbl">Sinaloa, México</div>
+            <div class="about-stat-num">95+</div>
+            <div class="about-stat-lbl">Lighthouse mobile</div>
           </div>
           <div class="about-stat">
-            <div class="about-stat-num">100%</div>
-            <div class="about-stat-lbl">Satisfacción garantizada</div>
+            <div class="about-stat-num">Sinaloa</div>
+            <div class="about-stat-lbl">Base · trabajamos remoto</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── PORTAFOLIO ── -->
+  <!-- ── PORTAFOLIO (5 DEMOS REALES VERCEL) ── -->
   <section class="portfolio" id="portafolio">
     <div class="container">
       <div class="port-header fu">
         <div>
           <p class="section-label">Portafolio</p>
-          <h2>Ejemplos de lo<br>que construimos</h2>
+          <h2 class="section-title">Capacidades demostrables.<br>Click para verlas en vivo.</h2>
         </div>
-        <p class="port-header-right">Cada sitio está hecho desde cero, 100% personalizado. Así puede verse el tuyo.</p>
+        <p class="port-header-right">Cada proyecto abajo es un sitio funcional construido por el estudio. Todos están deployados y son navegables — no son screenshots.</p>
       </div>
 
       <div class="port-grid-3 fu">
 
-        <!-- Barbería -->
-        <div class="port-card" onclick="window.open('demo-barberia/index.html','_blank')" style="cursor:pointer;">
+        <a href="https://yucatan-dental-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="port-card">
           <div class="port-img">
-            <img class="port-img-photo" src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=700&auto=format&fit=crop&q=80" alt="Demo Barbería"/>
-            <div class="port-img-overlay">Ver sitio completo →</div>
+            <img class="port-img-photo" loading="lazy" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=900&auto=format&fit=crop&q=85" alt="Demo Yucatan Dental Clinic — Mérida"/>
+            <div class="port-img-overlay">Abrir sitio en vivo →</div>
           </div>
           <div class="port-info">
-            <p class="port-cat">Barbería · Dark Mode</p>
-            <h3 class="port-name">Blade & Co.</h3>
-            <p class="port-desc">Landing con galería de trabajos, sidebar nav, reservaciones por WhatsApp y animaciones premium con GSAP.</p>
+            <p class="port-cat">Clínica · Mérida</p>
+            <h3 class="port-name">Yucatan Dental Clinic</h3>
+            <p class="port-desc">Sitio editorial trilingüe (ES/EN/FR) con foco en turismo dental. CTA WhatsApp + same-day appointment badge.</p>
             <div class="tags">
-              <span class="tag">Dark Mode</span>
-              <span class="tag">GSAP</span>
+              <span class="tag">Editorial</span>
+              <span class="tag">Trilingüe</span>
               <span class="tag">WhatsApp</span>
             </div>
-            <a href="demo-barberia/index.html" target="_blank" class="port-link">Ver demo →</a>
           </div>
-        </div>
+        </a>
 
-        <!-- Clínica Dental -->
-        <div class="port-card" onclick="window.open('demo-clinica/index.html','_blank')" style="cursor:pointer;">
+        <a href="https://grupo-dental-gdl-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="port-card">
           <div class="port-img">
-            <img class="port-img-photo" src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=700&auto=format&fit=crop&q=80" alt="Demo Clínica"/>
-            <div class="port-img-overlay">Ver sitio completo →</div>
+            <img class="port-img-photo" loading="lazy" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900&auto=format&fit=crop&q=85" alt="Demo Grupo Dental Guadalajara — clínica liderada por mujeres"/>
+            <div class="port-img-overlay">Abrir sitio en vivo →</div>
           </div>
           <div class="port-info">
-            <p class="port-cat">Clínica Dental · Claro</p>
-            <h3 class="port-name">DentalCare Mochis</h3>
-            <p class="port-desc">Diseño claro y profesional con catálogo de servicios, sección de confianza, testimonios y agendado de citas.</p>
+            <p class="port-cat">Clínica · Guadalajara</p>
+            <h3 class="port-name">Grupo Dental GDL</h3>
+            <p class="port-desc">Construido alrededor del diferenciador real: clínica liderada por mujeres. Storytelling + galería editorial.</p>
             <div class="tags">
-              <span class="tag">Light Mode</span>
-              <span class="tag">Formulario</span>
-              <span class="tag">SEO</span>
+              <span class="tag">Storytelling</span>
+              <span class="tag">Femenino</span>
             </div>
-            <a href="demo-clinica/index.html" target="_blank" class="port-link">Ver demo →</a>
           </div>
-        </div>
+        </a>
 
-        <!-- Gimnasio -->
-        <div class="port-card" onclick="window.open('demo-gym/index.html','_blank')" style="cursor:pointer;">
+        <a href="https://dentrica-coyoacan-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="port-card">
           <div class="port-img">
-            <img class="port-img-photo" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&auto=format&fit=crop&q=80" alt="Demo Gimnasio"/>
-            <div class="port-img-overlay">Ver sitio completo →</div>
+            <img class="port-img-photo" loading="lazy" src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&auto=format&fit=crop&q=85" alt="Demo Dentrica Coyoacán — clínica multi-especialidad CDMX"/>
+            <div class="port-img-overlay">Abrir sitio en vivo →</div>
           </div>
           <div class="port-info">
-            <p class="port-cat">Gimnasio · Dark Mode</p>
-            <h3 class="port-name">Iron Gym Los Mochis</h3>
-            <p class="port-desc">Membresías, galería de instalaciones, horario de clases interactivo, coaches y clase de prueba gratis.</p>
+            <p class="port-cat">Multi-especialidad · CDMX</p>
+            <h3 class="port-name">Dentrica Coyoacán</h3>
+            <p class="port-desc">Reorganización de 18 servicios alrededor de pillars de tecnología (láser + expediente digital).</p>
             <div class="tags">
-              <span class="tag">Dark Mode</span>
-              <span class="tag">Horarios</span>
-              <span class="tag">WhatsApp</span>
+              <span class="tag">Tech</span>
+              <span class="tag">10+ Doctors</span>
             </div>
-            <a href="demo-gym/index.html" target="_blank" class="port-link">Ver demo →</a>
           </div>
-        </div>
+        </a>
+
+        <a href="https://hilda-torre-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="port-card">
+          <div class="port-img">
+            <img class="port-img-photo" loading="lazy" src="https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=900&auto=format&fit=crop&q=85" alt="Demo Dra. Hilda Torre — ortodoncia Monterrey"/>
+            <div class="port-img-overlay">Abrir sitio en vivo →</div>
+          </div>
+          <div class="port-info">
+            <p class="port-cat">Ortodoncia · Monterrey</p>
+            <h3 class="port-name">Dra. Hilda Torre</h3>
+            <p class="port-desc">Especialista en ortodoncia. Storytelling profesional + cotizador integrado + galería antes/después.</p>
+            <div class="tags">
+              <span class="tag">Especialista</span>
+              <span class="tag">Cotizador</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://juriquilla-dental-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="port-card">
+          <div class="port-img">
+            <img class="port-img-photo" loading="lazy" src="https://images.unsplash.com/photo-1631815587646-b85a1bb027e1?w=900&auto=format&fit=crop&q=85" alt="Demo Dental Juriquilla — clínica moderna multi-sucursal Querétaro"/>
+            <div class="port-img-overlay">Abrir sitio en vivo →</div>
+          </div>
+          <div class="port-info">
+            <p class="port-cat">Multi-sucursal · QRO</p>
+            <h3 class="port-name">Dental Juriquilla</h3>
+            <p class="port-desc">Sitio con selector de sucursal desde el hero. Cada paciente ve la sede correcta con su info y mapa.</p>
+            <div class="tags">
+              <span class="tag">2 sedes</span>
+              <span class="tag">Bauhaus</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://constructora-template-henna.vercel.app" target="_blank" rel="noopener noreferrer" class="port-card">
+          <div class="port-img">
+            <img class="port-img-photo" loading="lazy" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&auto=format&fit=crop&q=85" alt="Demo Edifica Constructora — arquitectura moderna Sinaloa"/>
+            <div class="port-img-overlay">Abrir sitio en vivo →</div>
+          </div>
+          <div class="port-info">
+            <p class="port-cat">Construcción · Sinaloa</p>
+            <h3 class="port-name">Edifica Constructora</h3>
+            <p class="port-desc">Sitio editorial para constructora con catálogo de obras, garantías por escrito y captación de leads.</p>
+            <div class="tags">
+              <span class="tag">B2B</span>
+              <span class="tag">Editorial</span>
+            </div>
+          </div>
+        </a>
 
       </div>
 
-      <!-- Coming soon -->
-      <div class="port-coming fu" style="margin-top:24px;">
-        <div class="port-coming-inner">
-          <div class="port-coming-icon">🚀</div>
-          <h3 class="port-coming-title">Más demos próximamente</h3>
-          <p class="port-coming-desc">Restaurante, e-commerce, hotel, spa y más. ¿Tu industria no está aquí? Escríbenos y te mostramos exactamente cómo quedaría tu sitio.</p>
-          <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Quiero%20ver%20c%C3%B3mo%20quedar%C3%ADa%20el%20sitio%20de%20mi%20negocio%20%F0%9F%9A%80" target="_blank" class="btn btn-primary" style="display:inline-flex;">
-            Pide tu demo gratis →
-          </a>
-        </div>
-      </div>
+      <p class="port-disclaimer">
+        Algunos demos se construyeron como propuestas para los respectivos negocios y reflejan capacidad técnica y creativa del estudio. No son endorsements de los profesionales mostrados.
+      </p>
 
     </div>
   </section>
@@ -2286,13 +1986,24 @@
   <!-- ── FINAL CTA ── -->
   <section class="cta-final">
     <div class="container">
-      <p class="section-label" style="justify-content:center;margin-bottom:16px;">¿Listo para crecer?</p>
-      <h2 class="fu">Tu sitio web,<br><span class="highlight">sin riesgos.</span></h2>
-      <p class="fu">Escríbenos hoy y en menos de 48 horas tienes un sitio funcionando listo para mostrarle al mundo tu negocio.</p>
-      <a href="https://wa.me/526688853458?text=Hola%20Daniel!%20Vi%20Arkn%20Studio%20y%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio%20%F0%9F%9A%80%20%E2%80%94%20sin%20pago%20adelantado!" target="_blank" rel="noopener" class="wa-btn fu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="#080808"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
-        Empezar por WhatsApp — gratis
-      </a>
+      <p class="section-label" style="justify-content:center;margin-bottom:16px;">Hablemos</p>
+      <h2 class="fu">¿Listo para<br><span class="highlight">cotizar?</span></h2>
+      <p class="fu">Cuéntanos del proyecto y te enviamos cotización detallada con timeline y alcance. Sin compromiso.</p>
+      <div class="cta-final-btns fu">
+        <a href="https://wa.me/526688853458?text=Hola!%20Quiero%20cotizar%20un%20sitio%20web.%20Mi%20negocio%20es%3A" target="_blank" rel="noopener noreferrer" class="wa-btn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#080808"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
+          WhatsApp directo
+        </a>
+        <a href="mailto:pavelguapeton@gmail.com?subject=Cotizaci%C3%B3n%20nuevo%20proyecto%20%C2%B7%20Arkn%20Studio&body=Hola%20Arkn%20Studio%2C%0A%0ANegocio%3A%20%0ATipo%20de%20sitio%3A%20%28Landing%20%2F%20Studio%20%2F%20Flagship%29%0APresupuesto%20aproximado%3A%20%0ALink%20de%20referencia%3A%20%0A%0AGracias." class="email-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Enviar brief por email
+        </a>
+      </div>
+      <div class="cta-final-note">
+        <span>✓ Cotización formal por escrito</span>
+        <span>✓ Sin compromiso</span>
+        <span>✓ Respondemos en horario laboral MX</span>
+      </div>
     </div>
   </section>
 
@@ -2305,14 +2016,16 @@
             <span class="footer-logo-arkn">ARKN</span>
             <span class="footer-logo-studio">STUDIO</span>
           </div>
-          <p class="footer-tagline">Sitios web y automatizaciones para negocios reales en México. Sin anticipo, sin riesgo.</p>
+          <p class="footer-tagline">Estudio de diseño web para PyMEs en México. Sitios pensados para vender, no solo para verse bien.</p>
         </div>
         <div>
           <div class="footer-col-title">Navegación</div>
           <ul class="footer-links">
             <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#capacidades">Capacidades</a></li>
             <li><a href="#proceso">Proceso</a></li>
             <li><a href="#garantia">Garantía</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#portafolio">Portafolio</a></li>
             <li><a href="#nosotros">Nosotros</a></li>
           </ul>
@@ -2320,137 +2033,121 @@
         <div>
           <div class="footer-col-title">Contacto</div>
           <div class="footer-contact">
-            <a href="https://wa.me/526688853458" target="_blank" rel="noopener">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
+            <a href="https://wa.me/526688853458" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
               +52 668 885 3458
             </a>
             <a href="mailto:pavelguapeton@gmail.com">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               pavelguapeton@gmail.com
             </a>
-            <a href="https://github.com/saskrax" target="_blank" rel="noopener">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <a href="https://github.com/saskrax" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               github.com/saskrax
             </a>
             <a href="#">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              Los Mochis, Sinaloa
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Los Mochis, Sinaloa, MX
             </a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="footer-copy">© 2025 Arkn Studio · Todos los derechos reservados</div>
-        <div class="footer-loc">Hecho con ♥ en Los Mochis, México</div>
+        <div class="footer-copy">© 2026 Arkn Studio · Todos los derechos reservados</div>
+        <div class="footer-loc">Sinaloa · México</div>
       </div>
     </div>
   </footer>
 
   <!-- ── FLOAT WHATSAPP ── -->
-  <a href="https://wa.me/526688853458" target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
-    <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
+  <a href="https://wa.me/526688853458?text=Hola!%20Vi%20Arkn%20Studio%20y%20quiero%20cotizar%20un%20sitio." target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.847L0 24l6.324-1.501A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.375l-.36-.213-3.727.883.934-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/></svg>
   </a>
 
+  <!-- ── META PIXEL (deferred to end) ── -->
   <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-      // ── Navbar scroll ──
-      const navbar = document.getElementById('navbar');
-      window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 50);
-      });
-
-      // ── Mobile menu ──
-      const hamburger = document.getElementById('hamburger');
-      const mobileMenu = document.getElementById('mobileMenu');
-      hamburger.addEventListener('click', () => {
-        mobileMenu.classList.add('open');
-        hamburger.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-      });
-      document.getElementById('mobileClose').addEventListener('click', closeMobile);
-      function closeMobile() {
-        mobileMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      }
-      window.closeMobile = closeMobile;
-
-      // ── Set initial state ──
-      gsap.set('.fu', { opacity: 0, y: 38 });
-
-      // ── Hero animate ──
-      const heroEls = document.querySelectorAll('.hero .fu');
-      gsap.to(heroEls, {
-        opacity: 1, y: 0,
-        duration: 0.95, ease: 'power3.out',
-        stagger: 0.14, delay: 0.25
-      });
-
-      // ── Scroll fade-up ──
-      document.querySelectorAll('.fu:not(.hero .fu)').forEach(el => {
-        gsap.to(el, {
-          scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
-          opacity: 1, y: 0,
-          duration: 0.82, ease: 'power3.out'
-        });
-      });
-
-      // ── Service cards stagger ──
-      document.querySelectorAll('.card').forEach((card, i) => {
-        gsap.fromTo(card,
-          { opacity: 0, y: 28 },
-          {
-            scrollTrigger: { trigger: card, start: 'top 90%', toggleActions: 'play none none none' },
-            opacity: 1, y: 0,
-            duration: 0.65, ease: 'power2.out',
-            delay: (i % 3) * 0.08
-          }
-        );
-      });
-
-      // ── Process line fill ──
-      gsap.to('#procFill', {
-        scrollTrigger: {
-          trigger: '#procSteps',
-          start: 'top 65%', end: 'bottom 55%',
-          scrub: 1.2
-        },
-        width: '100%', ease: 'none'
-      });
-
-      // ── Process steps light up ──
-      ['s1','s2','s3','s4'].forEach((id) => {
-        ScrollTrigger.create({
-          trigger: `#${id}`,
-          start: 'top 72%',
-          onEnter: () => document.getElementById(id).classList.add('lit')
-        });
-      });
-
-      // ── Tab system ──
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-          document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-          btn.classList.add('active');
-          const panel = document.getElementById('tab-' + btn.dataset.tab);
-          if (panel) panel.classList.add('active');
-        });
-      });
-
-      // ── Retainer cards stagger ──
-      document.querySelectorAll('.ret-card').forEach((card, i) => {
-        gsap.fromTo(card,
-          { opacity: 0, y: 28 },
-          {
-            scrollTrigger: { trigger: card, start: 'top 88%', toggleActions: 'play none none none' },
-            opacity: 1, y: 0,
-            duration: 0.7, ease: 'power2.out',
-            delay: i * 0.12
-          }
-        );
-      });
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2262931414448064');
+  fbq('track', 'PageView');
   </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2262931414448064&ev=PageView&noscript=1"/></noscript>
+
+  <!-- ── INTERACTIVITY ── -->
+  <script>
+    // Navbar scroll
+    const nav = document.getElementById('navbar');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y > 60) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+      lastScroll = y;
+    });
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    });
+    function closeMobile() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    mobileClose.addEventListener('click', closeMobile);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMobile();
+    });
+
+    // GSAP fade-up on scroll (loaded with defer, check ready)
+    window.addEventListener('load', () => {
+      if (typeof gsap === 'undefined') return;
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.utils.toArray('.fu').forEach((el, i) => {
+        gsap.to(el, {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: 'power3.out',
+          delay: i < 6 ? i * 0.08 : 0,
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 88%',
+            toggleActions: 'play none none reverse'
+          }
+        });
+      });
+
+      // Process steps progressive lit
+      ScrollTrigger.create({
+        trigger: '#procSteps',
+        start: 'top 70%',
+        end: 'bottom 50%',
+        onUpdate: self => {
+          const p = self.progress;
+          const fill = document.getElementById('procFill');
+          if (fill) fill.style.width = (p * 100) + '%';
+          const steps = ['s1','s2','s3','s4','s5'];
+          steps.forEach((id, idx) => {
+            const threshold = idx / steps.length;
+            const el = document.getElementById(id);
+            if (!el) return;
+            if (p >= threshold) el.classList.add('lit');
+            else el.classList.remove('lit');
+          });
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
