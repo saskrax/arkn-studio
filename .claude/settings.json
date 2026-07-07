@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__7bd82059-3233-4b68-81a8-56548c9f36b0__generate_video",
+      "mcp__7bd82059-3233-4b68-81a8-56548c9f36b0__generate_image",
+      "mcp__7bd82059-3233-4b68-81a8-56548c9f36b0__media_import_url",
+      "mcp__7bd82059-3233-4b68-81a8-56548c9f36b0__job_display",
+      "mcp__7bd82059-3233-4b68-81a8-56548c9f36b0__balance"
+    ]
+  }
+}
